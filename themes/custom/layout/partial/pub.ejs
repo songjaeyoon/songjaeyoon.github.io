@@ -1,0 +1,29 @@
+<div class="pub">
+    <!-- title -->
+    <div class="pub-title">
+        <a href="<%= pub.url ? pub.url : '' %>">
+            <b><%- pub.title %></b>
+        </a>
+    </div>
+
+    <!-- authors -->
+    <% for (let [idx, author] of pub.authors.entries()) { %>
+        <% if (author === "Jaeyoon Song") { %>
+            <i><%- author %></i><% if (idx !== pub.authors.length - 1) { %>,<% } %>
+        <% } else { %>
+            <%- author %><% if (idx !== pub.authors.length - 1) { %>,<% } %>
+        <% } %>
+        
+    <% } %>
+
+    <!-- venue -->
+    <% if (pub.conference) { %>
+        <%- pub.conference.title %> <%- pub.year %><% if (pub.upcoming) { %>, to appear<% } %>
+    <% } else if (pub.journal) { %>
+        <%- pub.journal.title %> vol. <%- pub.journal.volume %>, no. <%- pub.journal.issue %>, pp. <%- pub.journal.page %>, <%- pub.year %><% if (pub.upcoming) { %>, to appear<% } %>
+    <% } %>
+
+    
+    
+
+</div>

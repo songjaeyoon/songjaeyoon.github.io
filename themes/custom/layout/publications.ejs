@@ -1,3 +1,34 @@
 <%- partial('partial/menu') %>
 
-publications
+<% let publications = site.data.publications.sort((a, b) => b.year - a.year) %>
+
+<% let papers = publications.filter(pub => pub.attrs.includes("paper")) %>
+<% let posters = publications.filter(pub => pub.attrs.includes("poster")) %>
+<% let wips = publications.filter(pub => pub.attrs.includes("wip")) %>
+
+
+<section>
+    <h2 class="title">Conference & Journal Papers</h2>
+
+    <% for (let pub of papers) { %>
+        <%- partial("partial/pub", {pub: pub}) %> 
+    <% } %>
+</section>
+
+<section>
+    <h2 class="title">Posters</h2>
+
+    <% for (let pub of posters) { %>
+        <%- partial("partial/pub", {pub: pub}) %> 
+    <% } %>
+</section>
+
+<% if (wips.length > 0) { %>
+<section>
+    <h2 class="title">Work in Progress</h2>
+
+    <% for (let pub in wips) { %>
+        <%- partial("partial/pub", {pub: pub}) %> 
+    <% } %>
+</section>
+<% } %>
