@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Jaeyoon Song
 subtitle: ''
 description: ''
-keywords:
-author: John Doe
+keywords: 
+author: Jaeyoon Song
 language: en
 timezone: ''
 
@@ -32,7 +32,7 @@ skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
-default_layout: post
+default_layout: index
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -85,7 +85,7 @@ updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 0
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -97,9 +97,17 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: custom
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+menu:
+  Home: /
+  About: /about/
+  Publications: /publications/
+  Projects: /projects/
+  Other: /other/
+  Blog: https://blog.jaeyoon.io/
