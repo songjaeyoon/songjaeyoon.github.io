@@ -45,9 +45,42 @@ camera.updateProjectionMatrix(); // 뭔가 바꿨으면 호출 필요
 // 무대 위에 카메라 올리기
 scene.add(camera); 
 
+
 /* 
 * light
 */
+scene.fog = new THREE.Fog(
+    "pink", 
+    -7, // near (범위 시작)
+    7, // far (범위 끝)
+)
+
+const light = new THREE.DirectionalLight(
+    0xffffff, // 빛의 색상
+    2, // 빛의 강도 (100이면 강함, 1이면 약함)
+);
+light.position.x = 1;
+light.position.z = 2;
+scene.add(light);
+
+
+/* 
+* mesh
+*/
+const geometry = new THREE.BoxGeometry(1, 2, 1); // 직육면체
+const material = new THREE.MeshStandardMaterial({
+  color: "white",
+});
+
+const meshes = [];
+let mesh;
+for (let i = 0; i < 10; i++) {
+	mesh = new THREE.Mesh(geometry, material);  
+    mesh.position.x = Math.random() * 5 - 2.5;
+    mesh.position.z = Math.random() * 5 - 2.5;
+    scene.add(mesh);
+    meshes.push(mesh);
+}
 
 
 /* 
