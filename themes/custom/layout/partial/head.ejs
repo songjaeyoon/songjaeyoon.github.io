@@ -1,0 +1,54 @@
+<!--
+    Light: Official Theme provided by Hexo 
+    Reference: https://github.com/hexojs/hexo-theme-light/blob/master/layout/_partial/head.ejs
+    License: MIT License
+    Copyright (c) 2012 Tommy Chen
+-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%
+    var title = [];
+    if (page.title) title.push(page.title);
+    title.push(config.title);
+    %>
+    <title><%= title.join(' | ') %></title>
+    <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
+    <% if (page.description){ %>
+    <meta name="description" content="<%= page.description %>">
+    <% } else if (config.description){ %>
+    <meta name="description" content="<%= config.description %>">
+    <% } else if (page.excerpt){ %>
+    <meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">
+    <% } else if (page.content){ %>
+    <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+    <% } %>
+    <meta name="keywords" content="social computing, computational social science, HCI, research, jyoonsong, jaeyoon, song, MIT, SNU"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
+    <meta property="og:site_name" content="<%= config.title %>"/>
+  
+    <% if(page.cover) { %>
+      <meta property="og:image" content="<%= page.cover %>" />
+    <% } else { %>
+      <meta property="og:image" content="<%= config.cover %>"/>
+    <% } %>
+  
+    <%- favicon_tag('favicon.png') %>
+
+    <% if (config.feed) { %>
+      <%- feed_tag() %>
+    <% } else if (config.rss) { %>
+      <%- feed_tag(config.rss) %>
+    <% } %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Inconsolata&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <%- css('css/multiselect.min.css') %>
+    <%- css('css/main.css') %>
+    <%- partial('google_analytics') %>
+    <script src="/js/tagger.js"></script>
+  </head>

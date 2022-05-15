@@ -1,2 +1,97 @@
 <%- partial('partial/menu') %>
-projects
+
+<section class="row mb-5 mt-3">
+    <h2 class="text-serif"><b>Projects</b></h2>
+</section>
+
+<% const topics = Array.from(new Set(site.data.projects.map(p => p.topic).flat())) %>
+
+<style>
+    /* Generate CSS filter rules */
+    <% for (let topic of topics) { %>
+    #category-<%= topic %>:checked ~ #projects .project:not(.category-<%= topic %>),
+    <% } %>
+    dummy
+    {
+        display: none;
+    }
+    #category-all:checked ~ #categories #label-category-all,
+    <% for (let topic of topics) { %>
+    #category-<%= topic %>:checked ~ #categories #label-category-<%= topic %>,
+    <% } %>
+    dummy
+    {
+        color: #000;
+        font-weight: bold;
+    }
+</style>
+
+<input class="hidden" type="radio" name="category" id="category-all" checked />
+<% for (let [idx, topic] of topics.entries()) { %>
+    <input class="hidden" type="radio" name="category" id="category-<%= topic %>" /> &nbsp;
+<% } %>
+
+<section class="row mb-3" id="categories">
+    <div class="col-12 col-md-2 col-lg-1 align-items-center">
+        <a class="text-serif">Categories</a>
+    </div>
+    <div class="col-12 indent col-md-6 col-lg-5 ">
+        <label class="pointer" for="category-all" id="label-category-all">all</label> &nbsp; | &nbsp; 
+        <% for (let [idx, topic] of topics.entries()) { %>
+            <label class="pointer" for="category-<%= topic %>" id="label-category-<%= topic %>"><%= topic %></label> &nbsp;
+            <%= idx === topics.length - 1 ? "" : " | " %>  &nbsp;
+        <% } %>
+
+    </div>
+</section>
+
+<section class="row mb-5">
+    <div class="col-12 col-md-2 col-lg-1 align-items-center">
+        <a class="text-serif">Keywords</a>
+    </div>
+    <div class="col-12 indent col-md-6 col-lg-5 ">
+        <div class="multi-select"></div>
+    </div>
+</section>
+
+
+<section class="row" id="projects">
+    <div class="col-12 col-md-9 col-lg-8">
+        <div class="row">
+            <% for (let project of site.data.projects) { %>
+                <%- partial("partial/proj", {project: project}) %>   
+            <% } %>
+        </div>
+    </div>
+</section>
+
+
+
+<% const keywords = site.data.projects.map(p => p.keywords).flat() %>
+
+<script>
+    var projects = Array.from(document.querySelectorAll(".project"));
+    var keywordList = "<%= keywords %>".split(",");
+
+    var multiSelect = new MultiSelect('.multi-select', {
+        items: Array.from(new Set(keywordList)),
+        current: [],
+        placeHolder: "Click to select keywords"
+    });
+    multiSelect.on('change', function (e) {
+        for (let project of projects) {
+            const projectKeywords = project.dataset.keywords.split(",").map(k => k.trim());
+            const selectedKeywords = multiSelect.getCurrent('value');
+            const found = projectKeywords.some(r => selectedKeywords.includes(r)) || selectedKeywords.length === 0;
+
+            if (found) {
+                project.classList.remove("hidden");
+            }
+            else {
+                project.classList.add("hidden");
+            }
+        }
+    });
+</script>
+
+<%- partial('partial/footer') %>

@@ -1,0 +1,12 @@
+<div 
+    class="col-12 col-md-4 project <% for (cat of project.topic) {%> category-<%= cat %> <% } %> mb-2"
+    data-keywords="<%= project.keywords.join(',') %>"
+>
+    <a class="project-wrapper">
+        <div class="project-img mb-2">
+            <img src="<%= project.image %>"/>
+        </div>
+        <h4><b><%= project.title %></b></h4>
+        <div class="text-muted"><%= project.desc %></div>
+    </a>
+</div>

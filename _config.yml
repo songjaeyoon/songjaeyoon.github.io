@@ -104,6 +104,7 @@ theme: custom
 deploy:
   type: ''
 
+# Menu
 menu:
   Home: /
   About: /about/
@@ -111,3 +112,9 @@ menu:
   Projects: /projects/
   Other: /other/
   Blog: https://blog.jaeyoon.io/
+
+# SCSS
+node_sass:
+  outputStyle: compressed
+  precision: 5
+  sourceComments: false

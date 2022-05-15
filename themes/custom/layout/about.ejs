@@ -1,3 +1,45 @@
 <%- partial('partial/menu') %>
 
-about
+<section class="row mb-3">
+    <img src="/images/profile.png" width="250" class="wave profile"/>
+</section>
+
+
+<section class="row mb-5">
+    <div class="col-12 indent col-md-8 col-lg-6 text-justify">
+        <div class="text-center mb-2">
+            <a>
+                <b>Jaeyoon Song | 송재윤 | 宋才潤</b><br/>
+                jaeyoons [at] mit [dot] edu
+            </a>
+        </div>
+        I am a PhD student at MIT Sloan in the Information Technologies (IT) group - a subgroup of the Management Science program - where I am advised by Thomas Malone. My general research area is computational social science, an area at the intersection of computer science, data science, and social science, where I employ data-driven computational thinking and methods to explore social science questions. Specifically, I am interested in human-AI collaboration, misinformation, and content engineering in the context of social media, advertising, and crowdsourced data.
+    </div>
+</section>
+
+<section class="row mb-5 mt-5">
+    <div class="col-12 col-md-3 col-lg-2">
+        <h2 class="text-serif">Experience</h2>
+    </div>
+
+    <div class="col-12 indent col-md-7 col-lg-5">
+        <% for (let exp of site.data.experience) { %>
+            <%- partial("partial/exp", {exp: exp}) %>
+        <% } %>
+    </div>
+</section>
+
+<section class="row mb-5 mt-2">
+    <div class="col-12 col-md-3 col-lg-2">
+        <h2 class="text-serif">Education</h2>
+    </div>
+
+    <div class="col-12 indent col-md-7 col-lg-5">
+        <% for (let edu of site.data.education) { %>
+            <%- partial("partial/edu", {edu: edu}) %>
+        <% } %>
+    </div>
+</section>
+
+
+<%- partial('partial/footer') %>

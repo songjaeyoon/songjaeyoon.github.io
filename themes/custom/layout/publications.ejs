@@ -7,28 +7,42 @@
 <% let wips = publications.filter(pub => pub.attrs.includes("wip")) %>
 
 
-<section>
-    <h2 class="title">Conference & Journal Papers</h2>
+<section class="row">
+    <div class="col-12 col-md-3 col-lg-2">
+        <h2 class="text-serif">Conference & Journal Papers</h2>
+    </div>
 
-    <% for (let pub of papers) { %>
-        <%- partial("partial/pub", {pub: pub}) %> 
-    <% } %>
+    <div class="col-12 indent col-md-7 col-lg-5">
+        <% for (let pub of papers) { %>
+            <%- partial("partial/pub", {pub: pub}) %> 
+        <% } %>
+    </div>
 </section>
 
-<section>
-    <h2 class="title">Posters</h2>
+<section class="row">
+    <div class="col-12 col-md-3 col-lg-2">
+        <h2 class="text-serif">Posters</h2>
+    </div>
 
-    <% for (let pub of posters) { %>
-        <%- partial("partial/pub", {pub: pub}) %> 
-    <% } %>
+    <div class="col-12 indent col-md-7 col-lg-5">
+        <% for (let pub of posters) { %>
+            <%- partial("partial/pub", {pub: pub}) %> 
+        <% } %>
+    </div>
 </section>
 
 <% if (wips.length > 0) { %>
-<section>
-    <h2 class="title">Work in Progress</h2>
+<section class="row">
+    <div class="col-12 col-md-3 col-lg-2">
+        <h2 class="text-serif">Work in Progress</h2>
+    </div>
 
-    <% for (let pub in wips) { %>
-        <%- partial("partial/pub", {pub: pub}) %> 
-    <% } %>
+    <div class="col-12 indent col-md-7 col-lg-5">
+        <% for (let pub in wips) { %>
+            <%- partial("partial/pub", {pub: pub}) %> 
+        <% } %>
+    </div>
 </section>
 <% } %>
+
+<%- partial('partial/footer') %>

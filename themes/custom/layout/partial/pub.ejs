@@ -1,4 +1,4 @@
-<div class="pub">
+<div class="pub mb-3">
     <!-- title -->
     <div class="pub-title">
         <a href="<%= pub.url ? pub.url : '' %>">
@@ -8,13 +8,18 @@
 
     <!-- authors -->
     <% for (let [idx, author] of pub.authors.entries()) { %>
-        <% if (author === "Jaeyoon Song") { %>
-            <i><%- author %></i><% if (idx !== pub.authors.length - 1) { %>,<% } %>
+        <% if (author.includes("Jaeyoon Song")) { %>
+            <i><%- author %></i><% if (idx !== pub.authors.length - 1) { %>, <% } %>
         <% } else { %>
-            <%- author %><% if (idx !== pub.authors.length - 1) { %>,<% } %>
+            <%- author %><% if (idx !== pub.authors.length - 1) { %>, <% } %>
         <% } %>
-        
     <% } %>
+
+    <div>
+        <% if (pub.equal_contribution) { %>
+            <small><i>* Equal contribution</i></small>
+        <% } %>
+    </div>
 
     <!-- venue -->
     <% if (pub.conference) { %>
@@ -23,7 +28,20 @@
         <%- pub.journal.title %> vol. <%- pub.journal.volume %>, no. <%- pub.journal.issue %>, pp. <%- pub.journal.page %>, <%- pub.year %><% if (pub.upcoming) { %>, to appear<% } %>
     <% } %>
 
-    
+    <!-- award -->
+    <% if (pub.award) { %>
+        <div class="text-muted">
+            <small>
+                🏆 Won <%- pub.award %> 🏆
+            </small>
+        </div>
+    <% } %>
+
+    <!-- links -->
+    <% const project = site.data.projects.filter(project => project.id === pub.id) %>
+    <% if (project.length > 0) { %>
+        <%- partial("partial/links", {project: project}) %>
+    <% } %>
     
 
 </div>
