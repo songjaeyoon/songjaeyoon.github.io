@@ -6,16 +6,28 @@
         z-index: 1000;
 
         &.top {
-            top: -20px;
+            top: -10px;
+            @media screen and (min-width: $on-large) {
+                top: -20px;
+            }
         }
         &.bottom {
-            bottom: -20px;
+            bottom: 0px;
+            @media screen and (min-width: $on-large) {
+                bottom: -20px;
+            }
         }
         &.left {
-            left: -30px;
+            left: -15px;
+            @media screen and (min-width: $on-large) {
+                left: -30px;
+            }
         }
         &.right {
-            right: -20px;
+            right: -10px;
+            @media screen and (min-width: $on-large) {
+                right: -20px;
+            }
         }
 
         &.purple path {

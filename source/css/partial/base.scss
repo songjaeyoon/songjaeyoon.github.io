@@ -3,7 +3,7 @@ html {
     overflow-x: hidden;
   }
   
-  html, body, .new-body {
+  html, body {
     position: relative;
   }
   
@@ -50,8 +50,10 @@ html {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    padding: 1rem;
     @media screen and (min-width: $on-large) {
       font-size: $base-font-size;
+      padding: 0;
     }
   }
   

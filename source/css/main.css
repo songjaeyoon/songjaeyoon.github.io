@@ -3,7 +3,7 @@ html {
   overflow-x: hidden;
 }
 
-html, body, .new-body {
+html, body {
   position: relative;
 }
 
@@ -52,10 +52,12 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  padding: 1rem;
 }
 @media screen and (min-width: 800px) {
   body {
     font-size: 16px;
+    padding: 0;
   }
 }
 
@@ -689,16 +691,36 @@ nav a.active {
   z-index: 1000;
 }
 .cloud-wrapper .cloud.top {
-  top: -20px;
+  top: -10px;
+}
+@media screen and (min-width: 800px) {
+  .cloud-wrapper .cloud.top {
+    top: -20px;
+  }
 }
 .cloud-wrapper .cloud.bottom {
-  bottom: -20px;
+  bottom: 0px;
+}
+@media screen and (min-width: 800px) {
+  .cloud-wrapper .cloud.bottom {
+    bottom: -20px;
+  }
 }
 .cloud-wrapper .cloud.left {
-  left: -30px;
+  left: -15px;
+}
+@media screen and (min-width: 800px) {
+  .cloud-wrapper .cloud.left {
+    left: -30px;
+  }
 }
 .cloud-wrapper .cloud.right {
-  right: -20px;
+  right: -10px;
+}
+@media screen and (min-width: 800px) {
+  .cloud-wrapper .cloud.right {
+    right: -20px;
+  }
 }
 .cloud-wrapper .cloud.purple path {
   fill: #baa2ff;
