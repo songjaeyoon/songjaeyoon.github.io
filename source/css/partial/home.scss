@@ -1,0 +1,44 @@
+.cloud-wrapper {
+    .cloud {
+        width: 30%;
+        position: fixed;
+        transition: transform .5s ease;
+        z-index: 1000;
+
+        &.top {
+            top: -20px;
+        }
+        &.bottom {
+            bottom: -20px;
+        }
+        &.left {
+            left: -30px;
+        }
+        &.right {
+            right: -20px;
+        }
+
+        &.purple path {
+            fill: $brand-color-light;
+            opacity: .6;
+        }
+        &.pink path {
+            fill: $pink;
+            opacity: .7;
+        }
+        &.yellow path {
+            fill: $yellow;
+        }
+        &.green path {
+            fill: $green;
+        }
+        &.blue path {
+            fill: $blue;
+        }
+
+        // &:hover {
+        //     transform: rotateZ(5deg);
+        // }
+    }
+
+}

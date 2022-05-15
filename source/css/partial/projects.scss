@@ -1,0 +1,27 @@
+.multi-select {
+    border: 1px solid #ddd;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    .si-result {
+        color: #000 !important;
+    }
+    .si-list {
+        background-color: rgba(255, 255, 255, 0.95);
+        .si-item:first-child {
+            border-top: 1px solid;
+        }
+    }
+}
+
+.project {
+    padding-right: 1rem;
+    .project-wrapper {
+        display: block;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        transition: transform .5s ease;
+        &:hover {
+            transform: translateY(-7px);
+        }
+    }
+}
