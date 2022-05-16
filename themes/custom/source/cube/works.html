@@ -1,0 +1,437 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"/>
+  <!-- SEO -->
+  <title>JaeYoon Song</title>
+  <meta name="author" content="Jaeyoon Song"/>
+  <meta name="keyword" content="Creator, Interactivity, UI, UX, Designer, Engineer, Web Development">
+  <meta name="description" content="Portfolio of interactive designer/developer JaeYoon.">
+  <meta name="copyright" content="Jaeyoon Song"/>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00f0ff">
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="123456789">
+  <meta property="og:url" content="https://www.example.com/path/to/page.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JaeYoon Song">
+  <meta property="og:image" content="https://www.example.com/path/to/image.jpg">
+  <meta property="og:description" content="Portfolio of interactive designer/developer JaeYoon.">
+  <meta property="og:site_name" content="JaeYoon Song">
+  <meta property="article:author" content="JaeYoon Song">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@site_account">
+  <meta name="twitter:creator" content="@individual_account">
+  <meta name="twitter:url" content="https://www.example.com/path/to/page.html">
+  <!-- Android -->
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#061E33">
+  <!-- iOS -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="The Jaeyoon World">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- Stylesheets-->
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <!--  https://cdn.rawgit.com/Paravel/ConvergeSE/v1/fonts/learning-curve-pro/stylesheet.css-->
+</head>
+<body class="no-select loading">
+  <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  
+  <!-- Border -->
+  <div class="wrapper"></div>
+  
+  <!-- Navigation -->
+  <nav id="nav" class="nav">
+    <h1 class="nav-brand">
+      <a href="/cube">
+        <img class="img-responsive" src="img/logo.png" alt="logo"/>
+      </a>
+    </h1>
+    <button id="nav-toggle" class="nav-toggle ease btn-trans">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="clearfix"></div>
+  </nav>
+  
+  <!-- Cube -->
+  <main class="cube-container hidden">
+    <div class="cube-wrapper">
+      <ul id="nav-container" class="des-container hidden-sm-down text-center">
+        <div class="des-nav">
+          <a class="des-link" href="about"></a>
+          <h2 class="des-heading text-shine text-white">About
+            <div>01</div>
+          </h2>
+          <div class="des-dot"></div>
+        </div>
+        <div class="des-nav">
+          <a class="des-link" href="contact"></a>
+          <h2 class="des-heading text-shine text-white">Contact
+            <div>02</div>
+          </h2>
+          <div class="des-dot"></div>
+        </div>
+        <div class="des-nav">
+          <a class="des-link" href="works"></a>
+          <h2 class="des-heading text-shine text-white">Works
+            <div>03</div>
+          </h2>
+          <div class="des-dot"></div>
+        </div>
+        <div class="des-nav">
+          <a class="des-link" href="lab"></a>
+          <h2 class="des-heading text-shine text-white">Lab
+            <div>04</div>
+          </h2>
+          <div class="des-dot"></div>
+        </div>
+        <div class="des-nav">
+          <a class="des-link" href="http://blog.jaeyoon.io"></a>
+          <h2 class="des-heading text-shine text-white">Blog
+            <div>05</div>
+          </h2>
+          <div class="des-dot"></div>
+        </div>
+      </ul>
+      <div class="cube open origin-bottom">
+        <div class="side right">04
+          <span class="side-inner mobile-only"></span>
+          <a class="side-inner desktop-only" href="lab"></a>
+        </div>
+        <div class="side left">01
+          <span class="side-inner mobile-only"></span>
+          <a class="side-inner desktop-only" href="about"></a>
+        </div>
+        <div class="side top">04
+          <span class="side-inner mobile-only"></span>
+          <a class="side-inner desktop-only" href="lab"></a>
+        </div>
+        <div class="side bottom">03
+          <span class="side-inner mobile-only"></span>
+          <a class="side-inner desktop-only" href="works"></a>
+        </div>
+        <div class="side front">05
+          <span class="side-inner mobile-only"></span>
+          <a class="side-inner desktop-only" href="http://blog.jaeyoon.io"></a>
+        </div>
+        <div class="side behind">02
+          <span class="side-inner mobile-only"></span>
+          <a class="side-inner desktop-only" href="contact"></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <aside class="lines hidden-sm-down">
+    <div id="line1" class="des-line no-events"></div>
+    <div id="line2" class="des-line no-events"></div>
+    <div id="line3" class="des-line no-events"></div>
+    <div id="line4" class="des-line no-events"></div>
+    <div id="line5" class="des-line no-events"></div>
+  </aside> 
+  
+  <!-- Stars -->
+    <aside class="no-events">
+      <div class="shoot"></div>
+      <div class="shoot"></div>
+      <div class="stars">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </aside>
+  
+  <!-- Header -->
+  <header class="flex flex-column center-x center-y">
+    <div class="text-center text-white text-wide text-serif">
+      <span class="opacity text-line text-small">&nbsp;00/06</span>
+      <h3 class="text-light text-shine">&nbsp;Portfolio<span class="hidden-sm-down"> of Selected Works</span></h3>
+      <span class="opacity">&nbsp;Scroll Down</span>
+    </div>
+    <br>
+    <br>
+  </header>
+  
+  <!-- Portfolio -->
+  <section class="flex center-y">
+    <div class="container text-white">
+      <a href="https://chartmetric.io" class="portfolio hidden" target="_blank"> <!-- works/0 -->
+        <img class="img-responsive" src="img/chartmetric.png" alt="chartmetric">
+        <div class="portfolio-des">
+          <span class="opacity text-light text-serif">0 1 / 0 5</span>
+          <h2 class="text-serif">Chartmetric</h2>
+          <span class="opacity text-light">Design &amp; Front-end Engineering Intern (2017)</span>
+        </div>
+      </a>
+      <a href="https://dribbble.com/shots/3971215-Landing-Page-for-Korean-Startup" class="portfolio hidden" target="_blank">
+        <img class="img-responsive" src="img/mercury.jpg" alt="mercury">
+        <div class="portfolio-des">
+          <span class="opacity text-light text-serif">0 2 / 0 5</span>
+          <h2 class="text-serif">Mercury</h2>
+          <span class="opacity text-light">Lead UX Engineer (2017)<br><i class="prize"></i>SK Startup Contest</span>
+        </div>
+      </a>
+      <a href="http://shashagungun.com" class="portfolio hidden" target="_blank">
+        <img class="img-responsive" src="img/shasha.jpg" alt="shashagungun">
+        <div class="portfolio-des">
+          <span class="opacity text-light text-serif">0 3 / 0 5</span>
+          <h2 class="text-serif">Shashagungun</h2>
+          <span class="opacity text-light">Founder, Designer, Front-end <span class="hidden-md-down">Developer </span>(2016)<br><i class="prize"></i>SNULife SANDBOX Winner</span>
+        </div>
+      </a>
+      <a href="http://scsc.snu.ac.kr" class="portfolio hidden" target="_blank">
+        <img class="img-responsive" src="img/scsc.png" alt="SCSC">
+        <div class="portfolio-des">
+          <span class="opacity text-light text-serif">0 4 / 0 5</span>
+          <h2 class="text-serif">S. C. S. C.</h2>
+          <span class="opacity text-light">
+            <span class="hidden-md-down">Seoul National University</span>
+            <span class="hidden-lg-up">SNU</span>
+            Computer Study Club<br>Front-end Developer (2015)
+          </span>
+        </div>
+      </a>
+      <a href="dt4c" class="portfolio hidden" target="_blank">
+        <img class="img-responsive" src="img/graphic.jpg" alt="graphic designs">
+        <div class="portfolio-des">
+          <span class="opacity text-light text-serif">0 5 / 0 5</span>
+          <h2 class="text-serif">Graphic Designs</h2>
+          <span class="opacity text-light">Posters, Card News etc</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Previous & Next -->
+  <footer class="footer flex center-x center-y hidden">
+    <div class="container flex justify-around">
+      <div class="footer-nav flex flex-column center-y text-white text-serif">
+        <a href="contact" class="text-center text-shine text-wide">Previous: <br class="hidden-md-up">Contact</a>
+        <a href="contact"><span class="opacity">02</span></a>
+      </div>
+      <div class="footer-nav flex flex-column center-y text-white text-serif">
+        <a href="lab" class="text-center text-shine text-wide">Next: <br class="hidden-md-up">Lab</a>
+        <a href="lab"><span class="opacity">04</span></a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/modernizr.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var footer = document.querySelector("footer");
+    
+    var controller = new ScrollMagic.Controller();
+    var portfolios = Array.from(document.querySelectorAll(".portfolio"));
+    for (i=0; i<portfolios.length; i++) {
+      var showItems = new ScrollMagic.Scene({triggerElement: portfolios[i], triggerHook: .7})
+                      .setClassToggle(portfolios[i], "show")
+                      .addTo(controller);
+    }
+    var changeBg = new ScrollMagic.Scene({triggerElement: portfolios[0], triggerHook: .7})
+                      .on("enter", function () {
+                        changeWrapper("#fff", "rgba(255,255,255,0)", 1);
+                      })
+                      .on("leave", function () {
+                        changeWrapper("", "", .1);
+                      })
+                      .addTo(controller);
+    var footerChange = new ScrollMagic.Scene({triggerElement: footer, triggerHook: .1})
+                      .on("enter", function () {
+                        changeWrapper("", "", .1);
+                        footer.classList.add("show");
+                        navbar.classList.remove("invert");
+                      })
+                      .on("leave", function () {
+                        changeWrapper("#fff", "rgba(255,255,255,0)", 1);
+                        footer.classList.remove("show");
+                        navbar.classList.add("invert");
+                      })
+                      .addTo(controller);
+    var changeNav = new ScrollMagic.Scene({triggerElement: portfolios[0]})
+                      .on("enter", function () {
+                        navbar.classList.add("invert");
+                      })
+                      .on("leave", function (e) {
+                        navbar.classList.remove("invert");
+                      })
+                      .addTo(controller);
+  
+    function changeWrapper(a, b, c, d) {
+      document.querySelector(".wrapper").style.background = a;
+      document.querySelector(".wrapper").style.borderColor = b;
+      document.querySelector(".wrapper").style.opacity = c;
+    }
+  </script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113321077-1');
+  </script>
+</body>
+</html>
