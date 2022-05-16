@@ -23,15 +23,14 @@ const scene = new THREE.Scene();
 /* 
 * camera
 */
-// const camera = new THREE.OrthographicCamera(
-// 	-(width / height),
-//     width / height, 
-//     1,
-//     -1,
-//     0.1, // near 
-//     1000, // far
-// );
-const 
+const camera = new THREE.OrthographicCamera(
+	-(width / height),
+    width / height, 
+    1,
+    -1,
+    0.1, // near 
+    1000, // far
+);
 
 // 위치 설정을 안하면 카메라의 디폴트 위치는 (0, 0, 0) 잘 안보일 거기 때문에 보통은 살짝 위치를 바꾼다.
 camera.position.set(3, 2, 4);
@@ -137,11 +136,7 @@ scene.add(meshGroup);
 * mousemove
 */
 const threshold = 0.25;
-const mouse = new THREE.Vector2();
 const handleMousemove = (e) => {
-    mouse.x = e.clientX / canvas.clientWidth * 2 - 1;
-    mouse.y = -(e.clientY / canvas.clientHeight * 2 - 1);
-
     const domElement = document.body;
     const halfWidth = domElement.offsetWidth / 2;
     const yawLeft = - ( ( e.pageX - domElement.offsetLeft ) - halfWidth ) / halfWidth;
@@ -161,25 +156,74 @@ const handleMousemove = (e) => {
 /* 
 * click
 */
-const raycaster = new THREE.Raycaster();
+
+function toScreenPosition(obj, camera)
+{
+    var vector = new THREE.Vector3();
+
+    var widthHalf = 0.5*width;
+    var heightHalf = 0.5*height;
+
+    obj.updateMatrixWorld();
+    vector.setFromMatrixPosition(obj.matrixWorld);
+    vector.project(camera);
+
+    vector.x = ( vector.x * widthHalf ) + widthHalf;
+    vector.y = - ( vector.y * heightHalf ) + heightHalf;
+
+    return { 
+        x: vector.x,
+        y: vector.y
+    };
+
+};
+const raycaster = new THREE.Raycaster(new THREE.Vector3(10, 5, 10));
 const paths = ["/about", "/publications", "/projects", "/other", "https://blog.jaeyoon.io"]
 const handleClick = (e) => {
-    raycaster.setFromCamera( mouse, camera );
+    const distances = meshes.map(meshItem => {
+        const meshPosition = toScreenPosition(meshItem, camera);
+        const distance = Math.sqrt(Math.pow(e.clientX - meshPosition.x, 2) + Math.pow(e.clientY - meshPosition.y, 2))
 
-    const intersects = raycaster.intersectObjects( meshes );
-    const names = intersects.map(i => i.object.name);
+        return {
+            name: meshItem.name,
+            distance: distance,
+        }
+    });
 
-    if (names.length > 0) {
-        const index = parseInt(names[0].substr(4, ));
+    const sorted = distances.sort((a, b) => a.distance - b.distance);
+
+    if (sorted[0].distance < 70) {
+        const index = parseInt(sorted[0].name.substr(4, ));
         if (index < 4) {
             window.location.href = paths[index];
         }
         else {
             window.location.replace(paths[index]);
         }
-        console.log(names);
-        console.log(intersects);
     }
+    
+    // const mouse = new THREE.Vector3();
+    // mouse.x = e.clientX / renderer.domElement.clientWidth * 2 - 1;
+    // mouse.y = -(e.clientY / renderer.domElement.clientHeight) * 2 + 1;
+    // mouse.z = 1;
+
+    // raycaster.setFromCamera( mouse, camera );
+
+    // const intersects = raycaster.intersectObjects( meshes );
+    // const names = intersects.map(i => i.object.name);
+
+    // console.log(intersects);
+    // if (names.length > 0) {
+    //     const index = parseInt(names[0].substr(4, ));
+    //     // if (index < 4) {
+    //     //     window.location.href = paths[index];
+    //     // }
+    //     // else {
+    //     //     window.location.replace(paths[index]);
+    //     // }
+    //     console.log(new Set(names));
+    //     // console.log(intersects);
+    // }
 }
 
 

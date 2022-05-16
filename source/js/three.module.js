@@ -11252,7 +11252,7 @@ Mesh.prototype.isMesh = true;
 
 function checkIntersection( object, material, raycaster, ray, pA, pB, pC, point ) {
 
-	let intersect;
+	// let intersect;
 
 	// if ( material.side === BackSide ) {
 
