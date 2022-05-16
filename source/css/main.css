@@ -10,7 +10,7 @@ html, body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -669,19 +669,96 @@ header.header {
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 999;
 }
-
-nav {
+header.header.home {
+  position: absolute;
+  right: 2.5rem;
+  top: calc(50% - 50px);
+}
+header.header.home .mobile-nav-content {
+  top: -100px;
+  right: 70px;
+}
+header.header.home .mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+header.header #mobile-menu-checkbox {
+  display: none;
+}
+header.header #mobile-menu-checkbox:checked ~ .mobile-nav-content {
+  opacity: 1;
+  pointer-events: all;
+}
+header.header .mobile-nav-content {
+  position: absolute;
+  top: 55px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+header.header .mobile-nav-content a {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+header.header .mobile-nav-btn {
+  background-color: #7c4dff;
+  border-radius: 50%;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+header.header .mobile-nav-btn {
+  background-color: #7c4dff;
+  border-radius: 50%;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+header.header .mobile-nav {
+  display: none;
+}
+header.header nav {
   display: flex;
   justify-content: space-around;
 }
-nav a {
+header.header nav a {
   color: #828282;
   opacity: 0.8;
 }
-nav a.active {
+header.header nav a.active {
   opacity: 1;
   color: #000;
   font-weight: bold;
+}
+@media (max-width: 600px) {
+  header.header {
+    background-color: transparent;
+  }
+  header.header nav {
+    display: none;
+  }
+  header.header .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
 }
 
 .cloud-wrapper .cloud {

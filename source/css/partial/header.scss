@@ -5,18 +5,102 @@ header.header {
     top: 0;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 999;
-}
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    a {
-        color: $text-color;
-        opacity: .8;
-        &.active {
-            opacity: 1;
-            color: #000;
-            font-weight: bold;
+    &.home {
+        position: absolute;
+        right: 2.5rem;
+        top: calc(50% - 50px);
+        .mobile-nav-content {
+            top: -100px;
+            right: 70px;
+        }
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
         }
     }
+
+    #mobile-menu-checkbox {
+        display: none;
+        &:checked ~ .mobile-nav-content {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    .mobile-nav-content {
+        position: absolute;
+        top: 55px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .5s ease;
+        a {
+            padding: .5rem 2rem;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    .mobile-nav-btn {
+        background-color: $brand-color;
+        border-radius: 50%;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .mobile-nav-btn {
+        background-color: $brand-color;
+        border-radius: 50%;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .mobile-nav {
+        display: none;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        a {
+            color: $text-color;
+            opacity: .8;
+            &.active {
+                opacity: 1;
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @media (max-width: $on-medium) {
+        background-color: transparent;
+        nav {
+            display: none;
+        }
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+    }
+
 }
+
+

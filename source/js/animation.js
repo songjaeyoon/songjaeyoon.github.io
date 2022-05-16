@@ -86,3 +86,8 @@ svgs.forEach((svg, index) => {
 
 TweenLite.ticker.addEventListener("tick", update);
 update();
+
+
+// Navigation
+// if mobile or home
+document.querySelector("header.header").classList.add("mobile");

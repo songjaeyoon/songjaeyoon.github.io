@@ -39,7 +39,12 @@ camera.position.set(3, 2, 4);
 camera.lookAt(0, 0, 0);
 
 // 카메라 줌: 기본값은 1 절반으로 하면 줌아웃
-camera.zoom = 0.2;
+if (width > height) {
+    camera.zoom = 0.2;
+}
+else {
+    camera.zoom = 0.1;
+}
 camera.updateProjectionMatrix(); // 뭔가 바꿨으면 호출 필요
 
 // 무대 위에 카메라 올리기
@@ -201,29 +206,6 @@ const handleClick = (e) => {
             window.location.replace(paths[index]);
         }
     }
-    
-    // const mouse = new THREE.Vector3();
-    // mouse.x = e.clientX / renderer.domElement.clientWidth * 2 - 1;
-    // mouse.y = -(e.clientY / renderer.domElement.clientHeight) * 2 + 1;
-    // mouse.z = 1;
-
-    // raycaster.setFromCamera( mouse, camera );
-
-    // const intersects = raycaster.intersectObjects( meshes );
-    // const names = intersects.map(i => i.object.name);
-
-    // console.log(intersects);
-    // if (names.length > 0) {
-    //     const index = parseInt(names[0].substr(4, ));
-    //     // if (index < 4) {
-    //     //     window.location.href = paths[index];
-    //     // }
-    //     // else {
-    //     //     window.location.replace(paths[index]);
-    //     // }
-    //     console.log(new Set(names));
-    //     // console.log(intersects);
-    // }
 }
 
 

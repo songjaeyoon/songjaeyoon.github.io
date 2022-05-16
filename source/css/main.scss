@@ -6,8 +6,7 @@ $serif-font-family: "Cardo", "Times New Roman", "Times", TimesNewRoman, Times, -
 $base-font-size:   16px !default;
 $base-font-size-mobile: 14.8px !default;
 $base-font-weight: 300 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.6 !default; 
+$base-line-height: 1.6 !default;
 
 $text-color:       #828282 !default;
 $background-color: #fff !default;
@@ -26,9 +25,9 @@ $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Width of the content area
-$content-width:    960px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
+
 $on-medium:        $on-palm !default;
 $on-large:         $on-laptop !default;
 
