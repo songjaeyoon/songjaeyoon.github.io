@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+$base-font-family: "PT Sans", "Ubuntu", -apple-system, BlinkMacSystemFont, Helvetica, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
+$serif-font-family: "Cardo", "Times New Roman", "Times", TimesNewRoman, Times, -apple-system, serif !default;
+$base-font-size:   16px !default;
+$base-font-size-mobile: 14.8px !default;
+$base-font-weight: 300 !default;
+$base-line-height: 1.6 !default;
+
+$text-color:       #828282 !default;
+$background-color: #fff !default;
+$brand-color:      #7c4dff !default;
+$brand-color-light:#baa2ff !default;
+
+$pink: #eebefa !default;
+$yellow: #ffffbf !default;
+$blue: #baffff !default;
+$green: #ccff90 !default;
+
+$spacing-unit:      1rem !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Width of the content area
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin media-query($device) {
+  @media screen and (scssax-width: $device) {
+    @content;
+  }
+}
+
+// Import partials
+@import
+  "partial/base",
+  "partial/grid",
+  "partial/margins",
+  "partial/animations",
+  "partial/header",
+  "partial/home",
+  "partial/about",
+  "partial/publications",
+  "partial/projects",
+  "partial/other"
+;

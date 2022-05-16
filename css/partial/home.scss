@@ -1,0 +1,64 @@
+.cloud-wrapper {
+    .cloud {
+        width: 30%;
+        position: fixed;
+        transition: transform .5s ease;
+        z-index: 1000;
+
+        &.top {
+            top: -10px;
+            @media screen and (min-width: $on-large) {
+                top: -20px;
+            }
+        }
+        &.bottom {
+            bottom: 0px;
+            @media screen and (min-width: $on-large) {
+                bottom: -20px;
+            }
+        }
+        &.left {
+            left: -15px;
+            @media screen and (min-width: $on-large) {
+                left: -30px;
+            }
+        }
+        &.right {
+            right: -10px;
+            @media screen and (min-width: $on-large) {
+                right: -20px;
+            }
+        }
+
+        &.purple path {
+            fill: $brand-color-light;
+            opacity: .6;
+        }
+        &.pink path {
+            fill: $pink;
+            opacity: .7;
+        }
+        &.yellow path {
+            fill: $yellow;
+        }
+        &.green path {
+            fill: $green;
+        }
+        &.blue path {
+            fill: $blue;
+        }
+
+        // &:hover {
+        //     transform: rotateZ(5deg);
+        // }
+    }
+
+}
+
+#three-canvas {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    // z-index: -1;
+    cursor: pointer;
+}

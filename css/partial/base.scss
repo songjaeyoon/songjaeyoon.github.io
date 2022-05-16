@@ -1,0 +1,176 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  html, body {
+    position: relative;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  ::selection {
+    background: $brand-color-light;
+    text-shadow: none;
+  }
+  ::-moz-selection {
+    background: $brand-color-light;
+    text-shadow: none;
+  }
+  
+  /**
+   * Reset some basic elements
+   */
+  body, h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre, hr,
+  dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+  
+  }
+
+  
+  /**
+   * Basic styling
+   */
+  body {
+    font: $base-font-weight #{$base-font-size-mobile}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+       -moz-font-feature-settings: "kern" 1;
+         -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 1rem;
+    @media screen and (min-width: $on-large) {
+      font-size: $base-font-size;
+      padding: 0;
+    }
+  }
+  
+  
+  
+  /**
+   * Set `margin-bottom` to maintain vertical rhythm
+   */
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre,
+  ul, ol, dl, figure,
+  %vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: $brand-color;
+  }
+  
+  /**
+   * `main` element
+   */
+  main {
+    display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  }
+  
+  
+  
+  /**
+   * Images
+   */
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+  /**
+   * Lists
+   */
+  ul, ol {
+    margin-left: $spacing-unit;
+  }
+  
+  li {
+    > ul,
+    > ol {
+      margin-bottom: 0;
+    }
+  }
+  
+  
+  
+  /**
+   * Headings
+   */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+  }
+  
+  /**
+   * Links
+   */
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: opacity .5s ease;
+  }
+
+  a[href]:hover {
+    color: $text-color;
+    opacity: .9;
+    text-decoration: none;
+  }
+  
+  
+ 
+
+  .indent {
+    padding-left: $spacing-unit;
+  }
+
+  .text-muted {
+      color: $grey-color;
+  }
+
+  .text-serif {
+    font-family: $serif-font-family;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  .text-justify {
+    text-align: justify;
+}
+
+  small {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.85rem;
+    display: inline-block;
+  }
+
+  .align-items-center {
+    align-items: center;
+    display: flex;
+  }
+
+  .pointer {
+      cursor: pointer;
+  }
+
+  .hidden {
+      display: none;
+  }
+
+  footer {
+      padding: 3rem 0;
+      margin-top: 4rem;
+  }
