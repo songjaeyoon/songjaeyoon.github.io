@@ -11254,17 +11254,17 @@ function checkIntersection( object, material, raycaster, ray, pA, pB, pC, point 
 
 	let intersect;
 
-	if ( material.side === BackSide ) {
+	// if ( material.side === BackSide ) {
 
-		intersect = ray.intersectTriangle( pC, pB, pA, true, point );
+	// 	intersect = ray.intersectTriangle( pC, pB, pA, true, point );
 
-	} else {
+	// } else {
 
-		intersect = ray.intersectTriangle( pA, pB, pC, material.side !== DoubleSide, point );
+	// 	intersect = ray.intersectTriangle( pA, pB, pC, material.side !== DoubleSide, point );
 
-	}
+	// }
 
-	if ( intersect === null ) return null;
+	// if ( intersect === null ) return null;
 
 	_intersectionPointWorld.copy( point );
 	_intersectionPointWorld.applyMatrix4( object.matrixWorld );

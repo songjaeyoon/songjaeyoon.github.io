@@ -740,6 +740,13 @@ nav a.active {
   fill: #baffff;
 }
 
+#three-canvas {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  cursor: pointer;
+}
+
 .exp {
   position: relative;
 }

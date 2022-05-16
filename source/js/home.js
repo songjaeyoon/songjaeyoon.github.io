@@ -10,7 +10,7 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true, // 배경을 투명하게
 });
 const width = window.innerWidth
-const height = window.innerHeight / 2;
+const height = window.innerHeight;
 renderer.setSize(width, height);
 
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1); // 고해상도 처리
@@ -23,23 +23,24 @@ const scene = new THREE.Scene();
 /* 
 * camera
 */
-const camera = new THREE.PerspectiveCamera(
-	75, // 시야각(field of view; fov)
-    width / height, // 종횡비(aspect)
-    0.1, // near 
-    1000, // far
-);
+// const camera = new THREE.OrthographicCamera(
+// 	-(width / height),
+//     width / height, 
+//     1,
+//     -1,
+//     0.1, // near 
+//     1000, // far
+// );
+const 
 
 // 위치 설정을 안하면 카메라의 디폴트 위치는 (0, 0, 0) 잘 안보일 거기 때문에 보통은 살짝 위치를 바꾼다.
-camera.position.x = 1; 
-camera.position.y = 2; 
-camera.position.z = 5; 
+camera.position.set(3, 2, 4);
 
 // 카메라가 원점을 바라보도록 조정
 camera.lookAt(0, 0, 0);
 
 // 카메라 줌: 기본값은 1 절반으로 하면 줌아웃
-camera.zoom = 0.5;
+camera.zoom = 0.2;
 camera.updateProjectionMatrix(); // 뭔가 바꿨으면 호출 필요
 
 // 무대 위에 카메라 올리기
@@ -49,37 +50,136 @@ scene.add(camera);
 /* 
 * light
 */
-scene.fog = new THREE.Fog(
-    "pink", 
-    -7, // near (범위 시작)
-    7, // far (범위 끝)
-)
-
-const light = new THREE.DirectionalLight(
-    0xffffff, // 빛의 색상
-    2, // 빛의 강도 (100이면 강함, 1이면 약함)
+const ambientLight = new THREE.AmbientLight(
+    "#fff", // 빛의 색상
+    1, // 빛의 강도 (100이면 강함, 1이면 약함)
 );
-light.position.x = 1;
-light.position.z = 2;
-scene.add(light);
-
+scene.add(ambientLight);
 
 /* 
 * mesh
 */
-const geometry = new THREE.BoxGeometry(1, 2, 1); // 직육면체
-const material = new THREE.MeshStandardMaterial({
-  color: "white",
-});
+const meshPositions = [-4, -2, 0, 0, 0];
+const meshScales = [0.5, 0.75, 1, 0.75, 0.5];
+const textureLoader = new THREE.TextureLoader();
+const texture = textureLoader.load("/images/bg.jpg");
+const textureFloor = textureLoader.load("/images/bg_floor.jpg");
+const texture1 = textureLoader.load("/images/bg1.jpg");
+const texture2 = textureLoader.load("/images/bg2.jpg");
+const texture3 = textureLoader.load("/images/bg3.jpg");
+const texture4 = textureLoader.load("/images/bg4.jpg");
+const texture5 = textureLoader.load("/images/bg5.jpg");
+const meshTextures = [texture1, texture2, texture3, texture4, texture5];
+const geometry = new THREE.BoxGeometry(2, 5, 2); // 직육면체
 
 const meshes = [];
-let mesh;
-for (let i = 0; i < 10; i++) {
-	mesh = new THREE.Mesh(geometry, material);  
-    mesh.position.x = Math.random() * 5 - 2.5;
-    mesh.position.z = Math.random() * 5 - 2.5;
-    scene.add(mesh);
+const meshGroup = new THREE.Group();
+
+for (let i = 0; i < 5; i++) {
+
+    const leftSide = i < 3 ? meshTextures[i] : texture;
+    const rightSide = i >= 3 ? meshTextures[i] : texture;
+    const materials = [
+        new THREE.MeshStandardMaterial({
+            map: rightSide,
+        }),
+        new THREE.MeshStandardMaterial({
+            map: texture,
+        }),
+        new THREE.MeshStandardMaterial({
+            map: texture,
+        }),
+        new THREE.MeshStandardMaterial({
+            map: texture,
+        }),
+        new THREE.MeshStandardMaterial({
+            map: leftSide,
+        }),
+    ];
+
+    const mesh = new THREE.Mesh(geometry, materials); 
+    mesh.position.set(meshPositions[i], 0, meshPositions[4 - i])
+    mesh.scale.set(meshScales[i], meshScales[i], meshScales[i]);
+    mesh.name = `mesh${i}`;
+
+    meshGroup.add(mesh);
     meshes.push(mesh);
+}
+
+const floorMaterials = [
+    new THREE.MeshStandardMaterial({
+        map: texture,
+    }),
+    new THREE.MeshStandardMaterial({
+        map: texture,
+    }),
+    new THREE.MeshStandardMaterial({
+        map: textureFloor,
+    }),
+    new THREE.MeshStandardMaterial({
+        map: texture,
+    }),
+    new THREE.MeshStandardMaterial({
+        map: texture,
+    }),
+];
+
+const floor = new THREE.Mesh(geometry, floorMaterials);
+floor.scale.set(4, 0.1, 4);
+floor.position.set(-1.5, -1.5, -1.5);
+meshGroup.add(floor);
+
+meshGroup.rotation.y = -0.1;
+scene.add(meshGroup);
+
+
+/* 
+* mousemove
+*/
+const threshold = 0.25;
+const mouse = new THREE.Vector2();
+const handleMousemove = (e) => {
+    mouse.x = e.clientX / canvas.clientWidth * 2 - 1;
+    mouse.y = -(e.clientY / canvas.clientHeight * 2 - 1);
+
+    const domElement = document.body;
+    const halfWidth = domElement.offsetWidth / 2;
+    const yawLeft = - ( ( e.pageX - domElement.offsetLeft ) - halfWidth ) / halfWidth;
+
+    if (meshGroup.rotation.y <= threshold && meshGroup.rotation.y >= -1 * threshold) {
+        meshGroup.rotation.y += (yawLeft * 0.02);
+
+        if (meshGroup.rotation.y > threshold) {
+            meshGroup.rotation.y = threshold;
+        }
+        else if (meshGroup.rotation.y < -1 * threshold) {
+            meshGroup.rotation.y = -1 * threshold;
+        }
+    }
+}
+
+/* 
+* click
+*/
+const raycaster = new THREE.Raycaster();
+const paths = ["/about", "/publications", "/projects", "/other", "https://blog.jaeyoon.io"]
+const handleClick = (e) => {
+    raycaster.setFromCamera( mouse, camera );
+
+    const intersects = raycaster.intersectObjects( meshes );
+    const names = intersects.map(i => i.object.name);
+
+    if (names.length > 0) {
+        const index = parseInt(names[0].substr(4, ));
+        if (index < 4) {
+            window.location.href = paths[index];
+        }
+        else {
+            window.location.replace(paths[index]);
+        }
+        console.log(names);
+        console.log(intersects);
+    }
 }
 
 
@@ -88,7 +188,9 @@ for (let i = 0; i < 10; i++) {
 */
 // renderer로 그려줘야 최종적으로 보인다
 const draw = () => {
-	renderer.render(scene, camera)
+    camera.lookAt(meshes[2].position);
+	renderer.render(scene, camera);
+    renderer.setAnimationLoop(draw);
 }
 
 draw();
@@ -109,3 +211,5 @@ const setSize = () => {
 }
   
 window.addEventListener("resize", setSize);
+document.body.addEventListener("mousemove", handleMousemove)
+canvas.addEventListener("click", handleClick);

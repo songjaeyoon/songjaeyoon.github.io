@@ -69,6 +69,7 @@
 
 <% const keywords = site.data.projects.map(p => p.keywords).flat() %>
 
+<script src="/js/tagger.js"></script>
 <script>
     var projects = Array.from(document.querySelectorAll(".project"));
     var keywordList = "<%= keywords %>".split(",");
