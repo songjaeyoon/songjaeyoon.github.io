@@ -66,13 +66,13 @@ scene.add(ambientLight);
 const meshPositions = [-4, -2, 0, 0, 0];
 const meshScales = [0.5, 0.75, 1, 0.75, 0.5];
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("/images/bg.jpg");
-const textureFloor = textureLoader.load("/images/bg_floor.jpg");
-const texture1 = textureLoader.load("/images/bg1.jpg");
-const texture2 = textureLoader.load("/images/bg2.jpg");
-const texture3 = textureLoader.load("/images/bg3.jpg");
-const texture4 = textureLoader.load("/images/bg4.jpg");
-const texture5 = textureLoader.load("/images/bg5.jpg");
+const texture = textureLoader.load("/images/bg.jpeg");
+const textureFloor = textureLoader.load("/images/bg_floor.jpeg");
+const texture1 = textureLoader.load("/images/bg1-min.jpg");
+const texture2 = textureLoader.load("/images/bg2-min.jpg");
+const texture3 = textureLoader.load("/images/bg3-min.jpg");
+const texture4 = textureLoader.load("/images/bg4-min.jpg");
+const texture5 = textureLoader.load("/images/bg5-min.jpg");
 const meshTextures = [texture1, texture2, texture3, texture4, texture5];
 const geometry = new THREE.BoxGeometry(2, 5, 2); // 직육면체
 
