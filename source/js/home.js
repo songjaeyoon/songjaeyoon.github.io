@@ -161,7 +161,8 @@ const handleMousemove = (e) => {
 /* 
 * click
 */
-
+// https://stackoverflow.com/questions/27409074/converting-3d-position-to-2d-screen-position-r69
+// Credit to meirm
 function toScreenPosition(obj, camera)
 {
     var vector = new THREE.Vector3();
