@@ -8,7 +8,7 @@ const paths = Array.from(document.querySelectorAll("svg path"));
 
 const connected = [false, false, false, false];
 const snapDist = 10;
-const smooth = 0.15;
+const smooth = 0.2;
 
 // other values
 const nexts = [
