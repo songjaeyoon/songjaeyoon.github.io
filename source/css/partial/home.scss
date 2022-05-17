@@ -62,3 +62,14 @@
     // z-index: -1;
     cursor: pointer;
 }
+
+.home {
+    @media (max-width: $on-medium) {
+        height: calc(100vh - 4rem);
+        position: fixed;
+        left: 1rem;
+        overflow: hidden;
+        font-size: 96%;
+        width: calc(100% - 2rem);
+    }
+}
