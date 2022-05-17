@@ -3,13 +3,7 @@
         <input type="checkbox" id="mobile-menu-checkbox"/>
         <label for="mobile-menu-checkbox" class="mobile-nav-btn">menu</label>
         <div class="mobile-nav-content">
-            <% for (let item in config.menu) { %>
-                <a 
-                    class="<%= page.title === item.toLowerCase() ? 'active' : '' %>" 
-                    href="<%= config.menu[item] %>"> 
-                        <%= item %> 
-                </a>
-            <% } %>
+            <%- partial('menu_list') %>
         </div>
     </div>
 </header>

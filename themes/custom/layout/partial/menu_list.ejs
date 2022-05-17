@@ -1,0 +1,7 @@
+<% for (let item in config.menu) { %>
+    <a 
+        class="<%= page.title && page.title.toLowerCase() === item.toLowerCase() ? 'active' : '' %>" 
+        href="<%= config.menu[item] %>"> 
+            <%= item %> 
+    </a>
+<% } %>
