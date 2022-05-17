@@ -824,6 +824,17 @@ header.header nav a.active {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .home {
+    height: calc(100vh - 4rem);
+    position: fixed;
+    left: 1rem;
+    overflow: hidden;
+    font-size: 96%;
+    width: calc(100% - 2rem);
+  }
+}
+
 .exp {
   position: relative;
 }

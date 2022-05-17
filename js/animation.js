@@ -3,20 +3,29 @@
 
 TweenLite.defaultEase = Elastic.easeOut.config(1, 0.2);
 
-var svgs  = Array.from(document.querySelectorAll("svg"));
-var paths = Array.from(document.querySelectorAll("svg path"));
+const svgs  = Array.from(document.querySelectorAll("svg"));
+const paths = Array.from(document.querySelectorAll("svg path"));
 
-var connected = [false, false, false, false];
-var snapDist = 30;
+const connected = [false, false, false, false];
+const snapDist = 10;
+const smooth = 0.2;
+
+// other values
+const nexts = [
+    [267, 416], // 223, 406, 138, 435],
+    [151, 223], // 161, 186, 129, 115],
+    [518, 240], // 561, 221, 640, 264],
+    [538, 81], // 558, 121, 660, 76],
+];
 
 // get 4 curves each with 3 points
-var starts = [
+const starts = [
     [327, 275, 365, 328, 316, 372],
     [306, 273, 248, 305, 199, 264], // 150 ?
     [409, 48, 430, 140, 474, 190],
     [327, 187, 348, 128, 442, 104],
 ];
-var curves = [
+const curves = [
     { x0: 327, y0: 275, x1: 365, y1: 328, x2: 316, y2: 372},
     { x0: 306, y0: 273, x1: 248, y1: 305, x2: 199, y2: 264},
     { x0: 409, y0: 48, x1: 430, y1: 140, x2: 474, y2: 190},
@@ -46,7 +55,6 @@ const update = () => {
     
         // animation for the reset
         const maxDistance = getMaxDistance(curves[index], starts[index]);
-        // console.log(maxDistance);
         if (maxDistance > snapDist * 2) {        
             connected[index] = false;
 
@@ -59,6 +67,27 @@ const update = () => {
     } 
 }
 
+// https://codepen.io/francoisromain/pen/XabdZm
+const line = (pointA, pointB) => {
+    const lengthX = pointB[0] - pointA[0]
+    const lengthY = pointB[1] - pointA[1]
+    return {
+      length: Math.sqrt(Math.pow(lengthX, 2) + Math.pow(lengthY, 2)),
+      angle: Math.atan2(lengthY, lengthX)
+    }
+}
+const calculateCurve = (curr, prev, next, reverse) => {
+    const l = line(prev || curr, next || curr);
+
+    const angle = l.angle + (reverse ? Math.PI : 0);
+    const length = l.length * smooth;
+
+    const x = curr[0] + Math.cos(angle) * length;
+    const y = curr[1] + Math.sin(angle) * length;
+
+    return [x, y];
+}
+
 const handleHover = (event) => {
     const id = event.target.id || event.target.parentElement.id;
     const index = parseInt(id.substr(5, ))
@@ -68,14 +97,22 @@ const handleHover = (event) => {
         TweenLite.killTweensOf(curves[index]); // Kill any active tweens on the point
     }
 
+    const point2 = [parseInt(event.offsetX * 2 - curves[index].x2 / 2), parseInt(event.offsetY * 2 - curves[index].y2 / 2)];
+
+    const prevprev = [curves[index].x0, curves[index].y0];
+    const prev = [curves[index].x1, curves[index].y1];
+
+    const point0 = calculateCurve(prev, prevprev, point2);
+    const point1 = calculateCurve(point2, prev, nexts[index], true);
+
     if (connected[index]) { 
         curves[index] = {
-            x0: parseInt(event.offsetX * 2 - curves[index].x0 / 2), 
-            y0: parseInt(event.offsetY * 2 - curves[index].y0 / 2),
-            x1: parseInt(event.offsetX * 2 - curves[index].x1 / 2), 
-            y1: parseInt(event.offsetY * 2 - curves[index].y1 / 2),
-            x2: parseInt(event.offsetX * 2 - curves[index].x2 / 2), 
-            y2: parseInt(event.offsetY * 2 - curves[index].y2 / 2),
+            x0: point0[0], 
+            y0: point0[1],
+            x1: point1[0], 
+            y1: point1[1],
+            x2: point2[0], 
+            y2: point2[1],
         }
     }
 }
