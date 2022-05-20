@@ -3,7 +3,7 @@
         width: 30%;
         position: fixed;
         transition: transform .5s ease;
-        z-index: 1000;
+        z-index: 998;
 
         &.top {
             top: -10px;
@@ -32,11 +32,9 @@
 
         &.purple path {
             fill: $brand-color-light;
-            opacity: .6;
         }
         &.pink path {
             fill: $pink;
-            opacity: .7;
         }
         &.yellow path {
             fill: $yellow;
@@ -57,8 +55,11 @@
 
 #three-canvas {
     position: fixed;
-    top: 4rem;
+    top: 15%;
     left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
     // z-index: -1;
     cursor: pointer;
 }

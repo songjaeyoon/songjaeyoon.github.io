@@ -4,14 +4,16 @@ import * as THREE from "./three.module.js";
 * renderer
 */
 const canvas = document.querySelector("#three-canvas");
+const aspect = 1.81;
 const renderer = new THREE.WebGLRenderer({ 
   canvas, // 미리 만든 canvas
   antialias: true, // 계단식으로 깨지는 걸 부드럽게 해줌. 대신 약간의 성능 저하 있음
   alpha: true, // 배경을 투명하게
 });
-const width = window.innerWidth
-const height = window.innerHeight;
+const width = window.innerWidth;
+const height = window.innerWidth / aspect;
 renderer.setSize(width, height);
+console.log(width, height);
 
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1); // 고해상도 처리
 
@@ -229,11 +231,11 @@ draw();
 */ 
 const setSize = () => {
     // 카메라 재설정
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = aspect;
     // 카메라 투영에 관련된 값에 변화가 있을 경우 실행해야 함
     camera.updateProjectionMatrix();
     // renderer 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerWidth / aspect);
     renderer.render(scene, camera);
 }
   
