@@ -7,7 +7,8 @@ const svgs  = Array.from(document.querySelectorAll("svg"));
 const paths = Array.from(document.querySelectorAll("svg path"));
 
 const connected = [false, false, false, false];
-const snapDist = 10;
+const snapDist = 50;
+const thresholdDist = 110;
 const smooth = 0.2;
 
 // other values
@@ -55,7 +56,8 @@ const update = () => {
     
         // animation for the reset
         const maxDistance = getMaxDistance(curves[index], starts[index]);
-        if (maxDistance > snapDist * 2) {        
+        if (maxDistance > snapDist * 2) {   
+            console.log("end");     
             connected[index] = false;
 
             TweenLite.to(curves[index], 1, { 
@@ -90,14 +92,17 @@ const calculateCurve = (curr, prev, next, reverse) => {
 
 const handleHover = (event) => {
     const id = event.target.id || event.target.parentElement.id;
-    const index = parseInt(id.substr(5, ))
+    const index = parseInt(id.substr(5, ));
   
     if (!connected[index] && !isNaN(index)) {    
         connected[index] = true;   
         TweenLite.killTweensOf(curves[index]); // Kill any active tweens on the point
     }
+    
+    const mouseX = index >= 2 ? event.offsetX + svgs[index].clientWidth / 4 : event.offsetX;
+    const mouseY = event.offsetY;
 
-    const point2 = [parseInt(event.offsetX * 2 - curves[index].x2 / 2), parseInt(event.offsetY * 2 - curves[index].y2 / 2)];
+    const point2 = [parseInt(mouseX * 2 - curves[index].x2 / 2), parseInt(mouseY * 2 - curves[index].y2 / 2)];
 
     const prevprev = [curves[index].x0, curves[index].y0];
     const prev = [curves[index].x1, curves[index].y1];
@@ -105,15 +110,26 @@ const handleHover = (event) => {
     const point0 = calculateCurve(prev, prevprev, point2);
     const point1 = calculateCurve(point2, prev, nexts[index], true);
 
-    if (connected[index]) { 
+    // convert with regard to the viewbox
+    const svgWidth = svgs[index].viewBox.baseVal.width;
+    const svgHeight = svgs[index].viewBox.baseVal.height;
+
+    const startX = starts[index][4] / svgWidth * svgs[index].clientWidth;
+    const startY = starts[index][5] / svgHeight * svgs[index].clientHeight;
+
+    const dist = Math.sqrt(Math.pow(event.offsetX - startX, 2) + Math.pow(event.offsetY - startY, 2));
+
+    // console.log(dist);
+    if (dist <= thresholdDist && connected[index]) { 
+        console.log("start");
         curves[index] = {
-            x0: point0[0], 
+            x0: point0[0],
             y0: point0[1],
             x1: point1[0], 
             y1: point1[1],
             x2: point2[0], 
             y2: point2[1],
-        }
+        };
     }
 }
 
