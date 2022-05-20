@@ -4,45 +4,64 @@ header.header {
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    z-index: 999;
+    z-index: 997;
 
     &.home {
         position: absolute;
         right: 2.5rem;
         top: calc(50% - 50px);
-        .mobile-nav-content {
-            top: -100px;
-            right: 70px;
-        }
         .mobile-nav {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-end;
             position: relative;
         }
     }
 
     #mobile-menu-checkbox {
         display: none;
-        &:checked ~ .mobile-nav-content {
-            opacity: 1;
-            pointer-events: all;
+        &:checked {
+            &~ .mobile-nav-btn:before {
+                content: "X";
+                font-size: 300%;
+                margin-right: 0;
+                @media (min-width: $on-medium) {
+                    margin-right: 2rem;
+                }
+            }
+            &~ .mobile-nav-content {
+                opacity: 1;
+                pointer-events: all;
+            }
         }
     }
 
     .mobile-nav-content {
-        position: absolute;
-        top: 55px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        background-color: #7c4dff;
         display: flex;
         flex-direction: column;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        pointer-events: none;
+        align-items: center;
+        justify-content: center;
+        // text-align: left;
+        font-size: 3rem;
+        font-weight: bold;
         opacity: 0;
+        pointer-events: none;
         transition: opacity .5s ease;
         a {
-            padding: .5rem 2rem;
-            border-bottom: 1px solid #ccc;
+            color: #fff;
+            width: fit-content;
+            padding: 0 1rem;
+            transition: color .5s ease;
+            &:hover {
+                color: #000;
+            }
         }
     }
 
@@ -70,6 +89,10 @@ header.header {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        z-index: 1000;
+        &:before {
+            content: "menu";
+        }
     }
     .mobile-nav {
         display: none;

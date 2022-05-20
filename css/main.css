@@ -14,17 +14,17 @@ html, body {
 }
 
 ::-moz-selection {
-  background: #baa2ff;
+  background: #d5c7ff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #baa2ff;
+  background: #d5c7ff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: #baa2ff;
+  background: #d5c7ff;
   text-shadow: none;
 }
 
@@ -667,44 +667,64 @@ header.header {
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.95);
-  z-index: 999;
+  z-index: 997;
 }
 header.header.home {
   position: absolute;
   right: 2.5rem;
   top: calc(50% - 50px);
 }
-header.header.home .mobile-nav-content {
-  top: -100px;
-  right: 70px;
-}
 header.header.home .mobile-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
 }
 header.header #mobile-menu-checkbox {
   display: none;
+}
+header.header #mobile-menu-checkbox:checked ~ .mobile-nav-btn:before {
+  content: "X";
+  font-size: 300%;
+  margin-right: 0;
+}
+@media (min-width: 600px) {
+  header.header #mobile-menu-checkbox:checked ~ .mobile-nav-btn:before {
+    margin-right: 2rem;
+  }
 }
 header.header #mobile-menu-checkbox:checked ~ .mobile-nav-content {
   opacity: 1;
   pointer-events: all;
 }
 header.header .mobile-nav-content {
-  position: absolute;
-  top: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: #7c4dff;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s ease;
 }
 header.header .mobile-nav-content a {
-  padding: 0.5rem 2rem;
-  border-bottom: 1px solid #ccc;
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 1rem;
+  transition: color 0.5s ease;
+}
+header.header .mobile-nav-content a:hover {
+  color: #000;
 }
 header.header .mobile-nav-btn {
   background-color: #7c4dff;
@@ -729,6 +749,10 @@ header.header .mobile-nav-btn {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 1000;
+}
+header.header .mobile-nav-btn:before {
+  content: "menu";
 }
 header.header .mobile-nav {
   display: none;
@@ -765,7 +789,7 @@ header.header nav a.active {
   width: 30%;
   position: fixed;
   transition: transform 0.5s ease;
-  z-index: 1000;
+  z-index: 998;
 }
 .cloud-wrapper .cloud.top {
   top: -10px;
@@ -800,12 +824,10 @@ header.header nav a.active {
   }
 }
 .cloud-wrapper .cloud.purple path {
-  fill: #baa2ff;
-  opacity: 0.6;
+  fill: #d5c7ff;
 }
 .cloud-wrapper .cloud.pink path {
-  fill: #eebefa;
-  opacity: 0.7;
+  fill: #f3d2fc;
 }
 .cloud-wrapper .cloud.yellow path {
   fill: #ffffbf;
@@ -819,8 +841,11 @@ header.header nav a.active {
 
 #three-canvas {
   position: fixed;
-  top: 4rem;
+  top: 15%;
   left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
   cursor: pointer;
 }
 
