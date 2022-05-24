@@ -8,13 +8,15 @@ header.header {
 
     &.home {
         position: absolute;
-        right: 2.5rem;
-        top: calc(50% - 50px);
-        .mobile-nav {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            position: relative;
+        @media (min-width: $on-medium) {
+            right: 2.5rem;
+            top: calc(50% - 50px);
+            .mobile-nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                position: relative;
+            }
         }
     }
 

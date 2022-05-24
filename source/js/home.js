@@ -10,8 +10,13 @@ const renderer = new THREE.WebGLRenderer({
   antialias: true, // 계단식으로 깨지는 걸 부드럽게 해줌. 대신 약간의 성능 저하 있음
   alpha: true, // 배경을 투명하게
 });
-const width = window.innerWidth;
-const height = window.innerWidth / aspect;
+const width = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight;
+const height = width / aspect;
+
+if (width > window.innerWidth) {
+    canvas.style.marginLeft = `-${parseInt((width - window.innerWidth) / 2)}px`
+}
+
 renderer.setSize(width, height);
 console.log(width, height);
 

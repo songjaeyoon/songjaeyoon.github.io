@@ -74,3 +74,9 @@
         width: calc(100% - 2rem);
     }
 }
+
+.title {
+    @media (max-width: $on-medium) {
+        margin-top: 7rem !important;
+    } 
+}
