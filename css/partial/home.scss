@@ -32,11 +32,9 @@
 
         &.purple path {
             fill: $brand-color-light;
-            opacity: .6;
         }
         &.pink path {
             fill: $pink;
-            opacity: .7;
         }
         &.yellow path {
             fill: $yellow;
@@ -75,4 +73,10 @@
         font-size: 96%;
         width: calc(100% - 2rem);
     }
+}
+
+.title {
+    @media (max-width: $on-medium) {
+        margin-top: 7rem !important;
+    } 
 }
