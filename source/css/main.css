@@ -855,7 +855,7 @@ header.header nav a.active {
 
 @media (max-width: 600px) {
   .home {
-    height: calc(100vh - 4rem);
+    height: calc(100% - 6rem);
     position: fixed;
     left: 1rem;
     overflow: hidden;
