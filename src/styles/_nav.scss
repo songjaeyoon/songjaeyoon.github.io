@@ -1,0 +1,21 @@
+.fab-container {
+    top: 1rem;
+    right: 2rem;
+    .fab-item {
+        background-color: $brand-color !important;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 3px 6px rgb(0 0 0 / 20%);
+    }
+    @media (min-width: $on-large) {
+        top: 1.6rem;
+        right: 2.8rem;
+    }
+    &:hover {
+        .fab-item.fab-rotate {
+            transform: rotate(45deg);
+            box-shadow: 5px 5px 20px rgb(0 0 0 / 19%), 3px 3px 6px rgb(0 0 0 / 23%);
+            transition: box-shadow .2s ease, transform .1s ease;
+            outline: none;
+        }
+    }
+}

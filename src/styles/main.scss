@@ -14,7 +14,7 @@ $base-line-height: 1.6 !default;
 $text-color:       #444452 !default;
 $black:            #1f1f21 !default;
 $background-color: #fffef5 !default;
-$brand-color:      #a40f0f !default;
+$brand-color:      #b41717 !default;
 $brand-color-light:#a2d8d8 !default;
 
 $grey-color:       #828282 !default;
@@ -51,5 +51,6 @@ $on-large:         $on-laptop !default;
 // import partials
 @import
   "base",
-  "grid"
+  "grid",
+  "nav"
 ;

@@ -1,26 +1,44 @@
-import { FloatingButton, Item } from "react-floating-button";
-import homeIcon from "../images/home.svg";
-import projectsIcon from "../images/projects.svg";
+import React from 'react';
+import { FloatingButton, Item } from "../fab";
 
 const Navigation = () => {
     return (
-      <div className="container">
         <FloatingButton
+            top={true}
         >
             <Item
-                imgSrc={homeIcon}
+                icon="🖋"
                 onClick={() => {
-                console.log("callback function here");
+                    console.log("callback function here");
                 }}
             />
             <Item
-                imgSrc={projectsIcon}
+                icon="🎨"
                 onClick={() => {
-                console.log("callback function here");
+                    console.log("callback function here");
                 }}
             />
-        </FloatingButton>;
-      </div>
+            <Item
+                icon="🔥"
+                onClick={() => {
+                    console.log("callback function here");
+                }}
+            />
+            <Item
+                icon="📑"
+                onClick={() => {
+                    console.log("callback function here");
+                }}
+            />
+            <Item
+                icon="👩‍💻"
+                onClick={() => {
+                    console.log("callback function here");
+                }}
+            />
+            
+            
+        </FloatingButton>
     );
 }
   
