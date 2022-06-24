@@ -15,27 +15,28 @@ const Navigation = ({ history }) => {
             <Item
                 icon="🎨"
                 onClick={() => {
-                    history.push("/fun");
-                }}
-            />
-            <Item
-                icon="🔥"
-                onClick={() => {
-                    history.push("/projects");
-                }}
-            />
-            <Item
-                icon="📑"
-                onClick={() => {
-                    history.push("/publications");
+                    history.push("/designer");
                 }}
             />
             <Item
                 icon="👩‍💻"
                 onClick={() => {
-                    history.push("/about");
+                    history.push("/developer");
                 }}
             />
+            <Item
+                icon="🧐"
+                onClick={() => {
+                    history.push("/researcher");
+                }}
+            />
+            <Item
+                icon="📚"
+                onClick={() => {
+                    history.push("/publications");
+                }}
+            />
+            
             
             
         </FloatingButton>

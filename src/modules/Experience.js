@@ -1,6 +1,6 @@
 const Experience = ({ exp }) => {
     return (
-        <div class="exp mb-3">
+        <div className="exp mb-3">
             <div>
                 <a target="_blank" href={`${exp.url}`}>
                     <b>{exp.institute}</b>
@@ -14,7 +14,7 @@ const Experience = ({ exp }) => {
                 </a>
             </div>
 
-            <div class="date">
+            <div className="date">
                 <small>{exp.time}</small>
             </div>
         </div>

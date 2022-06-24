@@ -17,21 +17,6 @@ const paths = [
     "https://blog.jaeyoon.io",
 ];
 
-const sideScroll = (element,direction,speed,distance,step) => {
-    let scrollAmount = 0;
-    var slideTimer = setInterval(() => {
-        if (direction === 'left'){
-            element.scrollLeft -= step;
-        } else {
-            element.scrollLeft += step;
-        }
-        scrollAmount += step;
-        if (scrollAmount >= distance){
-            window.clearInterval(slideTimer);
-        }
-    }, speed);
-} 
-
 const Card = ({title, classes, path}) => {
     return(
         <div className={`card ${classes}`}>
@@ -47,6 +32,7 @@ const Card = ({title, classes, path}) => {
 }
 
 let timeout;
+let borderTimeout;
 
 class CardContainer extends React.Component {
 
@@ -130,6 +116,15 @@ class CardContainer extends React.Component {
         scrollPos: element.scrollLeft,
       });
     }
+
+    handleMouseover(e) {
+        clearTimeout(borderTimeout);
+        const border = document.querySelector(".border")
+        border.style.borderColor = getComputedStyle(e.target).borderColor;
+        borderTimeout = setTimeout(() => {
+            border.style.borderColor = "#b41717"
+        }, 3000);
+    }
     
     componentDidUpdate(prevProps, prevState) {
         if (this.state.disableScroll) {
@@ -148,11 +143,16 @@ class CardContainer extends React.Component {
             timeout = setTimeout(autoScroll, 50);
         } 
         autoScroll();
+
+        const cards = Array.from(document.querySelectorAll(".card"))
+        cards.forEach(card => {
+            card.addEventListener("mouseover", this.handleMouseover);
+        })
     }
     
     componentWillUnmount() {
       window.removeEventListener('resize', this.reCalc);
-    //   clearTimeout(timeout);
+      clearTimeout(timeout);
     }
     
     render() {

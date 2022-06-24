@@ -6,6 +6,10 @@ import Experience from '../modules/Experience';
 import Education from '../modules/Education';
 import { education, experience } from "../data";
 
+import project1 from "../images/story.jpeg";
+import project2 from "../images/note-taking.jpeg";
+import { Link } from 'react-router-dom';
+
 const Home = () => {
     return (
         <div className="container">
@@ -42,37 +46,37 @@ const Home = () => {
             </section>
 
             <section className="full-height bg-white py-4 px-3">
-                <aside class="row mb-5 mt-5">
-                    <div class="col-12 col-md-3 col-lg-2">
-                        <h2 class="text-serif">Experience</h2>
+                <aside className="row mb-5 mt-5">
+                    <div className="col-12 col-md-3 col-lg-2">
+                        <h2 className="text-serif">Experience</h2>
                     </div>
 
-                    <div class="col-12 indent col-md-7 col-lg-5">
+                    <div className="col-12 indent col-md-7 col-lg-5">
                         {experience.map((exp, i) => 
                             <Experience key={i} exp={exp} />
                         )}
                     </div>
                 </aside>
 
-                <aside class="row mb-5 mt-2">
-                    <div class="col-12 col-md-3 col-lg-2">
-                        <h2 class="text-serif">Education</h2>
+                <aside className="row mb-5 mt-2">
+                    <div className="col-12 col-md-3 col-lg-2">
+                        <h2 className="text-serif">Education</h2>
                     </div>
 
-                    <div class="col-12 indent col-md-7 col-lg-5">
+                    <div className="col-12 indent col-md-7 col-lg-5">
                         {education.map((edu, i) => 
                             <Education key={i} edu={edu} />
                         )}
                     </div>
                 </aside>
 
-                <aside class="row mb-5 mt-2">
-                    <div class="col-12 col-md-3 col-lg-2">
-                        <h2 class="text-serif">Resume</h2>
+                <aside className="row mb-5 mt-2">
+                    <div className="col-12 col-md-3 col-lg-2">
+                        <h2 className="text-serif">Resume</h2>
                     </div>
 
-                    <div class="col-12 indent col-md-7 col-lg-5">
-                        <div class="mb-2">
+                    <div className="col-12 indent col-md-7 col-lg-5">
+                        <div className="mb-2">
                             <a href="/pdf/CV.pdf"><b>🔗 Resume as a Researcher</b></a><br/>
                             Last updated: 10/16/2021
                         </div>
@@ -85,8 +89,58 @@ const Home = () => {
 
             </section>
 
-            <section className="full-height bg-red py-4">
+            <section className="full-height bg-gradient py-4 row current-projects">
+                <div className="col-11 text-right">
+                    <h2>
+                        <strong>Current Projects</strong>
+                    </h2>
+                    Here are some of the ongoing projects I'm working on.<br/>
+                    Please contact me for more information.
 
+                </div>
+
+                <div className="project col-12 col-md-7">
+                    <Parallax speed={10}>
+                        <img src={project1} />
+                    </Parallax>
+                    <div className="desc">
+                        <h3>GPT-3 and Humans writing story together</h3>
+                        <p>
+                            How fast can human-computer groups write romance stories together? How better are these stories?
+                        </p>
+                    </div>
+                </div>
+                <div className="col-12 col-md-5"></div>
+
+                <div className="col-12 col-md-5"></div>
+                <div className="project col-12 col-md-7">
+                    <Parallax speed={10}>
+                        <img src={project2} />
+                    </Parallax>
+                    <div className="desc">
+                        <h3>Supporting note-taking process in online meetings</h3>
+                        <p>
+                            How fast can human-computer groups write romance stories together? How better are these stories?
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="project col-12 col-md-7">
+                    <Parallax speed={10}>
+                        <img src={project1} />
+                    </Parallax>
+                    <div className="desc">
+                        <h3>Supporting note-taking process in online meetings</h3>
+                        <p>
+                            How fast can human-computer groups write romance stories together? How better are these stories?
+                        </p>
+                    </div>
+                </div>
+                <div className="col-12 col-md-5"></div>
+                
+                <div className="col-12 center">
+                    <Link to="/research" className="btn">View More</Link>
+                </div>
             </section>
         </div>
     );
