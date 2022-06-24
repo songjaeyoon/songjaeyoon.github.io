@@ -1,7 +1,7 @@
 import React from 'react';
 import { FloatingButton, Item } from "../fab";
 
-const Navigation = () => {
+const Navigation = ({ history }) => {
     return (
         <FloatingButton
             top={true}
@@ -9,31 +9,31 @@ const Navigation = () => {
             <Item
                 icon="🖋"
                 onClick={() => {
-                    console.log("callback function here");
+                    window.location.replace("https://blog.jaeyoon.io");
                 }}
             />
             <Item
                 icon="🎨"
                 onClick={() => {
-                    console.log("callback function here");
+                    history.push("/fun");
                 }}
             />
             <Item
                 icon="🔥"
                 onClick={() => {
-                    console.log("callback function here");
+                    history.push("/projects");
                 }}
             />
             <Item
                 icon="📑"
                 onClick={() => {
-                    console.log("callback function here");
+                    history.push("/publications");
                 }}
             />
             <Item
                 icon="👩‍💻"
                 onClick={() => {
-                    console.log("callback function here");
+                    history.push("/about");
                 }}
             />
             

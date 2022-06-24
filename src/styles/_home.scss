@@ -1,0 +1,122 @@
+.title {
+    font-size: 3.5rem;
+    font-weight: 200;
+    position: absolute;
+    bottom: 2rem;
+    left: 4rem;
+    line-height: 1.1;
+    @media (max-width: $on-large) {
+        font-size: 2.5rem;
+    }
+    @media (max-width: $on-medium) {
+        font-size: 2rem;
+        bottom: 1.5rem;
+        left: 2.5rem;
+    }
+}
+
+strong {
+    font-weight: 900;
+}
+
+section {
+    position: relative;
+}
+
+
+.initial-section {
+    padding-top: 30vh;
+    padding-top: 30dvh;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .scrolling-wrapper {
+        padding: 2rem 0;
+        overflow-x: scroll;
+        overflow-y: visible;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .card {
+            margin: 0 10px;
+            width: 250px;
+            height: 250px;
+            font-family: 'Helvetica';
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            box-shadow: 0px 0px 25px 7px rgba(0,0,0,0.1);
+            transition: transform .5s ease;
+            transform: translateY(0);
+            @media (max-width: $on-medium) {
+                width: 200px;
+                height: 200px;
+            }
+            .card-inner {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+            }
+            &:hover {
+                transform: translateY(-15px);
+            }
+            &.bg-1 > a {
+                background-color: #000;
+                color: #fff;
+            }
+            &.bg-2 > a {
+                background-color: transparent;
+                border: 2px solid $brand-color;
+                color: $brand-color;
+            }
+            &.bg-3 > a {
+                background-color: $brand-color;
+                color: #fff;
+            }
+            &.bg-4 > a {
+                background-color: #fff;
+                border: 2px solid $grey-color;
+                color: $grey-color;
+            }
+            &.bg-5 > a {
+                background-color: $grey-color;
+                color: #fff;
+            }
+        }
+        
+    }
+    
+}
+
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .bg-video {
+        height: 100%;
+        opacity: 0.2;
+    }
+}
+
+.center {
+    @extend %center;
+}
+.intro {
+    color: #fff;
+    padding: 4rem;
+    text-align: right;
+}
