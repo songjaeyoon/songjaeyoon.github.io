@@ -38,3 +38,18 @@ export const experience = [
     "advisorurl": "https://hcil.snu.ac.kr/people/jinwook-seo/"
   }
 ];
+
+export const currentProjects = [
+  {
+    title: "GPT-3 and Humans writing romance stories together",
+    desc: "How fast can human-computer groups write romance stories together, in comparison to computers alone or humans alone? How better or worse are these stories?",
+  },
+  {
+    title: "Supporting note-taking process in online meetings",
+    desc: "In meetings, it is difficult to pay attention and take notes at the same time. How can we support the note-taking process to reduce such a burden?",
+  },
+  {
+    title: "Adaptive representation of group availability for scheduling meetings",
+    desc: "How can we adjust the interface to minimize the cognitive load of selecting/digesting available times? How can we support complexities such as subtle preferences or priorities?",
+  },
+];

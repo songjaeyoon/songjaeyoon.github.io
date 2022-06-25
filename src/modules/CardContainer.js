@@ -21,7 +21,7 @@ const Card = ({title, classes, path}) => {
     return(
         <div className={`card ${classes}`}>
             {path.includes("http") ? 
-                <a href={path} target="_blank" className="card-inner">{title}</a>
+                <a href={path} target="_blank" rel="noreferrer"  className="card-inner">{title}</a>
             :
                 <Link to={path} className="card-inner">
                     {title}
@@ -122,7 +122,7 @@ class CardContainer extends React.Component {
         const border = document.querySelector(".border")
         border.style.borderColor = getComputedStyle(e.target).borderColor;
         borderTimeout = setTimeout(() => {
-            border.style.borderColor = "#b41717"
+            border.style.borderColor = "#000"; // "#b41717"
         }, 3000);
     }
     

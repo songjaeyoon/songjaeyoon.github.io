@@ -96,6 +96,7 @@
            i={getAngle(0).angle}
            size={size}
            distance={getAngle(0).distance}
+           description={children.props.description}
            style={{
              backgroundColor: children.props.backgroundColor,
            }}
@@ -112,6 +113,7 @@
                  i={getAngle(i).angle}
                  size={size}
                  distance={getAngle(i).distance}
+                 description={children[i].props.description}
                  style={{
                    backgroundColor: children[i].props.backgroundColor,
                    fontSize: 20,

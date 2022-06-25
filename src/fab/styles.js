@@ -44,6 +44,7 @@ export const Container = styled(
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 `;
 
 export const Item = styled(
@@ -85,4 +86,21 @@ export const Item = styled(
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &:after {
+    content: "${(props) => props.description}";
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: .5rem;
+    padding: .25rem .5rem;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -20px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    pointer-events: none;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
 `;

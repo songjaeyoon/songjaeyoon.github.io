@@ -1,14 +1,19 @@
 import React from 'react';
-import bgVideo from "../images/bg-video.mp4";
 import { Parallax } from 'react-scroll-parallax';
+import { isMobile } from "react-device-detect";
+import { Link } from 'react-router-dom';
+
 import CardContainer from '../modules/CardContainer';
 import Experience from '../modules/Experience';
 import Education from '../modules/Education';
-import { education, experience } from "../data";
 
+import { currentProjects, education, experience } from "../data";
+import bgVideo from "../images/bg-video.mp4";
 import project1 from "../images/story.jpeg";
 import project2 from "../images/note-taking.jpeg";
-import { Link } from 'react-router-dom';
+import project3 from "../images/schedule.jpeg";
+
+const imgs = [project1, project2, project3];
 
 const Home = () => {
     return (
@@ -90,56 +95,41 @@ const Home = () => {
             </section>
 
             <section className="full-height bg-gradient py-4 row current-projects">
-                <div className="col-11 text-right">
+                <div className={`col-11 mb-3 ${isMobile ? "text-center" : "text-right"}`}>
                     <h2>
                         <strong>Current Projects</strong>
                     </h2>
-                    Here are some of the ongoing projects I'm working on.<br/>
+                    <p>
+                    Ongoing projects I'm working on.<br/>
                     Please contact me for more information.
-
+                    </p>
                 </div>
 
-                <div className="project col-12 col-md-7">
-                    <Parallax speed={10}>
-                        <img src={project1} />
-                    </Parallax>
-                    <div className="desc">
-                        <h3>GPT-3 and Humans writing story together</h3>
-                        <p>
-                            How fast can human-computer groups write romance stories together? How better are these stories?
-                        </p>
+                {currentProjects.map((project, i) =>
+                    <div key={i} className="project col-12 col-md-4"
+                        style={{
+                            backgroundImage: `url(${imgs[i]})`,
+                        }}
+                    >
+                        <div className="overlay">
+                            <h3>{project.title}</h3>
+                            <p>{project.desc}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="col-12 col-md-5"></div>
+                )}   
 
-                <div className="col-12 col-md-5"></div>
-                <div className="project col-12 col-md-7">
-                    <Parallax speed={10}>
-                        <img src={project2} />
-                    </Parallax>
-                    <div className="desc">
-                        <h3>Supporting note-taking process in online meetings</h3>
-                        <p>
-                            How fast can human-computer groups write romance stories together? How better are these stories?
-                        </p>
-                    </div>
-                </div>
-                
-                <div className="project col-12 col-md-7">
-                    <Parallax speed={10}>
-                        <img src={project1} />
-                    </Parallax>
-                    <div className="desc">
-                        <h3>Supporting note-taking process in online meetings</h3>
-                        <p>
-                            How fast can human-computer groups write romance stories together? How better are these stories?
-                        </p>
-                    </div>
-                </div>
-                <div className="col-12 col-md-5"></div>
-                
-                <div className="col-12 center">
+                <div className="col-12 center mt-3">
                     <Link to="/research" className="btn">View More</Link>
+                </div>
+
+                <div className={`col-11 mt-3 mb-3 ${isMobile && "text-center"}`}>
+                    <h2>
+                        <strong>Selected Projects</strong>
+                    </h2>
+                    <p className="text-black">
+                    Selected projects among the previous ones I participated in.<br/>
+                    You can click each project to view more information.
+                    </p>
                 </div>
             </section>
         </div>

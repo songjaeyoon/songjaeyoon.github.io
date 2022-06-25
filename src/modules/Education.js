@@ -2,7 +2,7 @@ const Education = ({ edu }) => {
     return (
         <div className="exp mb-3">
             <div>
-                <a target="_blank" href={edu.url}>
+                <a target="_blank" rel="noreferrer"  href={edu.url}>
                     <b>{edu.institute}</b>
                 </a>
             </div>
