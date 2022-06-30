@@ -10,7 +10,7 @@ const wips = publications.filter(pub => pub.attrs.includes("wip"))
 
 const Publications = () => {
     return (
-        <section className="full-height bg-white py-4">
+        <section className="full-height bg-white py-4 px-2">
             <div className="row">
                 <div className="col-12 col-md-3 col-lg-2">
                     <h2 className="text-serif">Conference {"&"} Journal Papers</h2>

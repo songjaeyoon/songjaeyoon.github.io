@@ -19,3 +19,11 @@
         }
     }
 }
+
+.logo {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    z-index: 999;
+    max-width: 60px;
+}
