@@ -1,11 +1,13 @@
+import Links from "./Links";
+
 const Publication = ({ pub, projects }) => {
 
     const project = projects.filter(project => project.id === pub.id);
 
     return (
-        <div class="pub mb-3">
+        <div className="pub mb-3">
             {/* title */}
-            <div class="pub-title">
+            <div className="pub-title">
                 <a href={pub.url ? pub.url : ""}>
                     <b>{pub.title}</b>
                 </a>
@@ -14,7 +16,7 @@ const Publication = ({ pub, projects }) => {
             {/* authors */}
             {pub.authors.map((author, i) => {
                 const comp = author.includes("Jaeyoon Song") ? <i>{author}</i> : author;
-                return <>{comp} {i !== pub.authors.length - 1 ? ", " : ""}</>
+                return <span key={i}>{comp} {i !== pub.authors.length - 1 ? ", " : ""}</span>
             })}
 
             <div>
@@ -32,7 +34,7 @@ const Publication = ({ pub, projects }) => {
 
             {/* award */}
             {pub.award &&
-                <div class="text-muted">
+                <div className="text-muted">
                     <small>
                         🏆 Won {pub.award} 🏆
                     </small>
@@ -41,6 +43,7 @@ const Publication = ({ pub, projects }) => {
 
             {/* links */}
             {project?.length > 0 && <>
+                <Links project={project[0]} />
             </>}
     
 

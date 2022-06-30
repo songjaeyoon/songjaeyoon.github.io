@@ -95,7 +95,7 @@ const Home = () => {
             </section>
 
             <section className="full-height bg-gradient py-4 row current-projects">
-                <div className={`col-11 mb-3 ${isMobile ? "text-center" : "text-right"}`}>
+                <div className={`col-11 mb-4 ${isMobile ? "text-center" : "text-right"}`}>
                     <h2>
                         <strong>Current Projects</strong>
                     </h2>
@@ -118,11 +118,11 @@ const Home = () => {
                     </div>
                 )}   
 
-                <div className="col-12 center mt-3 mb-3">
+                <div className="col-12 center mt-4 mb-4">
                     <Link to="/research" className="btn">View More</Link>
                 </div>
 
-                <div className={`col-11 mt-3 mb-3 ${isMobile && "text-center"}`}>
+                <div className={`col-11 mt-4 mb-4 ${isMobile && "text-center"}`}>
                     <h2>
                         <strong>Featured Projects</strong>
                     </h2>

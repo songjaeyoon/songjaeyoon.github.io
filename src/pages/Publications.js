@@ -11,36 +11,36 @@ const wips = publications.filter(pub => pub.attrs.includes("wip"))
 const Publications = () => {
     return (
         <section className="full-height bg-white py-4">
-            <div class="row">
-                <div class="col-12 col-md-3 col-lg-2">
-                    <h2 class="text-serif">Conference {"&"} Journal Papers</h2>
+            <div className="row">
+                <div className="col-12 col-md-3 col-lg-2">
+                    <h2 className="text-serif">Conference {"&"} Journal Papers</h2>
                 </div>
 
-                <div class="col-12 indent col-md-7 col-lg-5">
+                <div className="col-12 indent col-md-7 col-lg-5">
                     {papers.map((paper, i) => 
                         <Publication pub={paper} projects={projects} key={i} />
                     )}
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 col-md-3 col-lg-2">
-                    <h2 class="text-serif">Posters</h2>
+            <div className="row">
+                <div className="col-12 col-md-3 col-lg-2">
+                    <h2 className="text-serif">Posters</h2>
                 </div>
 
-                <div class="col-12 indent col-md-7 col-lg-5">
+                <div className="col-12 indent col-md-7 col-lg-5">
                     {posters.map((poster, i) => 
                         <Publication pub={poster} projects={projects} key={i} />
                     )}
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 col-md-3 col-lg-2">
-                    <h2 class="text-serif">Work in Progress</h2>
+            <div className="row">
+                <div className="col-12 col-md-3 col-lg-2">
+                    <h2 className="text-serif">Work in Progress</h2>
                 </div>
 
-                <div class="col-12 indent col-md-7 col-lg-5">
+                <div className="col-12 indent col-md-7 col-lg-5">
                     {wips.map((wip, i) => 
                         <Publication pub={wip} projects={projects} key={i} />
                     )}
