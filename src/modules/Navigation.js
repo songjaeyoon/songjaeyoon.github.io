@@ -1,7 +1,11 @@
 import React from 'react';
 import { FloatingButton, Item } from "../fab";
+import { useNavigate } from 'react-router-dom';
 
-const Navigation = ({ history }) => {
+const Navigation = () => {
+    
+    const navigate = useNavigate();
+    
     return (
         <FloatingButton
             top={true}
@@ -17,32 +21,30 @@ const Navigation = ({ history }) => {
                 icon="🎨"
                 description="designer"
                 onClick={() => {
-                    history.push("/designer");
+                    navigate("/designer");
                 }}
             />
             <Item
                 icon="👩‍💻"
                 description="developer"
                 onClick={() => {
-                    history.push("/developer");
+                    navigate("/developer");
                 }}
             />
             <Item
                 icon="🧐"
                 description="researcher"
                 onClick={() => {
-                    history.push("/researcher");
+                    navigate("/researcher");
                 }}
             />
             <Item
                 icon="📚"
                 description="publications"
                 onClick={() => {
-                    history.push("/publications");
+                    navigate("/publications");
                 }}
             />
-            
-            
             
         </FloatingButton>
     );

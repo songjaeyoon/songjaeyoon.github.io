@@ -14,24 +14,24 @@ const history = createBrowserHistory();
 function App() {
   return (
     <ParallaxProvider>
-    <Router history={history}>
-      <Navigation history={history} />
-      <div className="border"></div>
-      <Routes>
-        <Route path="/" exact element={<Home />} />
+      <Router history={history}>
+        <Navigation />
+        <div className="border"></div>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
 
-        <Route path="/publications" exact element={<Publications />} />
+          <Route path="/publications" exact element={<Publications />} />
 
-        <Route path="/research" exact element={<Research />} />
+          <Route path="/research" exact element={<Research />} />
 
-        <Route path="/projects" exact element={<Developer />} />
+          <Route path="/projects" exact element={<Developer />} />
 
-        <Route path="/designer" exact element={<Designer />} />
+          <Route path="/designer" exact element={<Designer />} />
 
-        <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
 
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
     </ParallaxProvider>
   );
 }

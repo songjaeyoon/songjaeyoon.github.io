@@ -28,6 +28,8 @@
    ],
  };
  
+ const mobileThreshold = 450;
+
  function FloatingButton({
    backgroundColor,
    color,
@@ -82,7 +84,7 @@
        number={number}
        distance={getAngle(0).distance}
        ref={ref}
-       center={window.innerWidth < 400}
+       center={window.innerWidth < mobileThreshold}
      >
        <Container
          size={size}
@@ -134,7 +136,7 @@
  FloatingButton.defaultProps = {
    color: "#828282",
    backgroundColor: "#b41717",
-   size: window.innerWidth < 400 ? 48 : 56,
+   size: window.innerWidth < mobileThreshold ? 48 : 56,
    top: false,
    right: true,
    children: {},

@@ -118,16 +118,16 @@ const Home = () => {
                     </div>
                 )}   
 
-                <div className="col-12 center mt-3">
+                <div className="col-12 center mt-3 mb-3">
                     <Link to="/research" className="btn">View More</Link>
                 </div>
 
                 <div className={`col-11 mt-3 mb-3 ${isMobile && "text-center"}`}>
                     <h2>
-                        <strong>Selected Projects</strong>
+                        <strong>Featured Projects</strong>
                     </h2>
                     <p className="text-black">
-                    Selected projects among the previous ones I participated in.<br/>
+                    Selected projects among the ones I have previously participated in.<br/>
                     You can click each project to view more information.
                     </p>
                 </div>

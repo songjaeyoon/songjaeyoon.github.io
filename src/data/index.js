@@ -20,7 +20,7 @@ export const experience = [
     "institute": "MIT Center for Collective Intelligence",
     "url": "https://cci.mit.edu",
     "time": "Jun 2020 - Present",
-    "advisor": "Thomas Malone",
+    "advisor": "Thomas W. Malone",
     "advisorurl": "https://mitsloan.mit.edu/faculty/directory/thomas-w-malone"
   },
   {

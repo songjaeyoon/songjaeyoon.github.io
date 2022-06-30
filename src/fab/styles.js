@@ -8,7 +8,7 @@ export const Floating = styled(
     press: { x: 0, delay: 100 },
     open: {
       x: (props) =>
-        props.number > 3 && window.innerWidth > 400 && (props.right ? -props.distance : props.distance),
+        props.number > 3 && window.innerWidth > 450 && (props.right ? -props.distance : props.distance),
       y: (props) =>
         props.number > 6 && (props.top ? props.distance : -props.distance),
     },
@@ -99,8 +99,12 @@ export const Item = styled(
     opacity: 0;
     transition: opacity .5s ease;
     pointer-events: none;
+    @media (max-width: 767px) {
+      opacity: 1;
+    }
   }
   &:hover:after {
     opacity: 1;
   }
+
 `;
