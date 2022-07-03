@@ -1,5 +1,5 @@
 import Navigation from "./modules/Navigation";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Publications from "./pages/Publications";
 import Research from "./pages/Research";
 import Developer from "./pages/Developer";
