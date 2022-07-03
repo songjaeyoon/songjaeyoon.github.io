@@ -24,7 +24,7 @@ function App() {
 
           <Route path="/publications" exact element={<Publications />} />
 
-          <Route path="/research" exact element={<Research />} />
+          <Route path="/projects" exact element={<Research />} />
 
           <Route path="/developer" exact element={<Developer />} />
 

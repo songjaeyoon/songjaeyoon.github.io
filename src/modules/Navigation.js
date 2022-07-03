@@ -33,9 +33,9 @@ const Navigation = () => {
             />
             <Item
                 icon="🧐"
-                description="researcher"
+                description="projects"
                 onClick={() => {
-                    navigate("/researcher");
+                    navigate("/projects");
                 }}
             />
             <Item

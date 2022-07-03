@@ -11,7 +11,7 @@ export const projects = [
       "link": "https://cci.mit.edu/minglr/",
       "code": "https://github.com/CCI-MIT/minglr",
       "video": "https://youtu.be/Xruflul84ik",
-      "image": "/images/projects/minglr.jpg",
+      "image": "projects/minglr.jpg",
       "keywords": [
         "virtual",
         "conference"
@@ -26,7 +26,7 @@ export const projects = [
       ],
       "year": 202008,
       "desc": "A mobile application that helps people exercise in free time",
-      "image": "/images/projects/zatoori.jpg",
+      "image": "projects/zatoori.jpg",
       "link": "https://www.behance.net/gallery/111082311/Zatoori-A-mobile-application-design",
       "keywords": [
         "design",
@@ -37,15 +37,15 @@ export const projects = [
       "id": "suggestbot",
       "title": "SuggestBot",
       "topic": [
-        "research"
+        "research",
       ],
       "year": 201812,
       "desc": "Crowdsourcing Evidence for Debate using Amazon Mechanical Turk. Project at Kixlab (Dec 2018 - Feb 2019)",
       "code": "https://github.com/kixlab/suggestbot-rails",
-      "image": "/images/projects/suggestbot.jpeg",
+      "image": "projects/suggestbot.jpeg",
       "keywords": [
         "crowdsourcing",
-        "debate"
+        "online discussion",
       ]
     },
     {
@@ -58,10 +58,10 @@ export const projects = [
       "desc": "Investigating the truth of Produce 101 results through data on Naver TV and DC Inside.",
       "link": "https://truth-101.github.io/",
       "code": "https://github.com/jyoonsong/truth101",
-      "image": "/images/projects/truth101.jpeg",
+      "image": "projects/truth101.jpeg",
       "keywords": [
         "datamining",
-        "entertainment"
+        "social issue",
       ]
     },
     {
@@ -74,7 +74,7 @@ export const projects = [
       "desc": "Credibility Assessment and Critical Thinking through Microtasks while Reading - How to intrinsically motivate readers by personalizing the sequence of microtasks",
       "slides": "https://docs.google.com/presentation/d/1-ThkCnb99jRDb5GaQee6vBDoydss0-77gfS8gAYoJko/edit?usp=sharing",
       "code": "https://github.com/jyoonsong/organic",
-      "image": "/images/projects/gaemi.jpeg",
+      "image": "projects/gaemi.jpeg",
       "keywords": [
         "crowdsourcing",
         "motivation"
@@ -89,12 +89,14 @@ export const projects = [
         "research"
       ],
       "keywords": [
-        "online discussion"
+        "online discussion",
+        "social issue",
+        "human-AI interaction",
       ],
       "paper": "https://kixlab.github.io/website-files/2020/chi2020-SolutionChat-paper.pdf",
       "link": "https://doi.org/10.1145/3313831.3376609",
       "video": "https://www.youtube.com/watch?v=MzUJzGOQXLI",
-      "image": "/images/projects/solutionchat.jpeg",
+      "image": "projects/solutionchat.jpeg",
       "slides": "https://docs.google.com/presentation/d/1hf84DHNZ2i3gJ0G8hIX1Kij83QtC-UNFN2v01HyCp-k/edit?usp=sharing",
       "desc": "Real-time Moderator Support for Chat-based Structured Discussion"
     },
@@ -108,9 +110,9 @@ export const projects = [
       ],
       "keywords": [
         "collaboration",
-        "accessibility"
+        "accessibility",
       ],
-      "award": {
+      "prize": {
         "name": "Honorable Mention (top 5%)",
         "date": "May 2020",
         "affiliation": "ACM CHI",
@@ -118,7 +120,7 @@ export const projects = [
       },
       "paper": "https://donghoon.io/assets/pdf/chi2020_talkingboogie_paper.pdf",
       "link": "https://dl.acm.org/citation.cfm?id=3312865/",
-      "image": "/images/projects/talkingboogie.jpeg",
+      "image": "projects/talkingboogie.jpeg",
       "desc": "Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers",
       "paragraph": "We worked like this - <a target='_blank' href='https://drive.google.com/open?id=1bNXBJ5wH5DEvbgjWWix2bAs8GOFqKJmx'>click here to see!</a>"
     },
@@ -131,13 +133,14 @@ export const projects = [
         "research"
       ],
       "keywords": [
-        "accessibility"
+        "accessibility",
+        "human-AI interaction",
       ],
       "paper": "https://hcil.snu.ac.kr/system/publications/pdfs/000/000/125/original/LBW1821.pdf",
       "link": "https://dl.acm.org/doi/abs/10.1145/3290607.3312865",
       "video": "https://www.youtube.com/watch?v=_Qml_WqmVFY",
       "code": "https://github.com/SoundGlance/",
-      "image": "/images/projects/soundglance.jpeg",
+      "image": "projects/soundglance.jpeg",
       "desc": "Briefing the glanceable cues of Web pages for screen reader users",
       "paragraph": "<strong>Motivation.</strong> I learned HTML for the first time when I was in high school, and since then I've been participating in a lot of web projects mostly working as a front-end developer. As I got better in web development, <b>web accessibility</b> was one thing I started to care about. Although there was an official accessibility guideline for web developers to comply with, most websites did not follow this guideline in reality. I thought there should be some other way to tackle the problem of web accessibility than just to rely on each developer, which is the initial motivation for SoundGlance project.<br><br> So I and Kiroong started this project with the help of X-corps research institute and Siloam Center for the Blind People. Then, we continued this project while I was working at <a target='_blank' href='https://hcil.snu.ac.kr'>SNU HCI Lab</a>.<br><br> <strong>Abstract.</strong> Screen readers have become a core assistive technology for blind web users to browse web pages. Although screen readers can convey the textual information or structural properties of web pages, they cannot deliver their overall impression. Such a limitation hinders blind web users from obtaining an overview of the website, which non-blind people can do in a short time. As such, we present SoundGlance, a novel application that briefly delivers an auditory summary of web pages. SoundGlance supports the screen reader users by converting the important glanceable cues of the pages into sound. The feasibility of the prototype was examined in a pilot study with fourteen blind people. Several practical insights were derived from the experiment."
     },
@@ -152,14 +155,14 @@ export const projects = [
       ],
       "keywords": [
         "datamining",
-        "management"
+        "collaboration",
       ],
       "paper": "https://www.mdpi.com/2071-1050/10/9/3001",
       "code": "https://github.com/jyoonsong/oss-efficiency",
-      "image": "/images/projects/oss.jpeg",
+      "image": "projects/oss.jpeg",
       "slides": "https://www.slideshare.net/JyoonSong/what-is-needed-for-the-sustainable-success-of-open-source-software-projects-efficiency-analysis-of-commit-production-process-via-git-171519211",
       "desc": "What Is Needed for the Sustainable Success of Open Source Software Projects?",
-      "award": {
+      "prize": {
         "name": "Grand Prize (1st)",
         "date": "May 2018",
         "affiliation": "Undergraduate Research Presentation Competition, Korean Production & Operations Management Society",
@@ -177,12 +180,13 @@ export const projects = [
         "competition"
       ],
       "keywords": [
-        "web development"
+        "web development",
+        "idea",
       ],
-      "image": "/images/projects/shashagungun.jpeg",
+      "image": "projects/shashagungun.jpeg",
       "link": "https://shashagungun.com",
       "desc": "Web Platform to gather posters of various events in Seoul National University",
-      "award": {
+      "prize": {
         "name": "Winner (1st)",
         "date": "Feb 2017",
         "affiliation": "SNULife School Service Development Tournament",
@@ -199,12 +203,13 @@ export const projects = [
         "competition"
       ],
       "keywords": [
-        "idea"
+        "collaboration",
+        "idea",
       ],
-      "image": "/images/projects/music.jpeg",
+      "image": "projects/music.jpeg",
       "slides": "https://www.slideshare.net/JyoonSong/music-of-bullshit-likelion-ideathon-2017-184059240",
       "desc": "Any sound can become a piece of music! A platform where users can collaboratively compose with any kind of nonsense sound",
-      "award": {
+      "prize": {
         "name": "Top Ten Winner ($1,000 AWS Credits)",
         "date": "Jul 2017",
         "affiliation": "Likelion (supported by AWS Korea)",
@@ -219,12 +224,12 @@ export const projects = [
         "competition"
       ],
       "keywords": [
-        "web development"
+        "web development",
       ],
-      "image": "/images/projects/samsung.jpeg",
+      "image": "projects/samsung.jpeg",
       "slides": "https://www.slideshare.net/JyoonSong/music-of-bullshit-likelion-ideathon-2017-184059240",
       "desc": "Restaurant recommendation service for Samsung AI Hackathon",
-      "award": {
+      "prize": {
         "name": "Top Ten Finalist",
         "date": "Sep 2018",
         "affiliation": "Samsung Research",
@@ -242,7 +247,7 @@ export const projects = [
         "web development",
         "visualization"
       ],
-      "image": "/images/projects/chartmetric.jpeg",
+      "image": "projects/chartmetric.jpeg",
       "link": "https://chartmetric.io",
       "desc": "Short-term intern for front-end development",
       "paragraph": "Chartmetric is a self-service tool that features a beautifully designed dashboard that combines hundreds of thousands of real-time data points across multiple music platforms (e.g., Spotify, iTunes). <br><br> In 2017 fall semester, I went to University of Southern California (USC) as an exchange student. Visiting Sungmoon Cho, who is the CEO of Chartmetric, I eventually became a short-term intern working on the front-end part of the system and visualizing the data."
@@ -256,11 +261,11 @@ export const projects = [
         "schoolwork"
       ],
       "keywords": [
-        "sketch app",
+        "social issue",
         "visualization"
       ],
       "link": "https://jaeyoon.io/dt4c",
-      "image": "/images/projects/img-2-small.jpeg",
+      "image": "projects/img-2-small.jpeg",
       "desc": "What people think, what data say, and what media highlight",
       "paragraph": "The topic of my project was refugees, more specifically the Yemeni Muslim refugees coming to Jeju island in South Korea. To narrow down the scope of the topic, I tried to put emphasis on the question if the refugees are dangerous and likely to be involved in a crime in particular. I didn’t explicitly answer the question, but instead tried to focus more on delivering the data itself so that the reader wouldn’t feel that they are being forced to be on one side. One example is the case of Sweden in which I showed both increasing and decreasing crime rate due to accepting refugees. This implies that the number of refugees have nothing to do with the crime rate, showing neither positive nor negative correlation. <br><br> I spent a lot of time searching for factual data—I even read the German official police report using Google translation in order to keep the objectivity using the rawest data. Because of this, the resulting infographic was less visually engaging, and sometimes even misleading due to wrong usage of visual devices.<br><br>The infographic first points out what the people think about the refugees, which has also been a motivation for this project. Then, it points out how crime rate of refugees or foreigners are not so different from other people, giving example of Germany, Norway, and South Korea. Lastly, it suggests that maybe the reason for the difference between people's perspective and what data really says is partially because of what media highlight."
     },
@@ -273,11 +278,11 @@ export const projects = [
         "schoolwork"
       ],
       "keywords": [
-        "sketch app",
+        "illustration",
         "visualization"
       ],
       "link": "https://jaeyoon.io/dt4c",
-      "image": "/images/projects/img-1-small.jpeg",
+      "image": "projects/img-1-small.jpeg",
       "desc": "Twelve variations of magic spells that appear in Harry Potter series.",
       "paragraph": "When I was young, I used to draw up a list of magic spells whenever I was reading Harry Potter. Some of them were so frequently cited that I remember them even now. Among many spells, as the title implies, I tried to avoid selecting deadly spells such as the three unforgivable curses—Avada Kedavra, for example, kills the target. Instead, selected spells are the ones that are comparatively peaceful and trivial but useful. This also accords with the theme of this assignment—my favorite things—since deadly curses are definitely not my favorite, though the magic itself and Harry Potter series are.<br><br>For more information, please visit <a href='https://jaeyoon.io/dt4c' target='_blank'>website.</a>"
     },
@@ -289,11 +294,11 @@ export const projects = [
         "schoolwork"
       ],
       "keywords": [
-        "web development",
+        "data mining",
         "visualization"
       ],
       "link": "https://jaeyoon.io/dt4c",
-      "image": "/images/projects/img-3-small.jpeg",
+      "image": "projects/img-3-small.jpeg",
       "desc": "Checking 'six degrees of Kevin Bacon' for my relationships on Facebook",
       "paragraph": "<strong>About.</strong> I collected data of my friends at Facebook, friend lists of those friends, friend lists of those friends of friends, and so on—only up to 6 times. With this data, I found the shortest path within six degrees that starts from my direct friends and comes back to me on Facebook. Also, I collected data of recent closeness by combining the number of mentions each friend is mentioned in my recent SNS notifications with my subjective closeness. My intention was to briefly check the following two things - (1) Does the concept of “six degrees of Kevin Bacon” also apply to my relationships on Facebook? (2) Does the shortest path have any relationship with recent closeness? The answer for the first question was \"most of the time,\" since there were several exceptions. For the second question, the answer was definitely \"yes\", since there was a high correlation between recent closeness and the degree in the shortest path. I thought that my relationships are relatively distributed, because with the other person’s data, I believe the results might have been much simpler ending up with only two or three degrees.<br><br><strong>How to Read.</strong> Each line coming straight out from the center of the circle represents my direct friend who is one degree away from me. The innermost part of the circle is recent closeness visualized as a line graph. Then, the innermost node refers to the friend of my friend, not my direct friend. So if the number of degrees is 2, the path is ‘my friend - friend’s friend - me’. If the path was found within six degrees, the vertices and edges were colored gray, whereas if not, the vertices and edges were colored blue—the vertices of me myself were colored yellow. The dark blue zone corresponds to an infinite zone implying that the connection didn’t come back to me yet.<br><br><img src='https://66.media.tumblr.com/7c68dfaf932ee05a0e085541a602eec4/tumblr_inline_pjzlchpmns1w8f964_540.gif' width='400'><br><br><strong>Implementation.</strong> For implementation, I used d3.js, which was also introduced in class by Professor Hong. Since d3.js is easily used together with web standards, I made an interactive version—nothing special except for tooltips, export function, and the buttons to check the small multiples—on the web as the photo above."
     },
@@ -308,7 +313,7 @@ export const projects = [
         "web development",
         "marketing"
       ],
-      "image": "/images/projects/bigpearl.jpeg",
+      "image": "projects/bigpearl.jpeg",
       "link": "https://ad.bigpearl.io",
       "desc": "I used to be a member of Bigpearl, a startup for influencer ad campaigns"
     },
@@ -325,7 +330,7 @@ export const projects = [
         "web development"
       ],
       "link": "https://jaeyoon.io/cube",
-      "image": "/images/projects/cube.gif",
+      "image": "projects/cube.gif",
       "desc": "My previous portfolio website",
       "paragraph": "I love cubes (i.e., regular hexahedrons). Why? There is no special reason. You know, they're just interesting, stable, and beautiful.<br><br> I do know that placing navigation links on a cube that is incessantly rotating does not really provide an optimal user experience, which is why I created this new ''ordinary'' version of portfolio website. The cube version was more targeted for <i>expressing</i> myself as an enthusiast in web development and design. I wanted to place something non-typical and cool in the middle of my website.<br><br>I started this project as an assignment at 'Interactive Web Development' class taught by <a href='https://viterbi.usc.edu/directory/faculty/Kim/Nayeon' target='_blank'>Prof. Nayeon Kim</a> at the University of Southern California. I was an exchange student there, and I got the top score for the final project (300/300) with this website. I also got A as my final grade, the highest grade in the grading system at USC."
     },
@@ -340,7 +345,7 @@ export const projects = [
         "web development",
         "visualization"
       ],
-      "image": "/images/projects/history.jpeg",
+      "image": "projects/history.jpeg",
       "link": "https://jaeyoon.io/infovis",
       "code": "https://github.com/jyoonsong/hci-project",
       "desc": "HCI team project"
@@ -354,11 +359,20 @@ export const projects = [
       ],
       "keywords": [
         "web development",
-        "sensemaking"
+        "sensemaking",
+        "collaboration",
       ],
-      "image": "/images/projects/ravi.jpeg",
+      "image": "projects/ravi.jpeg",
       "link": "https://github.com/jyoonsong/RAVi",
       "code": "https://github.com/jyoonsong/RAVi",
       "desc": "How to support writing a meeting log while doing a video chat?"
     }
 ]
+
+/*
+who2chat
+story
+agreement
+noteworthy 
+scheduling
+ */

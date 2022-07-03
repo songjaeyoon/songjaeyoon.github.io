@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const titles = [
     "Publications",
-    "Researcher",
+    "Projects",
     "Developer",
     "Designer",
     "Blog",
@@ -11,7 +11,7 @@ const titles = [
 
 const paths = [
     "/publications",
-    "/researcher",
+    "/projects",
     "/developer",
     "/designer",
     "https://blog.jaeyoon.io",
