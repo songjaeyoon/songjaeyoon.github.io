@@ -27,6 +27,9 @@ section, .position-relative {
 .initial-section {
     padding-top: 30vh;
     // padding-top: 30dvh;
+    @media (max-width: 767px) {
+        padding-top: 25vh;
+    }
 }
 
 .card-container {

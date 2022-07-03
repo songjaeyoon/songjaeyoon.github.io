@@ -1,5 +1,5 @@
 import Navigation from "./modules/Navigation";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Publications from "./pages/Publications";
 import Research from "./pages/Research";
 import Developer from "./pages/Developer";
@@ -30,6 +30,9 @@ function App() {
           <Route path="/designer" exact element={<Designer />} />
 
         </Routes>
+        <footer className="bg-red pt-4 pb-6 text-center">
+          <Link to="/" className="text-black"><b>🏠 Back Home</b></Link>
+        </footer>
       </Router>
     </ParallaxProvider>
   );
