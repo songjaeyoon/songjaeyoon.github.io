@@ -146,14 +146,19 @@ section, .position-relative {
             padding: 2rem 3rem;
         }
     }
-    &:nth-of-type(2) > .overlay {
+    &:nth-of-type(2) > .overlay,
+    &:nth-of-type(7) > .overlay {
         background-color: rgba(#000, 0.5);
     }
     &:nth-of-type(3) > .overlay {
         background-color: rgba($brand-color, 0.8);
     }
-    &:nth-of-type(4) > .overlay {
+    &:nth-of-type(4) > .overlay,
+    &:nth-of-type(9) > .overlay {
         background-color: rgba($grey-color, 0.8);
+    }
+    &:nth-of-type(8) > .overlay {
+        background-color: rgba($grey-color-dark, 0.8);
     }
 }
 

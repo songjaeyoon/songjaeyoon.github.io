@@ -12,6 +12,7 @@ import bgVideo from "../images/bg-video.mp4";
 import project1 from "../images/story.jpeg";
 import project2 from "../images/note-taking.jpeg";
 import project3 from "../images/schedule.jpeg";
+import { projects } from '../data/projects';
 
 const imgs = [project1, project2, project3];
 
@@ -94,7 +95,7 @@ const Home = () => {
 
             </section>
 
-            <section className="full-height bg-gradient py-4 row current-projects">
+            <section className="full-height bg-gradient row current-projects">
                 <div className={`col-11 mb-4 ${isMobile ? "text-center" : "text-right"}`}>
                     <h2>
                         <strong>Current Projects</strong>
@@ -131,7 +132,28 @@ const Home = () => {
                     You can click each project to view more information.
                     </p>
                 </div>
+
+                {projects.filter(proj => proj.featured).slice(0, 3).map((project, i) =>
+                    <div key={i} className="project col-12 col-md-4"
+                        style={{
+                            backgroundImage: `url(${require(`../images/${project.image}`)})`,
+                        }}
+                    >
+                        <div className="overlay">
+                            <h3>{project.title}</h3>
+                            <p>{project.desc}</p>
+                        </div>
+                    </div>
+                )} 
+
+                <div className="col-12 center mt-4 mb-4">
+                    <Link to="/research" className="btn">View More</Link>
+                </div>
             </section>
+
+            <footer className="bg-red py-5 text-center text-black">
+                &copy; Jaeyoon Song 2022
+            </footer>
         </div>
     );
 }
