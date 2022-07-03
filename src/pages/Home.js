@@ -120,7 +120,7 @@ const Home = () => {
                 )}   
 
                 <div className="col-12 center mt-4 mb-4">
-                    <Link to="/research" className="btn">View More</Link>
+                    <Link to="/projects" className="btn">View More</Link>
                 </div>
 
                 <div className={`col-11 mt-4 mb-4 ${isMobile && "text-center"}`}>
@@ -147,7 +147,7 @@ const Home = () => {
                 )} 
 
                 <div className="col-12 center mt-4 mb-4">
-                    <Link to="/research" className="btn">View More</Link>
+                    <Link to="/projects" className="btn">View More</Link>
                 </div>
             </section>
 
