@@ -139,6 +139,9 @@ html {
   .mb-4 {
     margin-bottom: 4rem;
   }
+  .mb-5 {
+    margin-bottom: 5rem;
+  }
   .mt-3 {
     margin-top: 3rem;
   }
@@ -155,9 +158,15 @@ html {
     padding-left: 3rem; 
     padding-right: 3rem;
   }
-  .py-4 {
+  .py-5 {
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+  .pt-5 {
+    padding-top: 10rem;
+  }
+  .pb-4 {
+    padding-bottom: 5rem;
   }
   
   
@@ -224,4 +233,7 @@ html {
 }
 .text-black {
     color: #000;
+}
+.text-muted {
+  color: $grey-color;
 }

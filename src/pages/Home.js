@@ -50,7 +50,7 @@ const Home = () => {
                 
             </section>
 
-            <section className="full-height bg-white py-4 px-3">
+            <section className="full-height bg-white py-5 px-3">
                 <aside className="row mb-5 mt-5">
                     <div className="col-12 col-md-3 col-lg-2">
                         <h2 className="text-serif">Experience</h2>
