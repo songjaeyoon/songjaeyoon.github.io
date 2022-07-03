@@ -5,7 +5,6 @@ import Research from "./pages/Research";
 import Developer from "./pages/Developer";
 import Designer from "./pages/Designer";
 import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { createBrowserHistory } from "history";
 import Logo from "./modules/Logo";
@@ -29,8 +28,6 @@ function App() {
           <Route path="/developer" exact element={<Developer />} />
 
           <Route path="/designer" exact element={<Designer />} />
-
-          <Route path="*" element={<NotFound />} />
 
         </Routes>
       </Router>
