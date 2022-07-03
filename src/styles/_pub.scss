@@ -2,8 +2,10 @@
     margin-top: .25rem;
     a {
         font-size: .85rem;
-        margin-right: .75rem;
         color: $grey-color;
         font-weight: 400;
+    }
+    a:not(:last-child) {
+        margin-right: .75rem;
     }
 }

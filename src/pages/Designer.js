@@ -15,7 +15,7 @@ const Designer = () => {
                     </div>
                     <div className="text-right text-muted text-small ">
                         <b>Magic Spells All Muggles are Jealous of</b><br/>
-                        Twelve variations of magic spells that appear in Harry Potter series.<br/>
+                        Twelve variations of magic spells in the Harry Potter series.<br/>
                         More information is available at <a className="border-link" href="https://jaeyoon.io/dt4c" target="_blank" rel="noreferrer">https://jaeyoon.io/dt4c</a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const Designer = () => {
                 </div>
             </div>
 
-            <div className="row mb-3 px-2">
+            <div className="row px-2 pb-4">
                 <div className="col-12 col-md-10 col-lg-8 pt-4 pb-4">
                     <div className="text-black"><strong>Photography & Drawings</strong></div>
                     <div className="text-muted">&copy; Jaeyoon Song 2022</div>

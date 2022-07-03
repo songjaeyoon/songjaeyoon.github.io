@@ -26,7 +26,7 @@ function App() {
 
           <Route path="/research" exact element={<Research />} />
 
-          <Route path="/projects" exact element={<Developer />} />
+          <Route path="/developer" exact element={<Developer />} />
 
           <Route path="/designer" exact element={<Designer />} />
 

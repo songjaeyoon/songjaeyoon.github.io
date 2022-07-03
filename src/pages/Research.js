@@ -2,7 +2,9 @@ import React from 'react';
 
 const Research = () => {
     return (
-        <div></div>
+        <section className="full-height bg-white">
+            
+        </section>
     );
 }
 

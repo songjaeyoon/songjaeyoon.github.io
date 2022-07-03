@@ -1,0 +1,52 @@
+.project {
+    .project-wrapper {
+        background-color: #fff;
+        margin: .5rem;
+        // border: 1px solid $grey-color-light;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 1px 5px 15px 0 rgba(14, 42, 90, 0.1);
+        transition: box-shadow .5s ease;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 1px 5px 20px 0 rgba(14, 42, 90, 0.2);
+            .project-img > img {
+                transform: scale(1.1);
+            }
+        }
+        .project-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            background: linear-gradient(170deg, #ffd6af, #ffa1a1);
+            img {
+                width: 70%;
+                box-shadow: 1px 5px 20px 0 rgba(14, 42, 90, 0.55);
+                transition: transform .5s ease;
+            }
+        }
+        .project-text {
+            // border-top: 5px solid $brand-color;
+            padding: 1rem 1.5rem 1.5rem 1.5rem;
+            // position: relative;
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     width: 150px;
+            //     height: 30px;
+            //     background-color: $brand-color;
+            //     top: -15px;
+            //     right: 0;
+            // }
+        }
+    }
+}
+
+.react-tags__search-wrapper {
+    input {
+        min-width: 300px !important;
+        outline: none;
+        padding: .5rem;
+    }
+}

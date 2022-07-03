@@ -38,7 +38,7 @@ const Home = () => {
                 <div className="row">
                     <div className="col-md-5"></div>
                     <div className="col-12 col-md-6 intro">
-                        <Parallax speed={-10}>
+                        <Parallax speed={-15}>
                             <h3>Hello 🙋‍♀️</h3>
                             I am a PhD student at MIT Sloan in the Information Technologies (IT) group - a subgroup of the Management Science program. 
                             My general research area is <b>social computing</b> and <b>computational social science</b> at the intersection of computer science, data science, and social science. I employ data-driven computational thinking and methods to explore social science questions. Specifically, I am interested in human-AI collaboration, online discussions/meetings, and misinformation on social media.<br/>

@@ -51,6 +51,7 @@ html {
          -o-font-feature-settings: "kern" 1;
             font-feature-settings: "kern" 1;
     font-kerning: normal;
+    overflow-wrap: break-word;
   
     @media screen and (min-width: $on-large) {
       font-size: $base-font-size;
@@ -156,6 +157,9 @@ html {
   .mt-4 {
     margin-top: 4rem;
   }
+  .mr-1 {
+    margin-right: 1rem;
+  }
 
   /* padding */
   .px-2 {
@@ -165,6 +169,14 @@ html {
   .px-3 {
     padding-left: 3rem; 
     padding-right: 3rem;
+  }
+  .py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .py-5 {
     padding-top: 10rem;
@@ -185,6 +197,9 @@ html {
   
   
   /* click & select control */
+  .pointer {
+    cursor: pointer;
+  }
   .noclick, .noclick * {
     pointer-events: none !important;
   }
@@ -253,6 +268,9 @@ html {
 }
 .text-small {
   font-size: 85%;
+}
+.text-bold {
+  font-weight: 500;
 }
 
 hr {

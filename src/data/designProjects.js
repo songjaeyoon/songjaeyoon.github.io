@@ -1,10 +1,9 @@
 export const designProjects = [
     {
         id: "music",
-        title: "Magic Spells All Muggles are Jealous of",
+        title: "Music of Bullshit (아무말음악잔치)",
         image: "projects/music-bullshit.jpg",
-        description: `Twelve variations of magic spells in Harry Potter series<br/>
-        More information is available at <a className="border-link" href="https://jaeyoon.io/dt4c" target="_blank" rel="noreferrer">https://jaeyoon.io/dt4c</a>`
+        description: `Any sound can become a piece of music! A platform where users can collaboratively compose with any kind of nonsense sound`
     },
     {
         id: "zatoori",
