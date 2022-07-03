@@ -4,7 +4,7 @@ import { designProjects } from '../data/designProjects';
 const Designer = () => {
     return (
         <section className="full-height bg-white">
-            <div className="row mb-3">
+            <div className="row mb-3 px-2">
                 <div className="col-12 col-md-10 col-lg-8 pt-5 pb-4">
                     <div className="text-black"><strong>Graphic Design</strong></div>
                     <div className="text-muted">Sketch App, Adobe Illustrator</div>
@@ -21,7 +21,8 @@ const Designer = () => {
                 </div>
             </div>
 
-            <div className="row">
+
+            <div className="row px-2">
                 <div className="col-12 col-md-10 col-lg-8 pt-4 pb-4">
                     <div className="text-black"><strong>Web & App Design</strong></div>
                     <div className="text-muted">Figma, Sketch App</div>
@@ -42,7 +43,7 @@ const Designer = () => {
                 </div>
             </div>
 
-            <div className="row mb-3">
+            <div className="row mb-3 px-2">
                 <div className="col-12 col-md-10 col-lg-8 pt-4 pb-4">
                     <div className="text-black"><strong>Photography & Drawings</strong></div>
                     <div className="text-muted">&copy; Jaeyoon Song 2022</div>

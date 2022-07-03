@@ -173,6 +173,9 @@ html {
   .pt-5 {
     padding-top: 10rem;
   }
+  .pt-3 {
+    padding-top: 3rem;
+  }
   .pt-4 {
     padding-top: 5rem;
   }
@@ -250,4 +253,8 @@ html {
 }
 .text-small {
   font-size: 85%;
+}
+
+hr {
+  border: 1px solid $grey-color-light;
 }
