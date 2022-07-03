@@ -115,6 +115,11 @@ html {
     color: $brand-color;
     text-decoration: none;
     transition: opacity .5s ease;
+    
+    &.border-link {
+      border-bottom: 2px solid $grey-color-light;
+      padding-bottom: .15rem;
+    }
 
     &.black {
         color: #000;
@@ -142,6 +147,9 @@ html {
   .mb-5 {
     margin-bottom: 5rem;
   }
+  .mt-1 {
+    margin-top: 1rem;
+  }
   .mt-3 {
     margin-top: 3rem;
   }
@@ -164,6 +172,9 @@ html {
   }
   .pt-5 {
     padding-top: 10rem;
+  }
+  .pt-4 {
+    padding-top: 5rem;
   }
   .pb-4 {
     padding-bottom: 5rem;
@@ -236,4 +247,7 @@ html {
 }
 .text-muted {
   color: $grey-color;
+}
+.text-small {
+  font-size: 85%;
 }
