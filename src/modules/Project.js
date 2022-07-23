@@ -1,10 +1,10 @@
 import React from 'react';
 import Links from './Links';
 
-const Project = ({ proj }) => {
+const Project = ({ proj, handleClick }) => {
     
     return (
-        <div className="project col-12 col-md-6 col-lg-4">
+        <div className="project col-12 col-md-6 col-lg-4" id={proj.id} onClick={handleClick}>
             <div className="project-wrapper">
                 <div className="project-img">
                     <img src={require(`../images/${proj.image}`)} alt={proj.title}/>

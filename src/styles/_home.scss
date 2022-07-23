@@ -9,7 +9,7 @@
         font-size: 2.5rem;
     }
     @media (max-width: $on-medium) {
-        font-size: 2rem;
+        font-size: 1.8rem;
         bottom: 1.5rem;
         left: 2.5rem;
     }
@@ -142,6 +142,8 @@ section, .position-relative {
     color: #fff;
     padding: 0;
     .overlay {
+        color: inherit;
+        display: block;
         width: 100%;
         height: 100%;
         padding: 6rem 3rem;

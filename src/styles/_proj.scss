@@ -50,3 +50,29 @@
         padding: .5rem;
     }
 }
+
+.react-responsive-modal-modal {
+    .react-responsive-modal-closeButton {
+        outline: none;
+    }
+    img {
+        max-width: 600px;
+        width: 100%;
+    }
+    .tag {
+        display: inline-block;
+        background-color: $brand-color-light;
+        font-weight: 700;
+        padding: .35rem .75rem;
+        margin: 1rem .5rem 1rem 0;
+        font-size: .75rem;
+        color: #fff;
+        border-radius: 10px;
+    }
+    table td {
+        font-size: .8rem;
+        border: 1px solid $grey-color-light;
+        padding: 0.5rem 1rem;
+        vertical-align: baseline;
+    }
+}

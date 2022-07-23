@@ -7,7 +7,7 @@ import CardContainer from '../modules/CardContainer';
 import Experience from '../modules/Experience';
 import Education from '../modules/Education';
 
-import { currentProjects, education, experience } from "../data";
+import { education, experience } from "../data";
 import bgVideo from "../images/bg-video.mp4";
 import project1 from "../images/story.jpeg";
 import project2 from "../images/note-taking.jpeg";
@@ -106,16 +106,16 @@ const Home = () => {
                     </p>
                 </div>
 
-                {currentProjects.map((project, i) =>
+                {projects.filter(proj => proj.current).slice(0, 3).map((project, i) =>
                     <div key={i} className="project col-12 col-md-4"
                         style={{
                             backgroundImage: `url(${imgs[i]})`,
                         }}
                     >
-                        <div className="overlay">
+                        <Link to={`/projects?key=${project.id}`} className="overlay">
                             <h3>{project.title}</h3>
                             <p>{project.desc}</p>
-                        </div>
+                        </Link>
                     </div>
                 )}   
 
@@ -139,10 +139,10 @@ const Home = () => {
                             backgroundImage: `url(${require(`../images/${project.image}`)})`,
                         }}
                     >
-                        <div className="overlay">
+                        <Link to={`/projects?key=${project.id}`} className="overlay">
                             <h3>{project.title}</h3>
                             <p>{project.desc}</p>
-                        </div>
+                        </Link>
                     </div>
                 )} 
 

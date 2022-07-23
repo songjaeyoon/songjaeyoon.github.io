@@ -61,7 +61,7 @@ const Developer = () => {
                         if (show || (selectedStack.length === 0 && selectedCollab === "")) { 
                             return <DevProject key={proj.id} proj={proj} projects={projects} />
                         }
-                        return "";
+                        return <div key={proj.id}></div>;
                     })}
                     </div>
                 </div>

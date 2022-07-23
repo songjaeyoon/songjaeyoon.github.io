@@ -24,7 +24,7 @@ export const Floating = styled(
   right: ${(props) => (props.right ? "50px" : "none")};
   left: ${(props) => (props.center ? "50px" : "none")};
   margin: ${(props) => props.center ? "auto" : "0"};
-  z-index: 9999;
+  z-index: 999;
 `;
 
 export const Container = styled(
