@@ -149,7 +149,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <footer className="bg-red pt-5 text-center text-black">
+            <footer className="bg-red py-5 text-center text-black">
                 &copy; Jaeyoon Song 2022
             </footer>
         </div>

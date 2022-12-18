@@ -32,9 +32,6 @@ function App() {
           <Route path="/designer" exact element={<Designer />} />
 
         </Routes>
-        <footer className="bg-red pt-4 pb-6 text-center">
-          <Link to="/" className="text-black"><b>🏠 Back Home</b></Link>
-        </footer>
       </Router>
     </ParallaxProvider>
   );
