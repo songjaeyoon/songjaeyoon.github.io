@@ -83,8 +83,8 @@ const Home = () => {
 
                     <div className="col-12 indent col-md-7 col-lg-5">
                         <div className="mb-2">
-                            <a href="/pdf/CV.pdf"><b>🔗 Resume as a Researcher</b></a><br/>
-                            Last updated: 10/16/2021
+                            <a href={require(`../pdf/CV.pdf`)}><b>🔗 Resume as a Researcher</b></a><br/>
+                            Last updated: 12/18/2022
                         </div>
                         <div>
                             <a href="https://bit.ly/developerjaeyoon"><b>🔗 Resume as a Developer</b></a><br/>
