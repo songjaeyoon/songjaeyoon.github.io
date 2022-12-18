@@ -35,7 +35,7 @@ const Developer = () => {
                 <div className="col-12 col-md-10 col-lg-8 mb-2">
                     <strong className="text-black">Stack</strong> <br/>
                     {allStack.map(stack => 
-                        <span className={`${selectedStack.includes(stack) && "text-bold"} mr-1 pointer`} onClick={selectStack}>{stack}</span>
+                        <span key={stack} className={`${selectedStack.includes(stack) && "text-bold"} mr-1 pointer`} onClick={selectStack}>{stack}</span>
                     )}
                 </div>
                 <div className="col-12 col-md-10 col-lg-8">
