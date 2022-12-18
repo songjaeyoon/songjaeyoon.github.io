@@ -243,7 +243,8 @@ html {
     left: 0;
     width: 100%;
     min-height: 100vh;
-    min-height: 100dvh;
+    // min-height: 100%;
+    // min-height: 100dvh;
     border: 1.6rem solid #000;
     z-index: 999;
     pointer-events: none;
@@ -256,7 +257,8 @@ html {
 .full-height {
     width: 100%;
     min-height: 100vh;
-    min-height: 100dvh;
+    // min-height: 100%;
+    // min-height: 100dvh;
 }
 
 .bg-white {
