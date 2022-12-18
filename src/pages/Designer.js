@@ -52,8 +52,13 @@ const Designer = () => {
                     <div className="row">
                         {[...Array(21).keys()].map(index =>
                             <div className="col-12 col-md-4 mb-2" key={index}>
-                                <div className="image-wrapper">
-                                    <img src={require(`../images/drawings/im${index}-min.jpeg`)} alt="drawing" />
+                                <div className="image-wrapper"
+                                    style={{
+                                        backgroundImage: `url(${require(`../images/drawings/im${index}-min.jpeg`)})`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center center",
+                                    }}
+                                >
                                 </div>
                             </div>
                         )}
