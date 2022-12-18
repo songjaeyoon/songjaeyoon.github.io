@@ -8,7 +8,7 @@ import Experience from '../modules/Experience';
 import Education from '../modules/Education';
 
 import { education, experience } from "../data";
-import bgVideo from "../images/bg-video.mp4";
+import bgImage from "../images/bg-optimized.png";
 import project1 from "../images/story.jpeg";
 import project2 from "../images/note-taking.jpeg";
 import project3 from "../images/schedule.jpeg";
@@ -27,14 +27,12 @@ const Home = () => {
                 </h1>
             </section>
             <section className="full-height bg-red center">
-                <div className="video-wrapper">
-                    <video 
-                        src={bgVideo} 
-                        autoPlay={true} 
-                        muted={true}
-                        loop={true}
-                        className="bg-video"
-                    />
+                <div className="video-wrapper"
+                    style={{
+                        backgroundImage: `url(${bgImage})`,
+                        backgroundSize: "cover"
+                    }}
+                >
                 </div>
                 <div className="row">
                     <div className="col-md-5"></div>
