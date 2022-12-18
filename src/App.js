@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { createBrowserHistory } from "history";
 import Logo from "./modules/Logo";
+import ScrollToTop from "./modules/ScrollToTop";
 
 const history = createBrowserHistory();
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <ParallaxProvider>
       <Router history={history}>
+        <ScrollToTop />
         <Logo />
         <Navigation />
         <div className="border"></div>
