@@ -76,15 +76,13 @@ class CardContainer extends React.Component {
       if (!this.state.disableScroll) {
         if (scrollPos + scrollPosAdd >= scrollWidth) {
             this.setScroll(
-                // The math floor value helps smooth out the scroll jump, 
-                // I don't know why that particular value works, but it does 
-                // Same goes for the other setScroll call below
                 container, 1 + Math.floor(scrollPosAdd/12.09)
             );
             this.setState({
                 disableScroll: true,
             });
-        } else if (scrollPos <= 0) {
+        } 
+        else if (scrollPos <= 0) {
             console.log(scrollPos);
             this.setScroll(
                 container, scrollWidth - clonesWidth - Math.floor(scrollPosAdd/12.09)
@@ -137,17 +135,17 @@ class CardContainer extends React.Component {
     }
     
     componentDidMount() {
-        window.addEventListener('resize', this.reCalc);
-        function autoScroll() {
-            document.querySelector(".scrolling-wrapper").scrollBy(1, 0);
-            timeout = setTimeout(autoScroll, 50);
-        } 
-        autoScroll();
+      window.addEventListener('resize', this.reCalc);
+      function autoScroll() {
+          document.querySelector(".scrolling-wrapper").scrollBy(1, 0);
+          timeout = setTimeout(autoScroll, 50);
+      } 
+      autoScroll();
 
-        const cards = Array.from(document.querySelectorAll(".card"))
-        cards.forEach(card => {
-            card.addEventListener("mouseover", this.handleMouseover);
-        })
+      const cards = Array.from(document.querySelectorAll(".card"))
+      cards.forEach(card => {
+          card.addEventListener("mouseover", this.handleMouseover);
+      });
     }
     
     componentWillUnmount() {
@@ -164,7 +162,17 @@ class CardContainer extends React.Component {
             <Card title={titles[2]} path={paths[2]} classes={"bg-3"} />
             <Card title={titles[3]} path={paths[3]} classes={"bg-4"} />
             <Card title={titles[4]} path={paths[4]} classes={"bg-5"} />
+            <Card title={titles[0]} path={paths[0]} classes={"bg-1"}/>
+            <Card title={titles[1]} path={paths[1]} classes={"bg-2"} />
+            <Card title={titles[2]} path={paths[2]} classes={"bg-3"} />
+            <Card title={titles[3]} path={paths[3]} classes={"bg-4"} />
+            <Card title={titles[4]} path={paths[4]} classes={"bg-5"} />
             <Card title={titles[0]} path={paths[0]} classes={"bg-1 is-clone is-start"}/>
+            <Card title={titles[1]} path={paths[1]} classes={"bg-2 is-clone"}/>
+            <Card title={titles[2]} path={paths[2]} classes={"bg-3 is-clone"}/>
+            <Card title={titles[3]} path={paths[3]} classes={"bg-4 is-clone"}/>
+            <Card title={titles[4]} path={paths[4]} classes={"bg-5 is-clone"}/>
+            <Card title={titles[0]} path={paths[0]} classes={"bg-1 is-clone"}/>
             <Card title={titles[1]} path={paths[1]} classes={"bg-2 is-clone"}/>
             <Card title={titles[2]} path={paths[2]} classes={"bg-3 is-clone"}/>
             <Card title={titles[3]} path={paths[3]} classes={"bg-4 is-clone"}/>
