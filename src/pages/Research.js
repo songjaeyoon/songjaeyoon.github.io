@@ -110,7 +110,7 @@ const Research = () => {
                     <div>{selectedProject.desc}</div>
 
                     {selectedProject.prize && <div>
-                        <a href={selectedProject.prize.link} target="_blank"><small>🏆 {selectedProject.prize.name} 🏆</small></a>
+                        <a href={selectedProject.prize.link} target="_blank" rel="noreferrer"><small>🏆 {selectedProject.prize.name} 🏆</small></a>
                     </div>}
 
                     {selectedProject.keywords.map((keyword, i) =>
