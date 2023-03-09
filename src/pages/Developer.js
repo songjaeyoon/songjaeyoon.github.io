@@ -36,13 +36,13 @@ const Developer = () => {
                 <div className="col-12 col-md-10 col-lg-8 mb-2">
                     <strong className="text-muted">Stack</strong> <br/>
                     {allStack.map(stack => 
-                        <span key={stack} className={`${selectedStack.includes(stack) && "text-bold"} mr-1 pointer`} onClick={selectStack}>{stack}</span>
+                        <span key={stack} className={`${selectedStack.includes(stack) && "text-bold"} mr-1 pointer filter`} onClick={selectStack}>{stack}</span>
                     )}
                 </div>
                 <div className="col-12 col-md-10 col-lg-8">
                     <strong className="text-muted">Work by</strong> <br/>
-                    <span className={`${selectedCollab === "Solo" && "text-bold"} mr-1 pointer`} onClick={selectCollab}>Solo</span>
-                    <span className={`${selectedCollab === "Team" && "text-bold"} mr-1 pointer`} onClick={selectCollab}>Team</span>
+                    <span className={`${selectedCollab === "Solo" && "text-bold"} mr-1 pointer filter`} onClick={selectCollab}>Solo</span>
+                    <span className={`${selectedCollab === "Team" && "text-bold"} mr-1 pointer filter`} onClick={selectCollab}>Team</span>
                 </div>
             </div>
             <div className="row pt-4 pb-5 px-2">

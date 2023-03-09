@@ -63,13 +63,13 @@ const Research = () => {
                 <div className="col-12 col-md-10 col-lg-8 mb-2">
                     <strong className="text-muted">Keywords</strong> <br/>
                     {allKeywords.map((keyword, i) => 
-                        <span key={i} className={`${selectedKeywords.includes(keyword) && "text-bold"} mr-1 pointer`} onClick={selectKeyword}>{keyword}</span>
+                        <span key={i} className={`${selectedKeywords.includes(keyword) && "text-bold"} mr-1 pointer filter`} onClick={selectKeyword}>{keyword}</span>
                     )}
                 </div>
                 <div className="col-12 col-md-10 col-lg-8">
                     <strong className="text-muted">Category</strong> <br/>
                     {allCategories.map((category, i) => 
-                        <span key={i} className={`${selectedCategories.includes(category) && "text-bold"} mr-1 pointer`} onClick={selectCategory}>{category}</span>
+                        <span key={i} className={`${selectedCategories.includes(category) && "text-bold"} mr-1 pointer filter`} onClick={selectCategory}>{category}</span>
                     )}
                 </div>
             </div>
