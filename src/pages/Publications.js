@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { pubs } from "../data/publications";
 import { projects } from "../data/projects";
 import Publication from '../modules/Publication';
@@ -9,6 +9,14 @@ const posters = publications.filter(pub => pub.attrs.includes("poster"))
 const wips = publications.filter(pub => pub.attrs.includes("wip"))
 
 const Publications = () => {
+
+    useEffect(() => {
+        const scriptTag = document.getElementById("sphere-script");
+        if (scriptTag) {
+            scriptTag.remove();
+        }
+    }, []);
+
     return (
         <section className="full-height bg-white py-5 px-2">
             <div className="row">

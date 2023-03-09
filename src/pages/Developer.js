@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { devProjects } from '../data/devProjects';
 import { projects } from '../data/projects';
 import DevProject from '../modules/DevProject';
 
 const Developer = () => {
+
+    useEffect(() => {
+        const scriptTag = document.getElementById("sphere-script");
+        if (scriptTag) {
+            scriptTag.remove();
+        }
+    }, []);
+
     const [selectedStack, setSelectedStack] = useState([]);
     const [selectedCollab, setSelectedCollab] = useState("");
     const allStack = [...new Set(devProjects.map(proj => proj.stack).flat(1))];

@@ -1,29 +1,101 @@
-.fab-container {
-    top: 1rem;
-    right: 2rem;
-    .fab-item {
-        background-color: $brand-color !important;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 3px 6px rgb(0 0 0 / 20%);
-    }
-    @media (min-width: $on-large) {
-        top: 1.6rem;
-        right: 2.8rem;
-    }
-    &:hover {
-        .fab-item.fab-rotate {
-            transform: rotate(45deg);
-            box-shadow: 5px 5px 20px rgb(0 0 0 / 19%), 3px 3px 6px rgb(0 0 0 / 23%);
-            transition: box-shadow .2s ease, transform .1s ease;
-            outline: none;
-        }
-    }
-}
-
 .logo {
     position: fixed;
     top: 3rem;
     left: 3rem;
     z-index: 999;
     max-width: 60px;
+}
+
+.nav {
+    z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 4rem;
+        right: 5rem;
+    }
+
+}
+
+.menu {
+    li > a {
+        color: $text-color;
+        margin-bottom: .3rem;
+        display: inline-block;
+        position: relative;
+        &.active {
+            font-weight: 900;
+            &:before {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 8px;
+                background-color: $text-color;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: -1.2rem;
+            }
+        }
+    }
+}
+
+/* --- Handling the responsive/toggle nav --- */
+.mobile-menu {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+div.menu-toggle {
+    font-size: 3em;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration:none;
+    color: $grey-color;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 999;
+    span {
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-menu-toggled {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    background-color: $grey-color-dark;
+    z-index: 998;
+    width: 100%;
+}
+.desktop-menu {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+    ul {
+        li.menu-item-has-children > ul {
+        display: none;
+        }
+        
+        li.menu-item-has-children {
+            &:hover > ul {
+                display: block;
+                position: absolute;
+            }
+        }
+    }
 }
