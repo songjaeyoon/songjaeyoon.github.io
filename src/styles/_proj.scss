@@ -19,7 +19,8 @@
             align-items: center;
             justify-content: center;
             padding: 2rem 0;
-            background: linear-gradient(170deg, #ffd6af, #ffa1a1);
+            // background: linear-gradient(170deg, #ffd6af, #ffa1a1);
+            background: linear-gradient(170deg, #affffb, #aaffa1);
             img {
                 width: 70%;
                 box-shadow: 1px 5px 20px 0 rgba(14, 42, 90, 0.55);
@@ -52,6 +53,7 @@
 }
 
 .react-responsive-modal-modal {
+    color: $black;
     .react-responsive-modal-closeButton {
         outline: none;
     }
@@ -76,3 +78,5 @@
         vertical-align: baseline;
     }
 }
+
+

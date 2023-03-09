@@ -118,7 +118,7 @@ html {
     transition: opacity .5s ease;
     
     &.border-link {
-      border-bottom: 2px solid $grey-color-light;
+      border-bottom: 2px solid $brand-color;
       padding-bottom: .15rem;
     }
 
@@ -288,6 +288,9 @@ html {
 }
 .text-muted {
   color: $grey-color;
+}
+.text-gray {
+  color: $grey-color-dark;
 }
 .text-small {
   font-size: 85%;

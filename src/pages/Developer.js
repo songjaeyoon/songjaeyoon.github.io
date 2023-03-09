@@ -34,13 +34,13 @@ const Developer = () => {
         <section className="full-height bg-white">
             <div className="row pt-5 px-2">
                 <div className="col-12 col-md-10 col-lg-8 mb-2">
-                    <strong className="text-black">Stack</strong> <br/>
+                    <strong className="text-muted">Stack</strong> <br/>
                     {allStack.map(stack => 
                         <span key={stack} className={`${selectedStack.includes(stack) && "text-bold"} mr-1 pointer`} onClick={selectStack}>{stack}</span>
                     )}
                 </div>
                 <div className="col-12 col-md-10 col-lg-8">
-                    <strong className="text-black">Work by</strong> <br/>
+                    <strong className="text-muted">Work by</strong> <br/>
                     <span className={`${selectedCollab === "Solo" && "text-bold"} mr-1 pointer`} onClick={selectCollab}>Solo</span>
                     <span className={`${selectedCollab === "Team" && "text-bold"} mr-1 pointer`} onClick={selectCollab}>Team</span>
                 </div>

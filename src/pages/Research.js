@@ -61,13 +61,13 @@ const Research = () => {
         <section className="full-height bg-white">
             <div className="row pt-5 px-2">
                 <div className="col-12 col-md-10 col-lg-8 mb-2">
-                    <strong className="text-black">Keywords</strong> <br/>
+                    <strong className="text-muted">Keywords</strong> <br/>
                     {allKeywords.map((keyword, i) => 
                         <span key={i} className={`${selectedKeywords.includes(keyword) && "text-bold"} mr-1 pointer`} onClick={selectKeyword}>{keyword}</span>
                     )}
                 </div>
                 <div className="col-12 col-md-10 col-lg-8">
-                    <strong className="text-black">Category</strong> <br/>
+                    <strong className="text-muted">Category</strong> <br/>
                     {allCategories.map((category, i) => 
                         <span key={i} className={`${selectedCategories.includes(category) && "text-bold"} mr-1 pointer`} onClick={selectCategory}>{category}</span>
                     )}
@@ -110,7 +110,7 @@ const Research = () => {
                     <div>{selectedProject.desc}</div>
 
                     {selectedProject.prize && <div>
-                        <a href={selectedProject.prize.link} target="_blank" rel="noreferrer"><small>🏆 {selectedProject.prize.name} 🏆</small></a>
+                        <a className="text-gray" href={selectedProject.prize.link} target="_blank" rel="noreferrer"><small>🏆 {selectedProject.prize.name} 🏆</small></a>
                     </div>}
 
                     {selectedProject.keywords.map((keyword, i) =>

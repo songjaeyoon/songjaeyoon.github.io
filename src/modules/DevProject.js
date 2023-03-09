@@ -12,7 +12,7 @@ const DevProject = ({ proj, projects }) => {
                 <div className="project-img">
                     <img src={require(`../images/${proj.image}`)} alt={proj.title}/>
                 </div>
-                <div className="project-text text-right text-muted text-small">
+                <div className="project-text text-right text-gray text-small">
                     <b>{proj.title} ({proj.year})</b><br/>
                     <i>{proj.collab}</i> &nbsp;| &nbsp;
                     {proj.stack.map((s, i) =>

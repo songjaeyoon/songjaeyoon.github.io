@@ -9,7 +9,7 @@ const Project = ({ proj, handleClick }) => {
                 <div className="project-img">
                     <img src={require(`../images/${proj.image}`)} alt={proj.title}/>
                 </div>
-                <div className="project-text text-right text-muted text-small">
+                <div className="project-text text-right text-gray text-small">
                     <b>{proj.title} ({parseInt(proj.year / 100)})</b><br/>
                     {proj.keywords.map((keyword, i) =>
                         <span key={i}>{keyword}{i !== proj.keywords.length - 1 ? ", " : ""}</span>
