@@ -11,13 +11,13 @@ html {
   }
   
   ::selection {
-    background: #000;
-    color: #fff;
+    background: $text-color;
+    color: $background-color;
     text-shadow: none;
   }
   ::-moz-selection {
-    background: #000;
-    color: #fff;
+    background: $text-color;
+    color: $background-color;
     text-shadow: none;
   }
   
@@ -43,7 +43,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     color: $text-color;
   
-    background-color: #000; //$brand-color;
+    background-color: $background-color; //$brand-color;
 
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -245,7 +245,7 @@ html {
     min-height: 100vh;
     // min-height: 100%;
     // min-height: 100dvh;
-    border: 1.6rem solid #000;
+    border: 1rem solid $grey-color-dark;
     z-index: 999;
     pointer-events: none;
     transition: border-color .5s ease-in-out;

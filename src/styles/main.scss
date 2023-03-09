@@ -4,20 +4,20 @@
 $base-font-family: 'Roboto', Roboto, system, system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 $mono-font-family: 'Inconsolata', monospace;
 
-$base-font-size:   15px !default;
-$base-font-size-mobile:   14px !default;
+$base-font-size:   14px !default;
+$base-font-size-mobile:   12.5px !default;
 $base-font-weight: 300 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.6 !default;
 
 // colors
-$text-color:       #444452 !default;
+$text-color:       #fffef5 !default;
 $black:            #1f1f21 !default;
-$background-color: #fffef5 !default;
+$background-color: #000000 !default;
 $brand-color:      #b41717 !default;
 $brand-color-light:#a2d8d8 !default;
 
-$grey-color:       #828282 !default;
+$grey-color:       #9d9d9d !default;
 $grey-color-light: lighten($grey-color, 30%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 

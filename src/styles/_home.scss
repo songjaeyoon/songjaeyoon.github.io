@@ -19,16 +19,42 @@ strong {
     font-weight: 900;
 }
 
+.text-weight-normal {
+    font-weight: 500;
+}
+
+.mobile-small {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-small {
+        font-size: 2rem;
+    }
+}
+
+
 section, .position-relative {
     position: relative;
 }
 
 
 .initial-section {
-    padding-top: 30vh;
+    padding-top: 27vh;
+    padding-left: 3rem;
+    padding-right: 3rem;
     // padding-top: 30dvh;
     @media (max-width: 767px) {
-        padding-top: 25vh;
+        padding-top: 12vh;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.initial-text {
+    margin-bottom: 5rem;
+    @media (max-width: 767px) {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -169,4 +195,15 @@ section, .position-relative {
     font-size: 1.5rem;
     border-radius: 10px;
     color: #fff;
+}
+
+canvas {
+    position: fixed;
+    bottom: 4rem;
+    right: 0;
+    z-index: -1;
+    @media (max-width: 767px) {
+        bottom: 2rem;
+        right: -4rem;
+    }
 }
