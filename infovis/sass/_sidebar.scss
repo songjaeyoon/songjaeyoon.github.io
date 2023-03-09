@@ -51,7 +51,8 @@ aside {
     padding: .25rem 2rem;
     background-color: $grey-1;
     overflow-y: scroll;
-    height: calc(45vh - 80px);
+    // height: calc(45vh - 80px);
+    height: calc(45% - 80px);
   }
 }
 p {
