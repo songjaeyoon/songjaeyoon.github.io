@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { pubs } from "../data/publications";
 import { projects } from "../data/projects";
 import Publication from '../modules/Publication';
@@ -10,21 +10,14 @@ const wips = publications.filter(pub => pub.attrs.includes("wip"))
 
 const Publications = () => {
 
-    useEffect(() => {
-        const scriptTag = document.getElementById("sphere-script");
-        if (scriptTag) {
-            scriptTag.remove();
-        }
-    }, []);
-
     return (
         <section className="full-height bg-white py-5 px-2">
             <div className="row">
-                <div className="col-12 col-md-3 col-lg-2">
-                    <h2 className="text-serif">Conference {"&"} Journal Papers</h2>
+                <div className="col-12 col-md-3 col-lg-2 mb-1">
+                    <strong className="text-serif">Conference {"&"} Journal Papers</strong>
                 </div>
 
-                <div className="col-12 indent col-md-7 col-lg-5">
+                <div className="col-12 indent col-md-7 col-lg-7">
                     {papers.map((paper, i) => 
                         <Publication pub={paper} projects={projects} key={i} />
                     )}
@@ -32,11 +25,11 @@ const Publications = () => {
             </div>
 
             <div className="row">
-                <div className="col-12 col-md-3 col-lg-2">
-                    <h2 className="text-serif">Posters</h2>
+                <div className="col-12 col-md-3 col-lg-2 mb-1">
+                    <strong className="text-serif">Posters</strong>
                 </div>
 
-                <div className="col-12 indent col-md-7 col-lg-5">
+                <div className="col-12 indent col-md-7 col-lg-7">
                     {posters.map((poster, i) => 
                         <Publication pub={poster} projects={projects} key={i} />
                     )}
@@ -44,11 +37,11 @@ const Publications = () => {
             </div>
 
             <div className="row">
-                <div className="col-12 col-md-3 col-lg-2">
-                    <h2 className="text-serif">Work in Progress</h2>
+                <div className="col-12 col-md-3 col-lg-2 mb-1">
+                    <strong className="text-serif">Work in Progress</strong>
                 </div>
 
-                <div className="col-12 indent col-md-7 col-lg-5">
+                <div className="col-12 indent col-md-7 col-lg-7">
                     {wips.map((wip, i) => 
                         <Publication pub={wip} projects={projects} key={i} />
                     )}

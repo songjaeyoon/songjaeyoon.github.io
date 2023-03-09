@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { designProjects } from '../data/designProjects';
 
 const Designer = () => {
-
-    useEffect(() => {
-        const scriptTag = document.getElementById("sphere-script");
-        if (scriptTag) {
-            scriptTag.remove();
-        }
-    }, []);
 
     return (
         <section className="full-height bg-white">

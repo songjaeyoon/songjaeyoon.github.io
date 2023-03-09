@@ -16,13 +16,6 @@ const Research = () => {
     const allCategories = [...new Set(projects.map(proj => proj.topic).flat(1))];
 
     useEffect(() => {
-        const scriptTag = document.getElementById("sphere-script");
-        if (scriptTag) {
-            scriptTag.remove();
-        }
-    }, []);
-
-    useEffect(() => {
         if (location.search) {
             const ids = location.search.split("=");
             if (ids.length >= 2) {
