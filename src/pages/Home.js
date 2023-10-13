@@ -1,196 +1,209 @@
-import React, { useEffect } from 'react';
-import { Parallax } from 'react-scroll-parallax';
+import React, { useEffect } from "react";
+import { Parallax } from "react-scroll-parallax";
 import { isMobile } from "react-device-detect";
 
-import { vertexShader, fragmentShader } from './shaders';
+import { vertexShader, fragmentShader } from "./shaders";
 
 import * as THREE from "three";
 
 const Home = () => {
+  let injected = false;
 
-    let injected = false;
-
-    useEffect(() => {
-        if (!injected) {
-            injected = true;
-            init();
-        }
-    }, []);
-
-    function init() {
-        createWorld();
-        createPrimitive();
-        //---
-        animation();
+  useEffect(() => {
+    if (!injected) {
+      injected = true;
+      init();
     }
+  }, []);
 
-    var Theme = {_darkred: 0x000000}
+  function init() {
+    createWorld();
+    createPrimitive();
+    //---
+    animation();
+  }
 
-    //--------------------------------------------------------------------
+  var Theme = { _darkred: 0x000000 };
 
-    var scene, camera, renderer, sphere;
-    var start = Date.now();
-    var _width, _height;
+  //--------------------------------------------------------------------
 
-    function createWorld() {
-        _width = window.innerWidth;
-        _height= window.innerHeight * 0.35;
+  var scene, camera, renderer, sphere;
+  var start = Date.now();
+  var _width, _height;
 
-        if (window.innerWidth > 767) {
-            _width = window.innerWidth * 0.7;
-            _height= window.innerHeight * 0.7;
-        }
-        //---
-        scene = new THREE.Scene();
-        //scene.fog = new THREE.Fog(Theme._darkred, 8, 20);
-        scene.background = new THREE.Color(Theme._darkred);
-        //---
-        camera = new THREE.PerspectiveCamera(55, _width/_height, 1, 1000);
-        camera.position.z = 12;
-        //---
-        renderer = new THREE.WebGLRenderer({antialias:true, alpha:false});
-        renderer.setSize(_width, _height);
-        //---
-        sphere = document.getElementById("sphere");
-        sphere.appendChild(renderer.domElement);
-        //---
-        window.addEventListener('resize', onWindowResize, false);
+  function createWorld() {
+    _width = window.innerWidth;
+    _height = window.innerHeight * 0.35;
+
+    if (window.innerWidth > 767) {
+      _width = window.innerWidth * 0.7;
+      _height = window.innerHeight * 0.7;
     }
+    //---
+    scene = new THREE.Scene();
+    //scene.fog = new THREE.Fog(Theme._darkred, 8, 20);
+    scene.background = new THREE.Color(Theme._darkred);
+    //---
+    camera = new THREE.PerspectiveCamera(55, _width / _height, 1, 1000);
+    camera.position.z = 12;
+    //---
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    renderer.setSize(_width, _height);
+    //---
+    sphere = document.getElementById("sphere");
+    sphere.appendChild(renderer.domElement);
+    //---
+    window.addEventListener("resize", onWindowResize, false);
+  }
 
-    function onWindowResize() {
-        _width = window.innerWidth;
-        _height = window.innerHeight;
-        renderer.setSize(_width, _height);
-        camera.aspect = _width / _height;
-        camera.updateProjectionMatrix();
-        console.log('- resize -');
-    }
+  function onWindowResize() {
+    _width = window.innerWidth;
+    _height = window.innerHeight;
+    renderer.setSize(_width, _height);
+    camera.aspect = _width / _height;
+    camera.updateProjectionMatrix();
+    console.log("- resize -");
+  }
 
-    //--------------------------------------------------------------------
+  //--------------------------------------------------------------------
 
-    var mat;
-    var primitiveElement = function() {
-        this.mesh = new THREE.Object3D();
-        mat = new THREE.ShaderMaterial( {
-            wireframe: false,
-            //fog: true,
-            uniforms: {
-            time: {
-                type: "f",
-                value: 0.0
-            },
-            pointscale: {
-                type: "f",
-                value: 0.0
-            },
-            decay: {
-                type: "f",
-                value: 0.0
-            },
-            complex: {
-                type: "f",
-                value: 0.0
-            },
-            waves: {
-                type: "f",
-                value: 0.0
-            },
-            eqcolor: {
-                type: "f",
-                value: 0.0
-            },
-            fragment: {
-                type: "i",
-                value: true
-            },
-            redhell: {
-                type: "i",
-                value: true
-            }
-            },
-            vertexShader: vertexShader, // document.getElementById( 'vertexShader' ).textContent,
-            fragmentShader: fragmentShader, // document.getElementById( 'fragmentShader' ).textContent
-        });
-        var geo = new THREE.IcosahedronBufferGeometry(3, 7);
-        var mesh = new THREE.Points(geo, mat);
-        
-        //---
-        this.mesh.add(mesh);
-    }
+  var mat;
+  var primitiveElement = function () {
+    this.mesh = new THREE.Object3D();
+    mat = new THREE.ShaderMaterial({
+      wireframe: false,
+      //fog: true,
+      uniforms: {
+        time: {
+          type: "f",
+          value: 0.0,
+        },
+        pointscale: {
+          type: "f",
+          value: 0.0,
+        },
+        decay: {
+          type: "f",
+          value: 0.0,
+        },
+        complex: {
+          type: "f",
+          value: 0.0,
+        },
+        waves: {
+          type: "f",
+          value: 0.0,
+        },
+        eqcolor: {
+          type: "f",
+          value: 0.0,
+        },
+        fragment: {
+          type: "i",
+          value: true,
+        },
+        redhell: {
+          type: "i",
+          value: true,
+        },
+      },
+      vertexShader: vertexShader, // document.getElementById( 'vertexShader' ).textContent,
+      fragmentShader: fragmentShader, // document.getElementById( 'fragmentShader' ).textContent
+    });
+    var geo = new THREE.IcosahedronBufferGeometry(3, 7);
+    var mesh = new THREE.Points(geo, mat);
 
-    var _primitive;
-    function createPrimitive() {
-        _primitive = new primitiveElement();
-        scene.add(_primitive.mesh);
-    }
+    //---
+    this.mesh.add(mesh);
+  };
 
-    //--------------------------------------------------------------------
+  var _primitive;
+  function createPrimitive() {
+    _primitive = new primitiveElement();
+    scene.add(_primitive.mesh);
+  }
 
-    var options = {
+  //--------------------------------------------------------------------
+
+  var options = {
     perlin: {
-        vel: 0.002,
-        speed: 0.00050,
-        perlins: 1.5,
-        decay: 0.10,
-        complex: 0.30,
-        waves: 20.0,
-        eqcolor: 7.0,
-        fragment: true,
-        redhell: true
+      vel: 0.002,
+      speed: 0.0005,
+      perlins: 1.5,
+      decay: 0.1,
+      complex: 0.3,
+      waves: 20.0,
+      eqcolor: 7.0,
+      fragment: true,
+      redhell: true,
     },
     spin: {
-        sinVel: 0.0,
-        ampVel: 80.0,
-    }
-    }
+      sinVel: 0.0,
+      ampVel: 80.0,
+    },
+  };
 
-    //--------------------------------------------------------------------
+  //--------------------------------------------------------------------
 
-    function animation() {
-        requestAnimationFrame(animation);
-        var performance = Date.now() * 0.003;
-        
-        _primitive.mesh.rotation.y += options.perlin.vel;
-        _primitive.mesh.rotation.x = (Math.sin(performance * options.spin.sinVel) * options.spin.ampVel )* Math.PI / 180;
-        //---
-        mat.uniforms['time'].value = options.perlin.speed * (Date.now() - start);
-        mat.uniforms['pointscale'].value = options.perlin.perlins;
-        mat.uniforms['decay'].value = options.perlin.decay;
-        mat.uniforms['complex'].value = options.perlin.complex;
-        mat.uniforms['waves'].value = options.perlin.waves;
-        mat.uniforms['eqcolor'].value = options.perlin.eqcolor;
-        mat.uniforms['fragment'].value = options.perlin.fragment;
-        mat.uniforms['redhell'].value = options.perlin.redhell;
-        //---
-        camera.lookAt(scene.position);
-        renderer.render(scene, camera);
-    }
+  function animation() {
+    requestAnimationFrame(animation);
+    var performance = Date.now() * 0.003;
 
-    return (
-        <div className="container">
-            <section className="full-height initial-section">
+    _primitive.mesh.rotation.y += options.perlin.vel;
+    _primitive.mesh.rotation.x =
+      (Math.sin(performance * options.spin.sinVel) *
+        options.spin.ampVel *
+        Math.PI) /
+      180;
+    //---
+    mat.uniforms["time"].value = options.perlin.speed * (Date.now() - start);
+    mat.uniforms["pointscale"].value = options.perlin.perlins;
+    mat.uniforms["decay"].value = options.perlin.decay;
+    mat.uniforms["complex"].value = options.perlin.complex;
+    mat.uniforms["waves"].value = options.perlin.waves;
+    mat.uniforms["eqcolor"].value = options.perlin.eqcolor;
+    mat.uniforms["fragment"].value = options.perlin.fragment;
+    mat.uniforms["redhell"].value = options.perlin.redhell;
+    //---
+    camera.lookAt(scene.position);
+    renderer.render(scene, camera);
+  }
 
-                <div className="col-11 col-md-6">
-                    <p className="initial-text">
-                        <strong className="mobile-small">Jaeyoon Song</strong> <br/>
-                        <span className="text-weight-normal">PhD Student @ MIT Sloan</span> <br/>
-                        UX, HCI, Social Computing, Computational Social Science
-                    </p>
+  return (
+    <div className="container">
+      <section className="full-height initial-section">
+        <div className="col-11 col-md-6">
+          <p className="initial-text">
+            <strong className="mobile-small">Jaeyoon Song</strong> <br />
+            <span className="text-weight-normal">
+              PhD Student @ MIT Sloan
+            </span>{" "}
+            <br />
+            Human-centered AI, Social Computing, Computational Social Science
+          </p>
 
-                    <Parallax speed={isMobile ? -5 : -15} className="text-muted text-small">
-                        Hello 🧚🏻 <br/>
-                        I am a PhD student at MIT Sloan in the Information Technologies (IT) group - a subgroup of the Management Science program. 
-                        My general research area is <b>social computing</b> and <b>computational social science</b> at the intersection of computer science, data science, and social science. I employ data-driven computational thinking and methods to explore social science questions. 
-                        Specifically, I am interested in human-AI collaboration and online discussions/meetings.<br/>
-                        <br/>
-                        jaeyoons [at] mit [dot] edu
-                    </Parallax>
-                </div>
-            </section>
-
-            <div id="sphere"></div>
+          <Parallax
+            speed={isMobile ? -5 : -15}
+            className="text-muted text-small"
+          >
+            Hello 🧚🏻 <br />I am a PhD student at MIT Sloan in the Information
+            Technologies (IT) group - a subgroup of the Management Science
+            program. My general research area is <b>social computing</b> and{" "}
+            <b>computational social science</b> at the intersection of computer
+            science, data science, and social science. I employ data-driven
+            computational thinking and methods to explore social science
+            questions. Specifically, I am interested in human-AI collaboration
+            and online discussions/meetings.
+            <br />
+            <br />
+            jaeyoons [at] mit [dot] edu
+          </Parallax>
         </div>
-    );
-}
+      </section>
+
+      <div id="sphere"></div>
+    </div>
+  );
+};
 
 export default Home;
