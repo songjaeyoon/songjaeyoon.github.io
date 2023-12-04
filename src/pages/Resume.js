@@ -14,7 +14,7 @@ const Resume = () => {
               <b>🔗 Resume as a Researcher</b>
             </a>
             <br />
-            Last updated: 10/07/2023
+            Last updated: 12/04/2023
           </div>
           <div>
             <a href="https://bit.ly/developerjaeyoon">
