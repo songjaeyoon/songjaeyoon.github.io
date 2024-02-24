@@ -10,18 +10,9 @@
     z-index: 999;
 }
 
-@media screen and (min-width: 768px) {
-    .nav {
-        position: fixed;
-        top: 4rem;
-        right: 5rem;
-    }
-
-}
-
 .menu {
     li > a {
-        color: $text-color;
+        color: #fff;
         margin-bottom: .3rem;
         display: inline-block;
         position: relative;
@@ -33,7 +24,7 @@
                 width: 8px;
                 height: 8px;
                 border-radius: 8px;
-                background-color: $text-color;
+                background-color: #fff;
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -43,6 +34,28 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 4rem;
+        right: 5rem;
+        min-width: 100px;
+    }
+    .menu {
+        li > a {
+            color: $text-color;
+            &.active {
+                &:before {
+                    background-color: $text-color;
+                }
+            }
+        }
+    }
+
+}
+
+
 
 /* --- Handling the responsive/toggle nav --- */
 .mobile-menu {

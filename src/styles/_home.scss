@@ -42,11 +42,15 @@ section, .position-relative {
     position: relative;
 }
 
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
 
 .initial-section {
     padding-top: 27vh;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     // padding-top: 30dvh;
     @media (max-width: 767px) {
         padding-top: 12vh;
@@ -73,4 +77,8 @@ canvas {
         left: 1rem;
         margin: auto;
     }
+}
+
+.keyword-filter {
+    white-space: pre-wrap;
 }

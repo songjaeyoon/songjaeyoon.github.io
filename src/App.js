@@ -5,7 +5,7 @@ import Research from "./pages/Research";
 import Developer from "./pages/Developer";
 import Designer from "./pages/Designer";
 import Home from "./pages/Home";
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider } from "react-scroll-parallax";
 import { createBrowserHistory } from "history";
 import Logo from "./modules/Logo";
 import ScrollToTop from "./modules/ScrollToTop";
@@ -32,7 +32,6 @@ function App() {
           <Route path="/designer" exact element={<Designer />} />
 
           <Route path="/resume" exact element={<Resume />} />
-
         </Routes>
       </Router>
     </ParallaxProvider>

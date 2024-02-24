@@ -36,14 +36,14 @@ html {
    */
   body {
     width: 100%;
-    // overflow-x: hidden;
+    overflow-x: hidden;
   
     font: $base-font-weight #{$base-font-size-mobile}/#{$base-line-height} $base-font-family;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $text-color;
   
-    background-color: $background-color; //$brand-color;
+    background-color: $background-color; 
 
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -293,7 +293,7 @@ html {
   color: $grey-color-dark;
 }
 .text-small {
-  font-size: 85%;
+  font-size: 90%;
 }
 .text-bold {
   font-weight: 500;

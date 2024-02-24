@@ -11,13 +11,13 @@ $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.6 !default;
 
 // colors
-$text-color:       #fffef5 !default;
+$text-color:       #000000 !default;
 $black:            #1f1f21 !default;
-$background-color: #000000 !default;
-$brand-color:      #adfffa !default;
-$brand-color-light:#a2d8d8 !default;
+$background-color: #ffffff !default;
+$brand-color:      #3798a5 !default;
+$brand-color-light:#65d3e1 !default;
 
-$grey-color:       #bcbcbc !default;
+$grey-color:       #5b5b5b !default;
 $grey-color-light: lighten($grey-color, 30%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
@@ -53,6 +53,8 @@ $on-large:         $on-laptop !default;
   "base",
   "grid",
   "nav",
+  "background",
+  "pyramid",
   "home",
   "pub",
   "proj",
