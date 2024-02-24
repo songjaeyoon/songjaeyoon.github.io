@@ -97,9 +97,6 @@ const Navigation = () => {
               Resume
             </NavLink>
           </li>
-          <li>
-            <a href="https://blog.jaeyoon.io">Blog</a>
-          </li>
         </ul>
       </div>
 
