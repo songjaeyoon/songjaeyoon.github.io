@@ -245,7 +245,7 @@ html {
     min-height: 100vh;
     // min-height: 100%;
     // min-height: 100dvh;
-    border: 1rem solid $grey-color-dark;
+    border: 1rem solid #bef0f0; // 1rem solid $grey-color-dark;
     z-index: 999;
     pointer-events: none;
     transition: border-color .5s ease-in-out;
