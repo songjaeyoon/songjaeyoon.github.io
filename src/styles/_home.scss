@@ -80,6 +80,9 @@ canvas {
 }
 
 .keyword-filter {
-    white-space: pre-wrap;
+    white-space: pre-wrap !important;
     word-wrap: break-word;
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
