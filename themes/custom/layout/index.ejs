@@ -1,20 +1,34 @@
-<div class="home">
+<div class="home-wrapper">
     
     <%- partial('partial/menu_home') %>
     
-    <section class="row mt-5 text-center title">
-        <h2 class="text-serif"><b>✨ Jaeyoon Song ✨</b></h2>
-    </section>
-
-    <section class="row text-center">
-        <p>Jaeyoon Song is a researcher, developer, and designer<br/>
-        currently based in Cambridge, MA</p>
-    </section>
-
-
-    <section class="row text-center">
-        <canvas id="three-canvas" class="float"></canvas>
-    </section>
+    <div class="intro">
+        <h1 class="mb-2">Jaeyoon Song</h1>
+        <p>Jaeyoon is a researcher, developer, and designer<br/>
+            currently based in Cambridge, MA</p>
+    </div>
+    <div class="container">
+        <a href="/about" class="circle">
+            About
+        </a> 
+        <a href="/publications" class="circle">
+            Publications
+        </a>
+        <a href="/projects" class="circle">
+            Projects
+        </a>
+        <a href="/other" class="circle">
+            Other
+        </a>
+        <a href="https://blog.jaeyoon.io" class="circle">
+            Blog
+        </a>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="gradient">
+    </div>
+    <div class="black">
+        <a href="mailto:jaeyoons@mit.edu">Say Hi</a>
+    </div>
 </div>
-
-<script type="module" src="/js/home.js"></script>
