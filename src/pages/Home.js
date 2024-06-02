@@ -30,7 +30,7 @@ const Home = () => {
                             Human-AI Collaboration, Generative AI for Business,
                             Computational Social Science
                         </p>
-                        <p className="text-muted">
+                        <p className="text-muted text-small">
                             Hello, I am a PhD student at MIT Sloan School of
                             Management in the{" "}
                             <a

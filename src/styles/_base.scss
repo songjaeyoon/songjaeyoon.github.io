@@ -2,6 +2,7 @@ html {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     overflow-x: hidden;
+    background-color: #bef0f0;
   }
   
   *,
@@ -43,7 +44,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     color: $text-color;
   
-    background-color: $background-color; 
+    background-color: #bef0f0;
 
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -57,6 +58,10 @@ html {
       font-size: $base-font-size;
     }
     
+  }
+
+  #root {
+    background-color: $background-color; 
   }
   
   
@@ -244,13 +249,13 @@ html {
     width: 100%;
     min-height: 100vh;
     // min-height: 100%;
-    // min-height: 100dvh;
     border: 1.7rem solid #bef0f0; // 1rem solid $grey-color-dark;
     z-index: 999;
     pointer-events: none;
     transition: border-color .5s ease-in-out;
     @media (max-width: 767px) {
         border-width: 1rem;
+        min-height: 100dvh;
     }
 }
 
