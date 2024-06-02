@@ -9,33 +9,34 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { createBrowserHistory } from "history";
 import Logo from "./modules/Logo";
 import ScrollToTop from "./modules/ScrollToTop";
-import Resume from "./pages/Resume";
 
 const history = createBrowserHistory();
 
 function App() {
-  return (
-    <ParallaxProvider>
-      <Router history={history}>
-        <ScrollToTop />
-        <Navigation />
-        <div className="border"></div>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
+    return (
+        <ParallaxProvider>
+            <Router history={history}>
+                <ScrollToTop />
+                <Navigation />
+                <div className="border"></div>
+                <Routes>
+                    <Route path="/" exact element={<Home />} />
 
-          <Route path="/publications" exact element={<Publications />} />
+                    <Route
+                        path="/publications"
+                        exact
+                        element={<Publications />}
+                    />
 
-          <Route path="/projects" exact element={<Research />} />
+                    <Route path="/projects" exact element={<Research />} />
 
-          <Route path="/developer" exact element={<Developer />} />
+                    <Route path="/developer" exact element={<Developer />} />
 
-          <Route path="/designer" exact element={<Designer />} />
-
-          <Route path="/resume" exact element={<Resume />} />
-        </Routes>
-      </Router>
-    </ParallaxProvider>
-  );
+                    <Route path="/designer" exact element={<Designer />} />
+                </Routes>
+            </Router>
+        </ParallaxProvider>
+    );
 }
 
 export default App;

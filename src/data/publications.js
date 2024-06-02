@@ -1,133 +1,113 @@
 export const pubs = [
     {
-      "id": "soundglance",
-      "title": "SoundGlance: Briefing the Glanceable Cues of Web Pages for Screen Reader Users",
-      "year": 2019,
-      "authors": [
-        "Jaeyoon Song*",
-        "Kiroong Choe*",
-        "Jaemin Jo",
-        "Jinwook Seo"
-      ],
-      "equal_contribution": true,
-      "conference": {
-        "title": "CHI LBW",
-        "year": 2019
-      },
-      "url": "https://dl.acm.org/citation.cfm?id=3312865/",
-      "attrs": [
-        "international",
-        "conference",
-        "poster"
-      ],
-      "type": "Poster"
+        id: "soundglance",
+        title: "SoundGlance: Briefing the Glanceable Cues of Web Pages for Screen Reader Users",
+        year: 2019,
+        authors: ["Jaeyoon Song*", "Kiroong Choe*", "Jaemin Jo", "Jinwook Seo"],
+        equal_contribution: true,
+        conference: {
+            title: "CHI LBW",
+            year: 2019,
+        },
+        url: "https://dl.acm.org/citation.cfm?id=3312865/",
+        attrs: ["international", "conference", "poster"],
+        type: "Poster",
     },
     {
-      "id": "oss",
-      "title": "What Is Needed for the Sustainable Success of Open Source Software Projects: Efficiency Analysis of Commit Production Process via Git",
-      "year": 2018,
-      "authors": [
-        "Jaeyoon Song",
-        "Changhee Kim"
-      ],
-      "journal": {
-        "title": "Sustainability (SSCI/SCIE)",
-        "volume": 10,
-        "issue": 9,
-        "page": 3001
-      },
-      "url": "https://www.mdpi.com/2071-1050/10/9/3001",
-      "attrs": [
-        "international",
-        "journal",
-        "paper"
-      ],
-      "type": "Journal"
+        id: "oss",
+        title: "What Is Needed for the Sustainable Success of Open Source Software Projects: Efficiency Analysis of Commit Production Process via Git",
+        year: 2018,
+        authors: ["Jaeyoon Song", "Changhee Kim"],
+        journal: {
+            title: "Sustainability (SSCI/SCIE)",
+            volume: 10,
+            issue: 9,
+            page: 3001,
+        },
+        url: "https://www.mdpi.com/2071-1050/10/9/3001",
+        attrs: ["international", "journal", "paper"],
+        type: "Journal",
     },
     {
-      "id": "solutionChat",
-      "title": "SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion",
-      "year": 2020,
-      "authors": [
-        "Sungchul Lee",
-        "Jaeyoon Song",
-        "Eunyoung Ko",
-        "Jihee Kim",
-        "Juho Kim"
-      ],
-      "conference": {
-        "title": "CHI",
-        "year": 2020
-      },
-      "attrs": [
-        "international",
-        "conference",
-        "paper"
-      ],
-      "type": "Conference"
+        id: "solutionChat",
+        title: "SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion",
+        year: 2020,
+        authors: [
+            "Sungchul Lee",
+            "Jaeyoon Song",
+            "Eunyoung Ko",
+            "Jihee Kim",
+            "Juho Kim",
+        ],
+        conference: {
+            title: "CHI",
+            year: 2020,
+        },
+        attrs: ["international", "conference", "paper"],
+        type: "Conference",
     },
     {
-      "id": "talkingBoogie",
-      "title": "TalkingBoogie: Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers",
-      "year": 2020,
-      "authors": [
-        "Donghoon Shin",
-        "Jaeyoon Song",
-        "Seokwoo Song",
-        "Jisoo Park",
-        "Joonhwan Lee",
-        "Soojin Jeon"
-      ],
-      "conference": {
-        "title": "CHI",
-        "year": 2020
-      },
-      "award": "Honorable Mention Award (Top 5% among submissions)",
-      "attrs": [
-        "international",
-        "conference",
-        "paper"
-      ],
-      "type": "Conference"
+        id: "talkingBoogie",
+        title: "TalkingBoogie: Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers",
+        year: 2020,
+        authors: [
+            "Donghoon Shin",
+            "Jaeyoon Song",
+            "Seokwoo Song",
+            "Jisoo Park",
+            "Joonhwan Lee",
+            "Soojin Jeon",
+        ],
+        conference: {
+            title: "CHI",
+            year: 2020,
+        },
+        attrs: ["international", "conference", "paper"],
+        type: "Conference",
     },
     {
-      "id": "minglr",
-      "title": "Online Mingling: Supporting Ad Hoc, Private Conversations at Virtual Conferences",
-      "year": 2021,
-      "authors": [
-        "Jaeyoon Song",
-        "Christoph Riedl",
-        "Thomas W. Malone"
-      ],
-      "conference": {
-        "title": "CHI",
-        "year": 2021
-      },
-      "attrs": [
-        "international",
-        "conference",
-        "paper"
-      ],
-      "type": "Conference"
+        id: "minglr",
+        title: "Online Mingling: Supporting Ad Hoc, Private Conversations at Virtual Conferences",
+        year: 2021,
+        authors: ["Jaeyoon Song", "Christoph Riedl", "Thomas W. Malone"],
+        conference: {
+            title: "CHI",
+            year: 2021,
+        },
+        attrs: ["international", "conference", "paper"],
+        type: "Conference",
     },
     {
-      "id": "test",
-      "title": "A Test for Evaluating Performance in Human-Computer Systems",
-      "authors": [
-        "Andres Campero*", 
-        "Michelle Vaccaro*", 
-        "Jaeyoon Song", 
-        "Haoran Wen", 
-        "Abdullah Almaatouq", 
-        "Thomas W. Malone",
-      ],
-      "equal_contribution": true,
-      "url": "https://arxiv.org/abs/2206.12390",
-      "attrs": [
-        "international",
-        "journal",
-        "wip"
-      ],
-      "type": "WIP"
-    }
+        id: "test",
+        title: "A Test for Evaluating Performance in Human-Computer Systems",
+        authors: [
+            "Andres Campero*",
+            "Michelle Vaccaro*",
+            "Jaeyoon Song",
+            "Haoran Wen",
+            "Abdullah Almaatouq",
+            "Thomas W. Malone",
+        ],
+        equal_contribution: true,
+        url: "https://arxiv.org/abs/2206.12390",
+        attrs: ["international", "journal", "wip"],
+        type: "WIP",
+    },
+    {
+        id: "who2chat",
+        title: "Who2chat: A Social Networking System for Academic Researchers in Virtual Social Hours Enabling Coordinating, Overcoming Barriers and Social Signaling",
+        year: 2024,
+        authors: [
+            "Soya Park",
+            "Jaeyoon Song",
+            "David Karger",
+            "Thomas W. Malone",
+        ],
+        conference: {
+            title: "CSCW",
+            year: 2024,
+        },
+        attrs: ["international", "journal", "paper"],
+        type: "Journal",
+    },
 ];

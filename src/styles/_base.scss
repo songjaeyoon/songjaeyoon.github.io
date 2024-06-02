@@ -36,7 +36,7 @@ html {
    */
   body {
     width: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   
     font: $base-font-weight #{$base-font-size-mobile}/#{$base-line-height} $base-font-family;
     -webkit-font-smoothing: antialiased;
@@ -245,11 +245,11 @@ html {
     min-height: 100vh;
     // min-height: 100%;
     // min-height: 100dvh;
-    border: 1rem solid #bef0f0; // 1rem solid $grey-color-dark;
+    border: 1.7rem solid #bef0f0; // 1rem solid $grey-color-dark;
     z-index: 999;
     pointer-events: none;
     transition: border-color .5s ease-in-out;
-    @media (max-width: $on-medium) {
+    @media (max-width: 767px) {
         border-width: 1rem;
     }
 }
@@ -297,6 +297,11 @@ html {
 }
 .text-bold {
   font-weight: 500;
+}
+.text-mono {
+  font-family: "input-mono-narrow", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 hr {
