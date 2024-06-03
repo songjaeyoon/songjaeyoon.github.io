@@ -11,7 +11,25 @@ import ScrollToTop from "./modules/ScrollToTop";
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
+import { projects } from "./data/projects";
+import { devProjects } from "./data/devProjects";
+
 const history = createBrowserHistory();
+
+const designImage = require("./images/design/magicspell.jpeg");
+const video0 = require("./images/videos/video0.mp4");
+const video1 = require("./images/videos/video1.mp4");
+const video2 = require("./images/videos/video2.mp4");
+const video3 = require("./images/videos/video3.mp4");
+
+const projImages = {};
+const devImages = {};
+for (let project of projects) {
+    projImages[project.id] = require(`./images/${project.image}`);
+}
+for (let project of devProjects) {
+    devImages[project.id] = require(`./images/${project.image}`);
+}
 
 function App() {
     useEffect(() => {
@@ -61,11 +79,31 @@ function App() {
                         element={<Publications />}
                     />
 
-                    <Route path="/projects" exact element={<Research />} />
+                    <Route
+                        path="/projects"
+                        exact
+                        element={<Research projImages={projImages} />}
+                    />
 
-                    <Route path="/developer" exact element={<Developer />} />
+                    <Route
+                        path="/developer"
+                        exact
+                        element={<Developer devImages={devImages} />}
+                    />
 
-                    <Route path="/designer" exact element={<Designer />} />
+                    <Route
+                        path="/designer"
+                        exact
+                        element={
+                            <Designer
+                                designImage={designImage}
+                                video0={video0}
+                                video1={video1}
+                                video2={video2}
+                                video3={video3}
+                            />
+                        }
+                    />
                 </Routes>
             </Router>
         </ParallaxProvider>

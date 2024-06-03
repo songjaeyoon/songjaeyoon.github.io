@@ -3,7 +3,7 @@ import { devProjects } from "../data/devProjects";
 import { projects } from "../data/projects";
 import DevProject from "../modules/DevProject";
 
-const Developer = () => {
+const Developer = ({ devImages }) => {
     const [selectedStack, setSelectedStack] = useState([]);
     const [selectedCollab, setSelectedCollab] = useState("");
     const allStack = [
@@ -93,6 +93,7 @@ const Developer = () => {
                                         key={proj.id}
                                         proj={proj}
                                         projects={projects}
+                                        devImages={devImages}
                                     />
                                 );
                             }

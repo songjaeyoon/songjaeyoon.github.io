@@ -2,7 +2,7 @@ import React from "react";
 import { designProjects } from "../data/designProjects";
 import { Link } from "react-router-dom";
 
-const Designer = () => {
+const Designer = ({ designImage, video0, video1, video2, video3 }) => {
     return (
         <section className="full-height bg-white">
             <div className="row mb-3 px-2">
@@ -17,7 +17,7 @@ const Designer = () => {
                 <div className="col-12 col-md-10 col-lg-8 ">
                     <div className="row mb-2">
                         <img
-                            src={require("../images/design/magicspell.jpeg")}
+                            src={designImage}
                             alt="4 illustration of magic spells"
                         />
                     </div>
@@ -50,11 +50,8 @@ const Designer = () => {
                 <div className="col-12 col-md-10 col-lg-8 ">
                     <div className="row mb-2">
                         <div className="col-12 col-md-6">
-                            <video controls autoplay loop muted playsinline>
-                                <source
-                                    src={require("../images/videos/video0.mp4")}
-                                    type="video/mp4"
-                                />
+                            <video controls loop muted playsinline>
+                                <source src={video0} type="video/mp4" />
                             </video>
                             <div className="text-right text-muted  text-small mt-1 mb-3">
                                 <b>Vanilla JavaScript</b>
@@ -68,11 +65,8 @@ const Designer = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
-                            <video controls autoplay loop muted playsinline>
-                                <source
-                                    src={require("../images/videos/video1.mp4")}
-                                    type="video/mp4"
-                                />
+                            <video controls loop muted playsinline>
+                                <source src={video1} type="video/mp4" />
                             </video>
                             <div className="text-right text-muted  text-small mt-1 mb-3">
                                 <b>React.js</b>
@@ -90,11 +84,8 @@ const Designer = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
-                            <video controls autoplay loop muted playsinline>
-                                <source
-                                    src={require("../images/videos/video2.mp4")}
-                                    type="video/mp4"
-                                />
+                            <video controls loop muted playsinline>
+                                <source src={video2} type="video/mp4" />
                             </video>
                             <div className="text-right text-muted  text-small mt-1 mb-3">
                                 <b>GSAP, Three.js, React.js</b>
@@ -106,11 +97,8 @@ const Designer = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
-                            <video controls autoplay loop muted playsinline>
-                                <source
-                                    src={require("../images/videos/video3.mp4")}
-                                    type="video/mp4"
-                                />
+                            <video controls loop muted playsinline>
+                                <source src={video3} type="video/mp4" />
                             </video>
                             <div className="text-right text-muted  text-small mt-1 mb-3">
                                 <b>React.js, D3.js</b>

@@ -5,7 +5,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useLocation } from "react-router-dom";
 
-const Research = () => {
+const Research = ({ projImages }) => {
     const location = useLocation();
 
     const [selectedKeywords, setSelectedKeywords] = useState([]);
@@ -127,6 +127,7 @@ const Research = () => {
                                     <Project
                                         key={proj.id}
                                         proj={proj}
+                                        projImages={projImages}
                                         handleClick={selectProject}
                                     />
                                 );
@@ -172,7 +173,7 @@ const Research = () => {
 
                         <div className="mb-2">
                             <img
-                                src={require(`../images/${selectedProject.image}`)}
+                                src={projImages[selectedProject.id]}
                                 alt={selectedProject.title}
                             />
                         </div>
