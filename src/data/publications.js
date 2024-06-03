@@ -107,6 +107,7 @@ export const pubs = [
             title: "CSCW",
             year: 2024,
         },
+        url: "https://doi.org/10.1145/3637435",
         attrs: ["international", "journal", "paper"],
         type: "Journal",
     },
