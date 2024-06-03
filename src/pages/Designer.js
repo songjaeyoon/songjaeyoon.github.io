@@ -104,8 +104,8 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                                 <b>React.js, D3.js</b>
                                 <br />
                                 <span>
-                                    The illustrations in the background are from
-                                    Codepen
+                                    The illustrations in the background are by
+                                    Julia Miocene
                                 </span>
                             </div>
                         </div>
