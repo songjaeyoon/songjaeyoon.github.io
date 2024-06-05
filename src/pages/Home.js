@@ -38,7 +38,7 @@ const Home = () => {
                                 href="https://mitsloan.mit.edu/phd/program-overview/it"
                                 target="_blank"
                             >
-                                Information Technologies (IT) group
+                                Information Technology (IT) group
                             </a>
                             - a subgroup of the Management Science program. My
                             general research area is <b>social computing</b> and{" "}
@@ -162,7 +162,7 @@ const Home = () => {
             className="text-muted text-small"
           >
             Hello, I am a PhD student at MIT Sloan in the Information
-            Technologies (IT) group - a subgroup of the Management Science
+            Technology (IT) group - a subgroup of the Management Science
             program. My general research area is <b>social computing</b> and{" "}
             <b>computational social science</b> at the intersection of computer
             science, data science, and social science. I employ data-driven
