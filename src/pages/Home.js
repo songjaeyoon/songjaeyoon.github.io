@@ -47,8 +47,8 @@ const Home = () => {
                             social science. I employ data-driven computational
                             thinking and methods to explore social science
                             questions. Specifically, I am interested in human-AI
-                            collaboration in various contexts such as customer
-                            support, creative writing, and online meetings.
+                            collaboration in various contexts such as creative
+                            writing, customer support, and online meetings.
                             <br />
                             <br />
                             <a
