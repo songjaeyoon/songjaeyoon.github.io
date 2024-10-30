@@ -4,6 +4,7 @@ import Project from "../modules/Project";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useLocation } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Research = ({ projImages }) => {
     const location = useLocation();
@@ -68,9 +69,14 @@ const Research = ({ projImages }) => {
     };
 
     return (
-        <section className="full-height bg-white">
-            <div className="row pt-4 px-2">
-                <div className="col-12 col-md-10 col-lg-8 mb-2 keyword-filter">
+        <Container fluid>
+            <Row className="pt-5 px-2 mt-5">
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="mb-2 keyword-filter"
+                >
                     <strong className="text-muted">Keywords</strong> <br />
                     {allKeywords.map((keyword, i) => (
                         <span
@@ -78,14 +84,19 @@ const Research = ({ projImages }) => {
                             className={`${
                                 selectedKeywords.includes(keyword) &&
                                 "text-bold"
-                            } mr-1 pointer filter`}
+                            } me-2 pointer filter`}
                             onClick={selectKeyword}
                         >
                             {keyword}
                         </span>
                     ))}
-                </div>
-                <div className="col-12 col-md-10 col-lg-8 keyword-filter">
+                </Col>
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="keyword-filter"
+                >
                     <strong className="text-muted">Category</strong> <br />
                     {allCategories.map((category, i) => (
                         <span
@@ -93,17 +104,21 @@ const Research = ({ projImages }) => {
                             className={`${
                                 selectedCategories.includes(category) &&
                                 "text-bold"
-                            } mr-1 pointer filter`}
+                            } me-2 pointer filter`}
                             onClick={selectCategory}
                         >
                             {category}
                         </span>
                     ))}
-                </div>
-            </div>
-            <div className="row pt-4 pb-5 px-2">
-                <div className="col-12 col-md-10 col-lg-8">
-                    <div className="row">
+                </Col>
+            </Row>
+            <Row className="pt-4 pb-5 px-2">
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                >
+                    <Row>
                         {projects.map((proj) => {
                             let show = false;
                             for (let keyword of selectedKeywords) {
@@ -132,11 +147,11 @@ const Research = ({ projImages }) => {
                                     />
                                 );
                             }
-                            return <div key={proj.id}></div>;
+                            return "";
                         })}
-                    </div>
-                </div>
-            </div>
+                    </Row>
+                </Col>
+            </Row>
             <Modal
                 open={selectedProject !== null}
                 onClose={() => setSelectedProject(null)}
@@ -186,7 +201,7 @@ const Research = ({ projImages }) => {
                     </>
                 )}
             </Modal>
-        </section>
+        </Container>
     );
 };
 

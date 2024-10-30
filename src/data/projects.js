@@ -1,5 +1,15 @@
 export const projects = [
     {
+        id: "test",
+        topic: ["research"],
+        title: "A Test for Evaluating Performance in Human-Computer Systems",
+        year: 202405,
+        desc: "The Turing test for comparing computer performance to that of humans is well known, but, surprisingly, there is no widely used test for comparing how much better human-computer systems perform relative to humans alone, computers alone, or other baselines. In this paper, we show how to perform such a test using the ratio of means as a measure of effect size.",
+        link: "https://arxiv.org/abs/2206.12390",
+        image: "projects/test.png",
+        keywords: ["human-AI interaction"],
+    },
+    {
         id: "who2chat",
         topic: ["research"],
         title: "Who2Chat",
@@ -14,12 +24,12 @@ export const projects = [
         topic: ["research"],
         title: "Adaptive representation of group availability for scheduling meetings",
         year: 202203,
-        desc: "How can we adjust the interface to minimize the cognitive load of selecting/digesting available times? How can we support complexities such as subtle preferences or priorities?",
+        desc: "How can we adjust the interface to reduce the cognitive load of selecting/digesting available times?",
         slides: "https://www.slideshare.net/secret/iIsfFq9obr82EB",
         image: "projects/togedule.gif",
         keywords: ["collaboration", "design", "sensemaking"],
         current: true,
-        paragraph: `We often schedule group meetings. In such cases, gathering and converging group availability is a challenging task that requires high cognitive load. <br/><br/>Using an automated scheduling assistant is a promising approach. However, for complex meetings, particularly those with a large number of invitees, it is difficult for the agent to converge on a meeting time without sharing calendar information among all invitees. In these cases, shared polling approaches may be more efficient. Nevertheless, current shared polling practices are also limited in that they cannot incorporate high complexities such as multiple levels of preferences or priorities of each invitee. They are often cumbersome for attendees and hard to digest for the organizer. <br/><br/>Thus, we suggest Togedule, a visual representation of group availability that <b>continuously adapts to the context</b> such as priority settings, prior inputs, and delicate preferences. Togedule aims to help the organizer take into account various parameters (e.g., priorities of each invitee) in making decision and reduce the burden of invitees in marking their availability.<br/><br/>As shown in the image above, Togedule maximizes the information gain at frist by showing the full list of possible options. Then, as enough information is gathered, Togedule <b>dynamically reduces the options and eventually changes into a poll format</b>. When needed, the user can choose from the full list again. <br/><br/>Togedule also provides the decision making tool, which the organizer can use to make the final decision. We <b>suggest the best times using multiple algorithms</b> each of which uses different weights on each aspect and leave the final decision up to the human organizer.`,
+        paragraph: ``,
     },
     {
         id: "notescribe",

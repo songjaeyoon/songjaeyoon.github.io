@@ -1,10 +1,14 @@
 import React from "react";
 import Links from "./Links";
+import { Col } from "react-bootstrap";
 
 const Project = ({ proj, projImages, handleClick }) => {
     return (
-        <div
-            className="project col-12 col-md-6 col-lg-4"
+        <Col
+            xs={12}
+            md={6}
+            lg={4}
+            className="project"
             id={proj.id}
             onClick={handleClick}
         >
@@ -33,7 +37,7 @@ const Project = ({ proj, projImages, handleClick }) => {
                     <Links project={proj} />
                 </div>
             </div>
-        </div>
+        </Col>
     );
 };
 

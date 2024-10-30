@@ -1,12 +1,20 @@
 import React from "react";
 import Links from "./Links";
+import { Col } from "react-bootstrap";
 
-const DevProject = ({ proj, projects, devImages }) => {
+const DevProject = ({ proj, projects, devImages, handleClick }) => {
     const found = projects.filter((project) => project.id === proj.id);
     const project = found.length > 0 ? found[0] : proj;
 
     return (
-        <div className="project col-12 col-md-6 col-lg-4">
+        <Col
+            xs={12}
+            md={6}
+            lg={4}
+            className="project"
+            id={proj.id}
+            onClick={handleClick}
+        >
             <div className="project-wrapper">
                 <div className="project-img">
                     <img src={devImages[proj.id]} alt={proj.title} />
@@ -31,7 +39,7 @@ const DevProject = ({ proj, projects, devImages }) => {
                     <Links project={project} />
                 </div>
             </div>
-        </div>
+        </Col>
     );
 };
 

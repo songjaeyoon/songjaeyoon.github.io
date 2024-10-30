@@ -4,6 +4,7 @@ import Publication from "../modules/Publication";
 import { pubs } from "../data/publications";
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 const publications = pubs.sort((a, b) => b.year - a.year);
 const papers = publications.filter((pub) => pub.attrs.includes("paper"));
@@ -11,46 +12,57 @@ const wips = publications.filter((pub) => pub.attrs.includes("wip"));
 
 const Home = () => {
     return (
-        <div className="container intro">
-            <div className="wrapper">
-                <section className="initial-section mb-5">
-                    <div className="col-12">
-                        <div className="pyramid">
-                            <div className="side left"></div>
-                            <div className="side front"></div>
-                            <div className="side right"></div>
-                            <div className="side back"></div>
-                        </div>
-                        <h1 className="mb-1">Jaeyoon Song</h1>
-                        <p>
-                            <span className="text-weight-normal">
-                                PhD Student @ MIT
-                            </span>{" "}
-                            <br />
-                            Human-AI Collaboration, Generative AI for Business,
-                            Computational Social Science
-                        </p>
-                        <p className="text-muted text-small">
-                            Hello, I am a PhD student at MIT Sloan School of
-                            Management in the{" "}
-                            <a
-                                className="link-underline"
-                                href="https://mitsloan.mit.edu/phd/program-overview/it"
-                                target="_blank"
-                            >
-                                Information Technology (IT) group
-                            </a>
-                            - a subgroup of the Management Science program. My
-                            general research area is <b>social computing</b> and{" "}
-                            <b>computational social science</b> at the
-                            intersection of computer science, data science, and
-                            social science. I employ data-driven computational
-                            thinking and methods to explore social science
-                            questions. Specifically, I am interested in human-AI
-                            collaboration in various contexts such as creative
-                            writing, customer support, and online meetings.
-                            <br />
-                            <br />
+        <Container fluid className="intro">
+            <Row>
+                <Col xs={12} md={{ offset: 3, span: 6 }} className="mb-5 pt-5">
+                    <div className="pyramid">
+                        <div className="side left"></div>
+                        <div className="side front"></div>
+                        <div className="side right"></div>
+                        <div className="side back"></div>
+                    </div>
+                    <h1 className="mb-1 intro-name">Jaeyoon Song</h1>
+                    <p>
+                        <span className="text-weight-normal">
+                            PhD Student @ MIT
+                        </span>{" "}
+                        <br />
+                        Human-AI Collaboration, Generative AI for Business,
+                        Computational Social Science
+                    </p>
+                    <p className="text-muted text-small">
+                        Hello, I am a PhD student at MIT Sloan School of
+                        Management in the{" "}
+                        <a
+                            className="link-underline"
+                            href="https://mitsloan.mit.edu/phd/program-overview/it"
+                            target="_blank"
+                        >
+                            Information Technology (IT) group
+                        </a>
+                        - a subgroup of the Management Science program. My
+                        general research area is{" "}
+                        <b>computational social science</b> and{" "}
+                        <b>social computing</b> at the intersection of computer
+                        science, data science, and social science. I employ
+                        data-driven computational thinking and methods to
+                        explore social science questions. Specifically, I am
+                        interested in human-AI interaction, collaboration, and
+                        the transformative impact of generative AI on work and
+                        organizations.
+                        <br />
+                        <br />
+                        In previous projects, I studied ways to facilitate
+                        virtual networking, helping individuals to overcome
+                        social and logistical barriers within digital
+                        workspaces. Currently, I'm investigating behavioral
+                        shifts within online communities, seeking insights into
+                        the future of work by identifying which contributors
+                        adapt and thrive in the evolving landscape of work and
+                        which gradually disengage.
+                        <br />
+                        <br />
+                        <span className="d-none d-md-inline-block">
                             <a
                                 href="https://www.linkedin.com/in/jyoonsong/"
                                 target="_blank"
@@ -58,94 +70,82 @@ const Home = () => {
                                 Linkedin
                             </a>{" "}
                             &nbsp;|&nbsp;{" "}
-                            <a
-                                href="https://github.com/jyoonsong"
-                                target="_blank"
-                            >
-                                GitHub
-                            </a>{" "}
-                            &nbsp;|&nbsp;{" "}
-                            <a
-                                href="https://scholar.google.com/citations?user=Im7uFVIAAAAJ"
-                                target="_blank"
-                            >
-                                Google Scholar
-                            </a>{" "}
-                            &nbsp;|&nbsp;{" "}
-                            <a href={require(`../pdf/CV.pdf`)} target="_blank">
-                                CV
-                            </a>{" "}
-                            &nbsp;|&nbsp; jaeyoons@mit.edu
-                        </p>
-                    </div>
-                </section>
+                        </span>
+                        <a href="https://github.com/jyoonsong" target="_blank">
+                            GitHub
+                        </a>{" "}
+                        &nbsp;|&nbsp;{" "}
+                        <a
+                            href="https://scholar.google.com/citations?user=Im7uFVIAAAAJ"
+                            target="_blank"
+                        >
+                            Google Scholar
+                        </a>{" "}
+                        &nbsp;|&nbsp;{" "}
+                        <a href={require(`../pdf/CV.pdf`)} target="_blank">
+                            CV
+                        </a>{" "}
+                        &nbsp;|&nbsp; jaeyoons@mit.edu
+                    </p>
+                </Col>
 
-                <aside className="divider mb-5">
+                <Col xs={12} className="divider my-5">
                     <div></div>
-                </aside>
+                </Col>
 
-                <section className="px-2 mb-5">
-                    <div className="row">
-                        <div className="col-12 col-md-6">
-                            <div className="intro-title text-mono">
-                                Recent Publications
-                            </div>
-
-                            <Publication
-                                pub={wips.find((wip) => wip.id === "test")}
-                                projects={projects}
-                            />
-                            <Publication
-                                pub={papers.find(
-                                    (paper) => paper.id === "minglr"
-                                )}
-                                projects={projects}
-                            />
-                            <Publication
-                                pub={papers.find(
-                                    (paper) => paper.id === "who2chat"
-                                )}
-                                projects={projects}
-                            />
-                            <div className="view-all">
-                                <Link to="/publications">
-                                    View All Publications →
-                                </Link>
-                            </div>
-                        </div>
+                <Col xs={12} md={{ offset: 3, span: 6 }} className="px-2 my-5">
+                    <div className="intro-title text-mono">
+                        Selected Publications
                     </div>
-                </section>
 
-                <aside className="divider mb-5">
+                    <Publication
+                        pub={wips.find((wip) => wip.id === "test")}
+                        projects={projects}
+                    />
+                    <Publication
+                        pub={papers.find((paper) => paper.id === "minglr")}
+                        projects={projects}
+                    />
+                    <Publication
+                        pub={papers.find((paper) => paper.id === "who2chat")}
+                        projects={projects}
+                    />
+                    <div className="view-all">
+                        <Link to="/publications">View All Publications →</Link>
+                    </div>
+                </Col>
+
+                <Col xs={12} className="divider my-5">
                     <div></div>
-                </aside>
+                </Col>
 
-                <section className="px-2 mb-5 pb-5">
-                    <div className="row">
-                        <div className="col-12 col-md-5">
-                            <div className="intro-title text-mono">
-                                Miscellaneous Facts
-                            </div>
-                            <div className="fun-fact">
-                                I enjoy{" "}
-                                <Link
-                                    className="link-underline"
-                                    to="/developer"
-                                >
-                                    programming
-                                </Link>{" "}
-                                and{" "}
-                                <Link className="link-underline" to="/designer">
-                                    design
-                                </Link>{" "}
-                                in my work and free time. I also love dogs and
-                                animals. Please contact me for more information
-                                about my current projects.
-                            </div>
-                        </div>
+                <Col
+                    xs={12}
+                    md={{ offset: 3, span: 6 }}
+                    className="px-2 my-5 py-5"
+                >
+                    <div className="intro-title text-mono">
+                        Miscellaneous Facts
                     </div>
-                </section>
-            </div>
+                    <div className="fun-fact">
+                        I enjoy{" "}
+                        <Link className="link-underline" to="/developer">
+                            programming
+                        </Link>{" "}
+                        and{" "}
+                        <Link className="link-underline" to="/designer">
+                            design
+                        </Link>{" "}
+                        in my work and free time. I also love dogs and animals.
+                        Please contact me for more information about my current
+                        projects.
+                    </div>
+                </Col>
+
+                <Col xs={12} className="divider my-5 opacity-0">
+                    <div></div>
+                </Col>
+            </Row>
             {/* <section className="full-height initial-section">
         <div className="col-11 col-md-6">
           <p className="initial-text">
@@ -175,7 +175,7 @@ const Home = () => {
           </Parallax>
         </div>
       </section> */}
-        </div>
+        </Container>
     );
 };
 

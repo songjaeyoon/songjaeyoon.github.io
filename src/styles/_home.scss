@@ -89,6 +89,7 @@ canvas {
 
 .link-underline {
     text-decoration: underline dotted lightgray 2px;
+    text-decoration-color: lightgray !important;
     text-underline-offset: 5px;
 }
 
@@ -118,4 +119,15 @@ canvas {
 
 .fun-fact {
     margin-top: 10px;
+}
+
+.container-fluid > .row {
+    @media (max-width: 767px) {
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+    }
+}
+.intro-name {
+    font-size: 1.5rem;
+    font-weight: bold;
 }

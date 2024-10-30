@@ -49,9 +49,9 @@ $on-large:         $on-laptop !default;
 }
 
 // import partials
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import
   "base",
-  "grid",
   "nav",
   "background",
   "pyramid",
@@ -60,3 +60,6 @@ $on-large:         $on-laptop !default;
   "proj",
   "design"
 ;
+
+
+

@@ -37,7 +37,7 @@ function App() {
         let vh = isMobile ? window.outerHeight : window.innerHeight;
         // Then we set the value in the --vh custom property to the root of the document
         document
-            .querySelector(".border")
+            .querySelector(".overall-border")
             .style.setProperty("height", `${vh}px`);
 
         // We listen to the resize event
@@ -45,7 +45,7 @@ function App() {
             // We execute the same script as before
             vh = isMobile ? window.outerHeight : window.innerHeight;
             document
-                .querySelector(".border")
+                .querySelector(".overall-border")
                 .style.setProperty("height", `${vh}px`);
         });
 
@@ -57,7 +57,7 @@ function App() {
                 if (vh !== window.outerHeight) {
                     vh = window.outerHeight;
                     document
-                        .querySelector(".border")
+                        .querySelector(".overall-border")
                         .style.setProperty("height", `${vh}px`);
                 }
             });
@@ -69,7 +69,7 @@ function App() {
             <Router history={history}>
                 <ScrollToTop />
                 <Navigation />
-                <div className="border"></div>
+                <div className="overall-border"></div>
                 <Routes>
                     <Route path="/" exact element={<Home />} />
 

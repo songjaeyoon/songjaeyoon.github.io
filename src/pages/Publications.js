@@ -2,6 +2,7 @@ import React from "react";
 import { pubs } from "../data/publications";
 import { projects } from "../data/projects";
 import Publication from "../modules/Publication";
+import { Col, Container, Row } from "react-bootstrap";
 
 const publications = pubs.sort((a, b) => b.year - a.year);
 const papers = publications.filter((pub) => pub.attrs.includes("paper"));
@@ -10,44 +11,59 @@ const wips = publications.filter((pub) => pub.attrs.includes("wip"));
 
 const Publications = () => {
     return (
-        <section className="full-height bg-white py-4 px-2">
-            <div className="row">
-                <div className="section-title col-12 col-md-3 col-lg-2 mb-1">
-                    <strong className="text-mono">Work in Progress</strong>
-                </div>
+        <Container fluid>
+            <Row className="mt-5 pt-5 pb-5">
+                <Col xs={12} md={{ offset: 2, span: 8 }} className="pb-5">
+                    <Row className="pb-5">
+                        <Col xs={12} md={3} className="section-title mb-1">
+                            <strong className="text-mono">
+                                Work in Progress
+                            </strong>
+                        </Col>
 
-                <div className="col-12 indent col-md-7 col-lg-6">
-                    {wips.map((wip, i) => (
-                        <Publication pub={wip} projects={projects} key={i} />
-                    ))}
-                </div>
-            </div>
-            <div className="row">
-                <div className="section-title col-12 col-md-3 col-lg-2 mb-1">
-                    <strong className="text-mono">
-                        Journal {"&"} Conference Papers
-                    </strong>
-                </div>
+                        <Col xs={12} md={9} className="indent mb-1">
+                            {wips.map((wip, i) => (
+                                <Publication
+                                    pub={wip}
+                                    projects={projects}
+                                    key={i}
+                                />
+                            ))}
+                        </Col>
 
-                <div className="col-12 indent col-md-7 col-lg-6">
-                    {papers.map((paper, i) => (
-                        <Publication pub={paper} projects={projects} key={i} />
-                    ))}
-                </div>
-            </div>
+                        <Col xs={12} md={3} className="section-title mb-1">
+                            <strong className="text-mono">
+                                Journal {"&"} Conference Papers
+                            </strong>
+                        </Col>
 
-            <div className="row">
-                <div className="section-title col-12 col-md-3 col-lg-2 mb-1">
-                    <strong className="text-mono">Posters</strong>
-                </div>
+                        <Col xs={12} md={9} className="indent mb-1">
+                            {papers.map((paper, i) => (
+                                <Publication
+                                    pub={paper}
+                                    projects={projects}
+                                    key={i}
+                                />
+                            ))}
+                        </Col>
 
-                <div className="col-12 indent col-md-7 col-lg-6">
-                    {posters.map((poster, i) => (
-                        <Publication pub={poster} projects={projects} key={i} />
-                    ))}
-                </div>
-            </div>
-        </section>
+                        <Col xs={12} md={3} className="section-title mb-1">
+                            <strong className="text-mono">Posters</strong>
+                        </Col>
+
+                        <Col xs={12} md={9} className="indent mb-1">
+                            {posters.map((poster, i) => (
+                                <Publication
+                                    pub={poster}
+                                    projects={projects}
+                                    key={i}
+                                />
+                            ))}
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

@@ -1,20 +1,30 @@
 import React from "react";
 import { designProjects } from "../data/designProjects";
 import { Link } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Designer = ({ designImage, video0, video1, video2, video3 }) => {
     return (
-        <section className="full-height bg-white">
-            <div className="row mb-3 px-2">
-                <div className="col-12 col-md-10 col-lg-8 pt-4 pb-4">
+        <Container fluid>
+            <Row className="mb-5 mt-5 pt-5 pb-5">
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="py-4"
+                >
                     <div className="text-black">
                         <strong>Graphic Design</strong>
                     </div>
                     <div className="text-muted">
                         Sketch App, Adobe Illustrator
                     </div>
-                </div>
-                <div className="col-12 col-md-10 col-lg-8 ">
+                </Col>
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                >
                     <div className="row mb-2">
                         <img
                             src={designImage}
@@ -37,17 +47,26 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                             https://jaeyoon.io/dt4c
                         </a>
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Row>
 
-            <div className="row px-2">
-                <div className="col-12 col-md-10 col-lg-8 pt-4 pb-4">
+            <Row className="mb-5 pb-5">
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="py-4"
+                >
                     <div className="text-black">
                         <strong>Creative Coding</strong>
                     </div>
                     <div className="text-muted">JavaScript, SASS/SCSS</div>
-                </div>
-                <div className="col-12 col-md-10 col-lg-8 ">
+                </Col>
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                >
                     <div className="row mb-2">
                         <div className="col-12 col-md-6">
                             <img src={require("../images/videos/gif0.gif")} />
@@ -102,17 +121,27 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Row>
 
-            <div className="row px-2">
-                <div className="col-12 col-md-10 col-lg-8 pt-4 pb-4">
+            <Row className="pb-5">
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="py-4"
+                >
                     <div className="text-black">
                         <strong>Web & App Design</strong>
                     </div>
                     <div className="text-muted">Figma, Sketch App</div>
-                </div>
-                <div className="col-12 col-md-10 col-lg-8 ">
+                </Col>
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="pt-4 pb-5"
+                >
                     <div className="row mb-2">
                         {designProjects.map((proj) => (
                             <div className="col-12 col-md-6" key={proj.id}>
@@ -132,9 +161,9 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                             </div>
                         ))}
                     </div>
-                </div>
-            </div>
-        </section>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
