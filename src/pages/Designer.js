@@ -25,13 +25,13 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                     md={{ offset: 1, span: 10 }}
                     lg={{ offset: 2, span: 8 }}
                 >
-                    <div className="row mb-2">
+                    <div className="row mb-3">
                         <img
                             src={designImage}
                             alt="4 illustration of magic spells"
                         />
                     </div>
-                    <div className="text-right text-muted text-small ">
+                    <div className="text-right text-muted text-small">
                         <b>Magic Spells All Muggles are Jealous of</b>
                         <br />
                         Twelve variations of magic spells in the Harry Potter
@@ -70,7 +70,7 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                     <div className="row mb-2">
                         <div className="col-12 col-md-6">
                             <img src={require("../images/videos/gif0.gif")} />
-                            <div className="text-right text-muted  text-small mt-1 mb-3">
+                            <div className="text-right text-muted  text-small mt-3 mb-4">
                                 <b>Vanilla JavaScript</b>
                                 <br />
                                 <span>
@@ -83,7 +83,7 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                         </div>
                         <div className="col-12 col-md-6">
                             <img src={require("../images/videos/gif1.gif")} />
-                            <div className="text-right text-muted  text-small mt-1 mb-3">
+                            <div className="text-right text-muted  text-small mt-3 mb-4">
                                 <b>React.js</b>
                                 <br />
                                 <span>
@@ -100,7 +100,7 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                         </div>
                         <div className="col-12 col-md-6">
                             <img src={require("../images/videos/gif2.gif")} />
-                            <div className="text-right text-muted  text-small mt-1 mb-3">
+                            <div className="text-right text-muted  text-small mt-3 mb-4">
                                 <b>GSAP, Three.js, React.js</b>
                                 <br />
                                 <span>
@@ -111,7 +111,7 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                         </div>
                         <div className="col-12 col-md-6">
                             <img src={require("../images/videos/gif3.gif")} />
-                            <div className="text-right text-muted  text-small mt-1 mb-3">
+                            <div className="text-right text-muted  text-small mt-3 mb-4">
                                 <b>React.js, D3.js</b>
                                 <br />
                                 <span>
@@ -149,7 +149,7 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                                     src={require(`../images/${proj.image}`)}
                                     alt={proj.title}
                                 />
-                                <div className="text-right text-muted  text-small mt-1 mb-3">
+                                <div className="text-right text-muted text-small mt-3 mb-4">
                                     <b>{proj.title}</b>
                                     <br />
                                     <span

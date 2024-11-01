@@ -52,14 +52,11 @@ const Home = () => {
                         organizations.
                         <br />
                         <br />
-                        In previous projects, I studied ways to facilitate
-                        virtual networking, helping individuals to overcome
-                        social and logistical barriers within digital
-                        workspaces. Currently, I'm investigating behavioral
-                        shifts within online communities, seeking insights into
-                        the future of work by identifying which contributors
-                        adapt and thrive in the evolving landscape of work and
-                        which gradually disengage.
+                        Currently, I'm investigating behavioral shifts within
+                        online communities, seeking insights into the future of
+                        work by identifying which contributors adapt and thrive
+                        in the evolving landscape of work and which gradually
+                        disengage.
                         <br />
                         <br />
                         <span className="d-none d-md-inline-block">
