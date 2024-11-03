@@ -163,6 +163,45 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                     </div>
                 </Col>
             </Row>
+
+            <Row className="pb-5">
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="py-4"
+                >
+                    <div className="text-black">
+                        <strong>Drawing</strong>
+                        <div className="text-muted">Colored pencils</div>
+                    </div>
+                </Col>
+                <Col
+                    xs={12}
+                    md={{ offset: 1, span: 10 }}
+                    lg={{ offset: 2, span: 8 }}
+                    className="pb-5"
+                >
+                    <div
+                        className="video-container"
+                        style={{
+                            position: "relative",
+                            paddingBottom: "56.25%",
+                            height: 0,
+                        }}
+                    >
+                        <iframe
+                            className="youtube"
+                            src="https://www.youtube.com/embed/3nVzW6YZcUg?si=WekSOuGARrCcflXG"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </Col>
+            </Row>
         </Container>
     );
 };

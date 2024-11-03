@@ -60,7 +60,7 @@ const Developer = ({ devImages }) => {
 
     return (
         <Container fluid>
-            <Row className="pt-5 px-2 mt-5">
+            <Row className="pt-5 mt-5">
                 <Col
                     xs={12}
                     md={{ offset: 1, span: 10 }}
