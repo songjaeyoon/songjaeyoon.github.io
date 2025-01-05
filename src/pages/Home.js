@@ -27,7 +27,7 @@ const Home = () => {
                             PhD Student @ MIT
                         </span>{" "}
                         <br />
-                        Human-AI Collaboration, Generative AI for Business,
+                        Human-AI Interaction, Collaboration, Generative AI,
                         Computational Social Science
                     </p>
                     <p className="text-muted text-small">
@@ -55,8 +55,8 @@ const Home = () => {
                         Currently, I'm investigating behavioral shifts within
                         online communities, seeking insights into the future of
                         work by identifying which contributors adapt and thrive
-                        in the evolving landscape of work and which gradually
-                        disengage.
+                        in the evolving landscape of generative AI and which
+                        gradually disengage.
                         <br />
                         <br />
                         <span className="d-none d-md-inline-block">
@@ -66,7 +66,7 @@ const Home = () => {
                             >
                                 Linkedin
                             </a>{" "}
-                            &nbsp;|&nbsp;{" "}
+                            &nbsp;| &nbsp;{" "}
                         </span>
                         <a href="https://github.com/jyoonsong" target="_blank">
                             GitHub
@@ -100,11 +100,11 @@ const Home = () => {
                         projects={projects}
                     />
                     <Publication
-                        pub={papers.find((paper) => paper.id === "minglr")}
+                        pub={wips.find((paper) => paper.id === "badge")}
                         projects={projects}
                     />
                     <Publication
-                        pub={papers.find((paper) => paper.id === "who2chat")}
+                        pub={papers.find((paper) => paper.id === "minglr")}
                         projects={projects}
                     />
                     <div className="view-all">
@@ -133,9 +133,10 @@ const Home = () => {
                         <Link className="link-underline" to="/designer">
                             design
                         </Link>{" "}
-                        in my work and free time. I also love dogs and animals.
-                        Please contact me for more information about my current
-                        projects.
+                        in my work and free time. Please contact me for more
+                        information about my current projects. I'm open to
+                        coffee chats on various topics like generative AI,
+                        startups, accessibility, and the future of work.
                     </div>
                 </Col>
 

@@ -17,7 +17,7 @@ const Publications = () => {
                     <Row className="pb-5">
                         <Col xs={12} md={3} className="section-title mb-1">
                             <strong className="text-mono">
-                                Work in Progress
+                                Working Papers
                             </strong>
                         </Col>
 

@@ -111,4 +111,61 @@ export const pubs = [
         attrs: ["international", "journal", "paper"],
         type: "Journal",
     },
+    {
+        id: "togedule",
+        title: "Togedule: Adaptive Representation of Group Availability Using Large Language Models for Scheduling Meeting",
+        authors: ["Jaeyoon Song", "Zahra Ashktorab", "Thomas W. Malone"],
+        // url: "https://arxiv.org/abs/2206.12390",
+        conference: {
+            title: "Under Revision",
+        },
+        attrs: ["international", "conference", "wip"],
+        type: "WIP",
+    },
+    {
+        id: "ibm",
+        title: "Interaction Configurations and Prompt Guidance in Conversational AI for Question Answering in Human-AI Teams",
+        authors: [
+            "Jaeyoon Song",
+            "Zahra Ashktorab",
+            "Qian Pan",
+            "Casey Dugan",
+            "Werner Geyer",
+            "Thomas W. Malone",
+        ],
+        // url: "https://arxiv.org/abs/2206.12390",
+        conference: {
+            title: "Under Revision",
+        },
+        attrs: ["international", "conference", "wip"],
+        type: "WIP",
+    },
+    {
+        id: "story",
+        title: "How Human-AI Synergy Changes as AI Technology Advances: A Case of Writing Short Stories",
+        authors: [],
+        authors: [
+            "Jaeyoon Song",
+            "Jennifer Heyman",
+            "Abdullah Almaatouq",
+            "Thomas W. Malone",
+        ],
+        // url: "https://arxiv.org/abs/2206.12390",
+        conference: {
+            title: "Work In Progress",
+        },
+        attrs: ["international", "journal", "wip"],
+        type: "WIP",
+    },
+    {
+        id: "badge",
+        title: "Generative AI and the Future of Work: Behavioral Adaptation on Stack Overflow Post-ChatGPT",
+        authors: ["Jaeyoon Song", "Dokyun Lee"],
+        // url: "https://arxiv.org/abs/2206.12390",
+        conference: {
+            title: "Work In Progress",
+        },
+        attrs: ["international", "journal", "wip"],
+        type: "WIP",
+    },
 ];

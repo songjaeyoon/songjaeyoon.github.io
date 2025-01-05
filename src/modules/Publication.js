@@ -7,9 +7,15 @@ const Publication = ({ pub, projects }) => {
         <div className="pub mb-3">
             {/* title */}
             <div className="pub-title mb-1">
-                <a href={pub.url ? pub.url : ""}>
-                    <b>{pub.title}</b>
-                </a>
+                {pub.url ? (
+                    <a href={pub.url}>
+                        <b>{pub.title}</b>
+                    </a>
+                ) : (
+                    <a>
+                        <b>{pub.title}</b>
+                    </a>
+                )}
             </div>
 
             <div className="text-small">
