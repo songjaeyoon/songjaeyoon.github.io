@@ -4,7 +4,7 @@ const Publication = ({ pub, projects }) => {
     const project = projects.filter((project) => project.id === pub.id);
 
     return (
-        <div className="pub mb-3">
+        <div className="pub mb-4">
             {/* title */}
             <div className="pub-title mb-1">
                 {pub.url ? (
@@ -68,7 +68,7 @@ const Publication = ({ pub, projects }) => {
                 {/* links */}
                 {project?.length > 0 && (
                     <>
-                        <Links project={project[0]} />
+                        <Links project={project[0]} isPubList={true} />
                     </>
                 )}
             </div>

@@ -34,7 +34,7 @@ const Project = ({ proj, projImages, handleClick }) => {
                             🏆 {proj.prize.name} 🏆
                         </small>
                     )}
-                    <Links project={proj} />
+                    <Links project={proj} isPubList={false} />
                 </div>
             </div>
         </Col>

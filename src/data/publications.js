@@ -144,12 +144,12 @@ export const pubs = [
         id: "story",
         title: "How Human-AI Synergy Changes as AI Technology Advances: A Case of Writing Short Stories",
         authors: [],
-        authors: [
-            "Jaeyoon Song",
-            "Jennifer Heyman",
-            "Abdullah Almaatouq",
-            "Thomas W. Malone",
-        ],
+        // authors: [
+        //     "Jaeyoon Song",
+        //     "Jennifer Heyman",
+        //     "Abdullah Almaatouq",
+        //     "Thomas W. Malone",
+        // ],
         // url: "https://arxiv.org/abs/2206.12390",
         conference: {
             title: "Work In Progress",
@@ -160,7 +160,8 @@ export const pubs = [
     {
         id: "badge",
         title: "Generative AI and the Future of Work: Behavioral Adaptation on Stack Overflow Post-ChatGPT",
-        authors: ["Jaeyoon Song", "Dokyun Lee"],
+        // authors: ["Jaeyoon Song", "Dokyun Lee"],
+        authors: [],
         // url: "https://arxiv.org/abs/2206.12390",
         conference: {
             title: "Work In Progress",

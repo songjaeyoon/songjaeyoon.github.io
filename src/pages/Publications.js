@@ -21,7 +21,7 @@ const Publications = () => {
                             </strong>
                         </Col>
 
-                        <Col xs={12} md={9} className="indent mb-1">
+                        <Col xs={12} md={9} className="indent mb-2">
                             {wips.map((wip, i) => (
                                 <Publication
                                     pub={wip}
@@ -37,7 +37,7 @@ const Publications = () => {
                             </strong>
                         </Col>
 
-                        <Col xs={12} md={9} className="indent mb-1">
+                        <Col xs={12} md={9} className="indent mb-2">
                             {papers.map((paper, i) => (
                                 <Publication
                                     pub={paper}
@@ -51,7 +51,7 @@ const Publications = () => {
                             <strong className="text-mono">Posters</strong>
                         </Col>
 
-                        <Col xs={12} md={9} className="indent mb-1">
+                        <Col xs={12} md={9} className="indent mb-2">
                             {posters.map((poster, i) => (
                                 <Publication
                                     pub={poster}

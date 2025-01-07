@@ -73,7 +73,7 @@ const Developer = ({ devImages }) => {
                             key={stack}
                             className={`${
                                 selectedStack.includes(stack) && "text-bold"
-                            } me-2 pointer filter`}
+                            } me-3 pointer filter`}
                             onClick={selectStack}
                         >
                             {stack}
@@ -90,10 +90,10 @@ const Developer = ({ devImages }) => {
                     <span
                         className={`${
                             selectedCollab === "Solo" && "text-bold"
-                        } me-2 pointer filter`}
+                        } me-3 pointer filter`}
                         onClick={selectCollab}
                     >
-                        Solo
+                        Individual
                     </span>
                     <span
                         className={`${
@@ -153,9 +153,9 @@ const Developer = ({ devImages }) => {
             >
                 {selectedProject !== null && (
                     <>
-                        <h2>
+                        <h3 className="mt-3 mb-2">
                             {selectedProject.title} ({selectedProject.year})
-                        </h2>
+                        </h3>
                         <div>{selectedProject.desc}</div>
 
                         {selectedProject.prize && (

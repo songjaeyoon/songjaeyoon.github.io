@@ -36,7 +36,7 @@ const DevProject = ({ proj, projects, devImages, handleClick }) => {
                     {proj.prize && (
                         <small className="text-black">🏆 {proj.prize} 🏆</small>
                     )}
-                    <Links project={project} />
+                    <Links project={project} isPubList={false} />
                 </div>
             </div>
         </Col>

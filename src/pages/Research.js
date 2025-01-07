@@ -84,7 +84,7 @@ const Research = ({ projImages }) => {
                             className={`${
                                 selectedKeywords.includes(keyword) &&
                                 "text-bold"
-                            } me-2 pointer filter`}
+                            } me-3 pointer filter`}
                             onClick={selectKeyword}
                         >
                             {keyword}
@@ -104,7 +104,7 @@ const Research = ({ projImages }) => {
                             className={`${
                                 selectedCategories.includes(category) &&
                                 "text-bold"
-                            } me-2 pointer filter`}
+                            } me-3 pointer filter`}
                             onClick={selectCategory}
                         >
                             {category}
@@ -159,10 +159,10 @@ const Research = ({ projImages }) => {
             >
                 {selectedProject !== null && (
                     <>
-                        <h2>
+                        <h3 className="mt-3 mb-2">
                             {selectedProject.title} (
                             {parseInt(selectedProject.year / 100)})
-                        </h2>
+                        </h3>
                         <div>{selectedProject.desc}</div>
 
                         {selectedProject.prize && (
