@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 const Links = ({ project, isPubList }) => {
     return (
         <div className="extra-links">
-            {project.paper && (
-                <a href={project.paper} target="_blank" rel="noreferrer">
-                    <i className="far fa-sticky-note" aria-hidden="true"></i>{" "}
-                    Paper
-                </a>
-            )}
             {project.link && (
                 <a href={project.link} target="_blank" rel="noreferrer">
                     <i className="fas fa-link" aria-hidden="true"></i> Link
+                </a>
+            )}
+            {project.paper && (
+                <a href={project.paper} target="_blank" rel="noreferrer">
+                    <i className="far fa-sticky-note" aria-hidden="true"></i>{" "}
+                    PDF
                 </a>
             )}
             {project.demo && (
