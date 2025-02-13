@@ -120,7 +120,7 @@ export const pubs = [
         year: 2025,
         authors: ["Jaeyoon Song", "Zahra Ashktorab", "Thomas W. Malone"],
         conference: {
-            title: "Conditionally Accepted with Minor Revisions, CSCW",
+            title: "Conditionally Accepted, CSCW",
             year: 2025,
         },
         // url: "https://doi.org/10.1145/3637435",
@@ -140,7 +140,7 @@ export const pubs = [
             "Thomas W. Malone",
         ],
         conference: {
-            title: "Conditionally Accepted with Minor Revisions, CSCW",
+            title: "Conditionally Accepted, CSCW",
             year: 2025,
         },
         // url: "https://doi.org/10.1145/3637435",
