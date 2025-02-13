@@ -92,19 +92,19 @@ const Home = () => {
 
                 <Col xs={12} md={{ offset: 3, span: 6 }} className="px-2 my-5">
                     <div className="intro-title text-mono">
-                        Selected Publications
+                        Selected Projects
                     </div>
 
+                    <Publication
+                        pub={wips.find((wip) => wip.id === "badge")}
+                        projects={projects}
+                    />
                     <Publication
                         pub={wips.find((wip) => wip.id === "test")}
                         projects={projects}
                     />
                     <Publication
-                        pub={wips.find((paper) => paper.id === "badge")}
-                        projects={projects}
-                    />
-                    <Publication
-                        pub={papers.find((paper) => paper.id === "minglr")}
+                        pub={wips.find((wip) => wip.id === "story")}
                         projects={projects}
                     />
                     <div className="view-all">

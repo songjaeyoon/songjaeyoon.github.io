@@ -117,17 +117,20 @@ export const pubs = [
     {
         id: "togedule",
         title: "Togedule: Scheduling Meetings with Large Language Models and Adaptive Representations of Group Availability",
+        year: 2025,
         authors: ["Jaeyoon Song", "Zahra Ashktorab", "Thomas W. Malone"],
-        // url: "https://arxiv.org/abs/2206.12390",
         conference: {
-            title: "Under Revision",
+            title: "Conditionally Accepted with Minor Revisions, CSCW",
+            year: 2025,
         },
-        attrs: ["international", "conference", "wip"],
-        type: "WIP",
+        // url: "https://doi.org/10.1145/3637435",
+        attrs: ["international", "journal", "paper"],
+        type: "Journal",
     },
     {
         id: "ibm",
         title: "Interaction Configurations and Prompt Guidance in Conversational AI for Question Answering in Human-AI Teams",
+        year: 2025,
         authors: [
             "Jaeyoon Song",
             "Zahra Ashktorab",
@@ -136,12 +139,13 @@ export const pubs = [
             "Werner Geyer",
             "Thomas W. Malone",
         ],
-        // url: "https://arxiv.org/abs/2206.12390",
         conference: {
-            title: "Under Revision",
+            title: "Conditionally Accepted with Minor Revisions, CSCW",
+            year: 2025,
         },
-        attrs: ["international", "conference", "wip"],
-        type: "WIP",
+        // url: "https://doi.org/10.1145/3637435",
+        attrs: ["international", "journal", "paper"],
+        type: "Journal",
     },
     {
         id: "story",
