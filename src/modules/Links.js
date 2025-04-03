@@ -51,7 +51,7 @@ const Links = ({ project, isPubList }) => {
             {project.id && isPubList === true && (
                 <Link to={`/projects?key=${project.id}`} rel="noreferrer">
                     <i className="fas fa-info-circle" aria-hidden="true"></i>{" "}
-                    Info
+                    About
                 </Link>
             )}
         </div>
