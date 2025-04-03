@@ -31,15 +31,8 @@ const Home = () => {
                         </span>
                     </p>
                     <p className="text-small">
-                        Hello, I am a PhD candidate in{" "}
-                        <a
-                            className="link-underline"
-                            href="https://mitsloan.mit.edu/phd/program-overview/it"
-                            target="_blank"
-                        >
-                            Information Technology
-                        </a>{" "}
-                        at MIT, where I am fortunate to be advised by Prof.{" "}
+                        Hello, I am a PhD candidate in Information Technology at
+                        MIT, where I am fortunate to be advised by Prof.{" "}
                         <a
                             className="link-underline"
                             href="https://mitsloan.mit.edu/faculty/directory/thomas-w-malone"
