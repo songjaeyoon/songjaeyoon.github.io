@@ -71,3 +71,66 @@
         }
     }
 }
+
+.navbar-toggler-icon {
+    background: none;
+    border-bottom: 3px solid #222;
+    padding-top: 17px;
+    display: block;
+    position: relative;
+    &:before, &:after {
+        border-top: 3px solid #222;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    &:before {
+        top: 7px;
+    }
+    &:after {
+        bottom: 7px;
+    }
+}
+
+
+/*
+* This is where all the animation happens
+*/
+.navbar-toggler-icon,
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+    transition-property: transform, border-color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+   
+.navigation-toggle-icon {
+    transition-delay: 0.125s;
+}
+   
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+    transition-delay: 0;
+    transform-origin: center;
+}
+  
+.navbar-toggler:not(.collapsed) {
+    .navbar-toggler-icon {
+        transition-delay: 0;
+        border-color: transparent;
+    }
+    .navbar-toggler-icon:before {
+        transition-delay: 0.125s;
+        transform: translateY(3px) rotate(135deg);
+    }
+         
+    .navbar-toggler-icon:after {
+        transition-delay: 0.125s;
+        transform: translateY(-7px) rotate(-135deg);
+    }
+}
+
+
+  
+  
