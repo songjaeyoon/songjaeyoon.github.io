@@ -26,8 +26,8 @@ const Home = () => {
                         <span className="text-bold">PhD Student @ MIT</span>
                         <br />
                         <span className="text-normal">
-                            Human-AI Interaction, Generative AI, Future of Work,
-                            Computational Social Science
+                            Human-AI Interaction, Generative AI, Computational
+                            Social Science
                         </span>
                     </p>
                     <p className="text-small">
@@ -58,6 +58,18 @@ const Home = () => {
                         interested in human-AI interaction and the
                         transformative impact of generative AI on work and
                         organizations.
+                        <br />
+                        <br />
+                        📍 This summer, I'll be joining &nbsp;
+                        <b>Microsoft Research</b>&nbsp; as a research intern,
+                        working with Dr.&nbsp;
+                        <a
+                            className="link-underline"
+                            href="https://www.dangoldstein.com/"
+                            target="_blank"
+                        >
+                            Dan Goldstein
+                        </a>
                         <br />
                         <br />
                         <span className="d-none d-md-inline-block">
