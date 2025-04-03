@@ -23,14 +23,14 @@ const Home = () => {
                     </div>
                     <h1 className="mb-1 intro-name">Jaeyoon Song</h1>
                     <p>
-                        <span className="text-weight-normal">
-                            PhD Student @ MIT
-                        </span>{" "}
+                        <span className="text-bold">PhD Student @ MIT</span>
                         <br />
-                        Human-AI Interaction, Collaboration, Generative AI,
-                        Computational Social Science
+                        <span className="text-normal">
+                            Human-AI Interaction, Generative AI, Future of Work,
+                            Computational Social Science
+                        </span>
                     </p>
-                    <p className="text-muted text-small">
+                    <p className="text-small">
                         Hello, I am a PhD student at MIT Sloan School of
                         Management in the{" "}
                         <a
@@ -39,24 +39,25 @@ const Home = () => {
                             target="_blank"
                         >
                             Information Technology (IT) group
+                        </a>{" "}
+                        — a subgroup of the Management Science program — where I
+                        am fortunate to be advised by Prof.{" "}
+                        <a
+                            className="link-underline"
+                            href="https://mitsloan.mit.edu/faculty/directory/thomas-w-malone"
+                            target="_blank"
+                        >
+                            Thomas W. Malone
                         </a>
-                        - a subgroup of the Management Science program. My
-                        general research area is{" "}
-                        <b>computational social science</b> and{" "}
-                        <b>social computing</b> at the intersection of computer
-                        science, data science, and social science. I employ
-                        data-driven computational thinking and methods to
+                        . My general research area is &nbsp;
+                        <b>computational social science</b> &nbsp;and &nbsp;
+                        <b>social computing</b> &nbsp;at the intersection of
+                        computer science, data science, and social science. I
+                        employ data-driven computational thinking and methods to
                         explore social science questions. Specifically, I am
-                        interested in human-AI interaction, collaboration, and
-                        the transformative impact of generative AI on work and
+                        interested in human-AI interaction and the
+                        transformative impact of generative AI on work and
                         organizations.
-                        <br />
-                        <br />
-                        Currently, I'm investigating behavioral shifts within
-                        online communities, seeking insights into the future of
-                        work by identifying which contributors adapt and thrive
-                        in the evolving landscape of generative AI and which
-                        gradually disengage.
                         <br />
                         <br />
                         <span className="d-none d-md-inline-block">
@@ -66,23 +67,23 @@ const Home = () => {
                             >
                                 Linkedin
                             </a>{" "}
-                            &nbsp;| &nbsp;{" "}
-                        </span>
+                            &nbsp; | &nbsp;
+                        </span>{" "}
                         <a href="https://github.com/jyoonsong" target="_blank">
                             GitHub
                         </a>{" "}
-                        &nbsp;|&nbsp;{" "}
+                        &nbsp; | &nbsp;{" "}
                         <a
                             href="https://scholar.google.com/citations?user=Im7uFVIAAAAJ"
                             target="_blank"
                         >
                             Google Scholar
                         </a>{" "}
-                        &nbsp;|&nbsp;{" "}
+                        &nbsp; | &nbsp;{" "}
                         <a href={require(`../pdf/CV.pdf`)} target="_blank">
                             CV
                         </a>{" "}
-                        &nbsp;|&nbsp; jaeyoons@mit.edu
+                        &nbsp; | &nbsp; jaeyoons@mit.edu
                     </p>
                 </Col>
 
