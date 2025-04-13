@@ -52,8 +52,7 @@ const Publication = ({ pub, projects }) => {
 
                 {pub.journal && (
                     <>
-                        {pub.journal.title} vol. {pub.journal.volume}, no.{" "}
-                        {pub.journal.issue}, pp. {pub.journal.page}, {pub.year}{" "}
+                        {pub.journal.title}, pp. {pub.journal.page}, {pub.year}{" "}
                         {pub.upcoming ? ", to appear" : ""}
                     </>
                 )}

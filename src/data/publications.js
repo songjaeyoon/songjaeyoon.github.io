@@ -19,7 +19,7 @@ export const pubs = [
         year: 2018,
         authors: ["Jaeyoon Song", "Changhee Kim"],
         journal: {
-            title: "Sustainability (SSCI/SCIE)",
+            title: "Sustainability",
             volume: 10,
             issue: 9,
             page: 3001,
@@ -126,6 +126,7 @@ export const pubs = [
         // url: "https://doi.org/10.1145/3637435",
         attrs: ["international", "journal", "paper"],
         type: "Journal",
+        upcoming: true,
     },
     {
         id: "ibm",
@@ -146,6 +147,7 @@ export const pubs = [
         // url: "https://doi.org/10.1145/3637435",
         attrs: ["international", "journal", "paper"],
         type: "Journal",
+        upcoming: true,
     },
     {
         id: "story",

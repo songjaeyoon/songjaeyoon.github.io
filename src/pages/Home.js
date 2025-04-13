@@ -100,15 +100,15 @@ const Home = () => {
                     </div>
 
                     <Publication
-                        pub={wips.find((wip) => wip.id === "badge")}
-                        projects={projects}
-                    />
-                    <Publication
                         pub={wips.find((wip) => wip.id === "test")}
                         projects={projects}
                     />
                     <Publication
-                        pub={wips.find((wip) => wip.id === "story")}
+                        pub={wips.find((wip) => wip.id === "badge")}
+                        projects={projects}
+                    />
+                    <Publication
+                        pub={wips.find((wip) => wip.id === "togedule")}
                         projects={projects}
                     />
                     <div className="view-all">
