@@ -108,7 +108,7 @@ const Home = () => {
                         projects={projects}
                     />
                     <Publication
-                        pub={wips.find((wip) => wip.id === "togedule")}
+                        pub={papers.find((paper) => paper.id === "togedule")}
                         projects={projects}
                     />
                     <div className="view-all">
