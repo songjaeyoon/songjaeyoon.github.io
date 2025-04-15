@@ -9,6 +9,7 @@ import Modal from "react-responsive-modal";
 const Developer = ({ devImages }) => {
     const location = useLocation();
 
+    const [isOpen, setIsOpen] = useState(false);
     const [selectedStack, setSelectedStack] = useState([]);
     const [selectedCollab, setSelectedCollab] = useState("");
     const [selectedProject, setSelectedProject] = useState(null);
@@ -25,6 +26,7 @@ const Developer = ({ devImages }) => {
                 );
                 if (newSelectedProject.length > 0) {
                     setSelectedProject(newSelectedProject[0]);
+                    setIsOpen(true);
                 }
             }
         }
@@ -55,6 +57,7 @@ const Developer = ({ devImages }) => {
         );
         if (newSelectedProject.length > 0) {
             setSelectedProject(newSelectedProject[0]);
+            setIsOpen(true);
         }
     };
 
@@ -147,46 +150,47 @@ const Developer = ({ devImages }) => {
                 </Col>
             </Row>
             <Modal
-                open={selectedProject !== null}
-                onClose={() => setSelectedProject(null)}
+                open={isOpen}
+                onClose={() => {
+                    setIsOpen(false);
+                }}
+                onAnimationEnd={() => {
+                    if (!isOpen) {
+                        setSelectedProject(null);
+                    }
+                }}
                 blockScroll={true}
             >
-                {selectedProject !== null && (
-                    <>
-                        <h3 className="mt-3 mb-2">
-                            {selectedProject.title} ({selectedProject.year})
-                        </h3>
-                        <div>{selectedProject.desc}</div>
+                <h3 className="mt-3 mb-2">
+                    {selectedProject?.title} ({selectedProject?.year})
+                </h3>
+                <div>{selectedProject?.desc}</div>
 
-                        {selectedProject.prize && (
-                            <div>
-                                <a
-                                    className="text-gray"
-                                    href={selectedProject.prize.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <small>
-                                        🏆 {selectedProject.prize.name} 🏆
-                                    </small>
-                                </a>
-                            </div>
-                        )}
-
-                        <div className="mb-2">
-                            <img
-                                src={devImages[selectedProject.id]}
-                                alt={selectedProject.title}
-                            />
-                        </div>
-
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: selectedProject.paragraph,
-                            }}
-                        ></p>
-                    </>
+                {selectedProject?.prize && (
+                    <div>
+                        <a
+                            className="text-gray"
+                            href={selectedProject?.prize.link}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <small>🏆 {selectedProject?.prize.name} 🏆</small>
+                        </a>
+                    </div>
                 )}
+
+                <div className="mb-2">
+                    <img
+                        src={devImages[selectedProject?.id]}
+                        alt={selectedProject?.title}
+                    />
+                </div>
+
+                <p
+                    dangerouslySetInnerHTML={{
+                        __html: selectedProject?.paragraph,
+                    }}
+                ></p>
             </Modal>
         </Container>
     );

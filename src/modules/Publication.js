@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Links from "./Links";
 
 const Publication = ({ pub, projects }) => {
@@ -8,13 +9,21 @@ const Publication = ({ pub, projects }) => {
             {/* title */}
             <div className="pub-title mb-1">
                 {pub.url ? (
-                    <a href={pub.url}>
+                    <a href={pub.url} target="_blank">
                         <b>{pub.title}</b>
                     </a>
                 ) : (
-                    <a>
-                        <b>{pub.title}</b>
-                    </a>
+                    <>
+                        {pub.link ? (
+                            <Link to={pub.link} rel="noreferrer">
+                                <b>{pub.title}</b>
+                            </Link>
+                        ) : (
+                            <a>
+                                <b>{pub.title}</b>
+                            </a>
+                        )}
+                    </>
                 )}
             </div>
 

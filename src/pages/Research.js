@@ -9,6 +9,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const Research = ({ projImages }) => {
     const location = useLocation();
 
+    const [isOpen, setIsOpen] = useState(false);
     const [selectedKeywords, setSelectedKeywords] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -29,6 +30,7 @@ const Research = ({ projImages }) => {
                 );
                 if (newSelectedProject.length > 0) {
                     setSelectedProject(newSelectedProject[0]);
+                    setIsOpen(true);
                 }
             }
         }
@@ -65,6 +67,7 @@ const Research = ({ projImages }) => {
         );
         if (newSelectedProject.length > 0) {
             setSelectedProject(newSelectedProject[0]);
+            setIsOpen(true);
         }
     };
 
@@ -153,53 +156,54 @@ const Research = ({ projImages }) => {
                 </Col>
             </Row>
             <Modal
-                open={selectedProject !== null}
-                onClose={() => setSelectedProject(null)}
+                open={isOpen}
+                onClose={() => {
+                    setIsOpen(false);
+                }}
+                onAnimationEnd={() => {
+                    if (!isOpen) {
+                        setSelectedProject(null);
+                    }
+                }}
                 blockScroll={true}
             >
-                {selectedProject !== null && (
-                    <>
-                        <h3 className="mt-3 mb-2">
-                            {selectedProject.title} (
-                            {parseInt(selectedProject.year / 100)})
-                        </h3>
-                        <div>{selectedProject.desc}</div>
+                <h3 className="mt-3 mb-2">
+                    {selectedProject?.title} (
+                    {parseInt(selectedProject?.year / 100)})
+                </h3>
+                <div>{selectedProject?.desc}</div>
 
-                        {selectedProject.prize && (
-                            <div>
-                                <a
-                                    className="text-gray"
-                                    href={selectedProject.prize.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <small>
-                                        🏆 {selectedProject.prize.name} 🏆
-                                    </small>
-                                </a>
-                            </div>
-                        )}
-
-                        {selectedProject.keywords.map((keyword, i) => (
-                            <span className="tag" key={i}>
-                                {keyword}
-                            </span>
-                        ))}
-
-                        <div className="mb-2">
-                            <img
-                                src={projImages[selectedProject.id]}
-                                alt={selectedProject.title}
-                            />
-                        </div>
-
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: selectedProject.paragraph,
-                            }}
-                        ></p>
-                    </>
+                {selectedProject?.prize && (
+                    <div>
+                        <a
+                            className="text-gray"
+                            href={selectedProject?.prize.link}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <small>🏆 {selectedProject?.prize.name} 🏆</small>
+                        </a>
+                    </div>
                 )}
+
+                {selectedProject?.keywords.map((keyword, i) => (
+                    <span className="tag" key={i}>
+                        {keyword}
+                    </span>
+                ))}
+
+                <div className="mb-2">
+                    <img
+                        src={projImages[selectedProject?.id]}
+                        alt={selectedProject?.title}
+                    />
+                </div>
+
+                <p
+                    dangerouslySetInnerHTML={{
+                        __html: selectedProject?.paragraph,
+                    }}
+                ></p>
             </Modal>
         </Container>
     );
