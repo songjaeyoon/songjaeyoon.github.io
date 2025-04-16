@@ -37,6 +37,7 @@ const Home = () => {
                             className="link-underline"
                             href="https://mitsloan.mit.edu/faculty/directory/thomas-w-malone"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Thomas W. Malone
                         </a>
@@ -58,6 +59,7 @@ const Home = () => {
                             className="link-underline"
                             href="https://www.dangoldstein.com/"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Dan Goldstein
                         </a>
@@ -67,12 +69,17 @@ const Home = () => {
                             <a
                                 href="https://www.linkedin.com/in/jyoonsong/"
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 Linkedin
                             </a>{" "}
                             &nbsp; | &nbsp;
                         </span>{" "}
-                        <a href="https://github.com/jyoonsong" target="_blank">
+                        <a
+                            href="https://github.com/jyoonsong"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             GitHub
                         </a>{" "}
                         &nbsp; | &nbsp;{" "}
@@ -83,7 +90,11 @@ const Home = () => {
                             Google Scholar
                         </a>{" "}
                         &nbsp; | &nbsp;{" "}
-                        <a href={require(`../pdf/CV.pdf`)} target="_blank">
+                        <a
+                            href={require(`../pdf/CV.pdf`)}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             CV
                         </a>{" "}
                         &nbsp; | &nbsp; jaeyoons@mit.edu

@@ -9,7 +9,7 @@ const Publication = ({ pub, projects }) => {
             {/* title */}
             <div className="pub-title mb-1">
                 {pub.url ? (
-                    <a href={pub.url} target="_blank">
+                    <a href={pub.url} target="_blank" rel="noreferrer">
                         <b>{pub.title}</b>
                     </a>
                 ) : (
