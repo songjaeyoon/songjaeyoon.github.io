@@ -26,8 +26,8 @@ const Home = () => {
                         <span className="text-bold">PhD Student @ MIT</span>
                         <br />
                         <span className="text-normal">
-                            Human-AI Interaction, Generative AI, Computational
-                            Social Science
+                            Human-AI Interaction, Large Language Models,
+                            Computational Social Science
                         </span>
                     </p>
                     <p className="text-small">
@@ -150,8 +150,8 @@ const Home = () => {
                         </Link>{" "}
                         in my work and free time. Please contact me for more
                         information about my current projects. I'm open to
-                        coffee chats on various topics like generative AI,
-                        startups, accessibility, and the future of work.
+                        coffee chats on various topics like large language
+                        models, startups, accessibility, and the future of work.
                     </div>
                 </Col>
 
