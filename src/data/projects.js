@@ -2,7 +2,7 @@ export const projects = [
     {
         id: "badge",
         topic: ["research"],
-        title: "Generative AI and the Future of Work: Behavioral Adaptation on Stack Overflow Post-ChatGPT",
+        title: "Behavioral Adaptation to Generative AI in the Online Knowledge Community",
         year: 202412,
         desc: "How does the introduction of generative AI, specifically ChatGPT, impact the engagement patterns of different contributor groups on Stack Overflow?",
         image: "projects/badge.png",

@@ -171,7 +171,7 @@ export const pubs = [
     },
     {
         id: "badge",
-        title: "Generative AI and the Future of Work: Behavioral Adaptation on Stack Overflow Post-ChatGPT",
+        title: "Behavioral Adaptation to Generative AI in the Online Knowledge Community",
         // authors: ["Jaeyoon Song", "Dokyun Lee"],
         authors: [],
         // url: "https://arxiv.org/abs/2206.12390",
