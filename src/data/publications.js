@@ -123,7 +123,7 @@ export const pubs = [
             title: "CSCW",
             year: 2025,
         },
-        // url: "https://doi.org/10.1145/3637435",
+        url: "https://arxiv.org/abs/2505.01000",
         link: "/projects?key=togedule",
         attrs: ["international", "journal", "paper"],
         type: "Journal",
