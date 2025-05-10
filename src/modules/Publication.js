@@ -55,14 +55,14 @@ const Publication = ({ pub, projects }) => {
                 {pub.conference && (
                     <>
                         {pub.conference.title} {pub.year}{" "}
-                        {pub.upcoming ? ", to appear" : ""}
+                        {pub.upcoming ? "(to appear)" : ""}
                     </>
                 )}
 
                 {pub.journal && (
                     <>
                         {pub.journal.title}, pp. {pub.journal.page}, {pub.year}{" "}
-                        {pub.upcoming ? ", to appear" : ""}
+                        {pub.upcoming ? "(to appear)" : ""}
                     </>
                 )}
 
