@@ -59,10 +59,18 @@ const Bibtex = ({ pub }) => {
         } else if (pub?.journal) {
             return `@article{${bibId},
     title={${pub?.title}},
-    author={Song, Jaeyoon and Kim, Changhee},
-    journal={${pub?.journal?.title}},
-    ${pub?.journal?.volume ? `volume={${pub?.journal?.volume}},` : ""}
-    ${pub?.journal?.page ? `pages={${pub?.journal?.page}},` : ""}
+    author={${authorText}},
+    journal={${pub?.journal?.title}},${
+                pub?.journal?.volume
+                    ? `
+    volume={${pub?.journal?.volume}},`
+                    : ""
+            }${
+                pub?.journal?.page
+                    ? `
+    pages={${pub?.journal?.page}},`
+                    : ""
+            }
     year={${pub?.year}},
     ${pub?.journal?.publisher ? `publisher={${pub?.journal?.publisher}},` : ""}
 }`;

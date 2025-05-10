@@ -6,7 +6,7 @@ export const pubs = [
         authors: ["Jaeyoon Song", "Kiroong Choe", "Jaemin Jo", "Jinwook Seo"],
         coauthors: ["Jaeyoon Song", "Kiroong Choe"],
         conference: {
-            full: "",
+            full: "Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems",
             short: "CHI LBW 2019",
         },
         url: "https://dl.acm.org/doi/abs/10.1145/3290607.3312865",
