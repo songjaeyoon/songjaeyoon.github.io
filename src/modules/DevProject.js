@@ -34,7 +34,7 @@ const DevProject = ({ proj, projects, devImages, handleClick }) => {
                     <br />
                     {/* {proj.link && <span> Live at <a className="border-link" href={proj.link} target="_blank" rel="noreferrer">{proj.link}</a><br/></span>} */}
                     {proj.prize && (
-                        <small className="text-black">🏆 {proj.prize} 🏆</small>
+                        <small className="text-black">🏆 {proj.prize}</small>
                     )}
                     <Links project={project} isPubList={false} />
                 </div>

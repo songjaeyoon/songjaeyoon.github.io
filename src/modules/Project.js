@@ -31,7 +31,7 @@ const Project = ({ proj, projImages, handleClick }) => {
                     {/* {proj.link && <span> Live at <a className="border-link" href={proj.link} target="_blank" rel="noreferrer">{proj.link}</a><br/></span>} */}
                     {proj.prize && (
                         <small className="text-black">
-                            🏆 {proj.prize.name} 🏆
+                            🏆 {proj.prize.name}
                         </small>
                     )}
                     <Links project={proj} isPubList={false} />

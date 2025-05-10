@@ -30,21 +30,19 @@ const Publication = ({ pub, projects }) => {
             <div className="text-small">
                 {/* authors */}
                 {pub.authors.map((author, i) => {
-                    const comp = author.includes("Jaeyoon Song") ? (
-                        <i>{author}</i>
-                    ) : (
-                        author
-                    );
+                    const comp =
+                        author === "Jaeyoon Song" ? <i>{author}</i> : author;
                     return (
                         <span key={i}>
                             {comp}
+                            {pub.coauthors?.includes(author) ? "*" : ""}
                             {i !== pub.authors.length - 1 ? ", " : ""}
                         </span>
                     );
                 })}
 
                 <div>
-                    {pub.equal_contribution && (
+                    {pub.coauthors && (
                         <small>
                             <i>* Equal contribution</i>
                         </small>
@@ -52,25 +50,27 @@ const Publication = ({ pub, projects }) => {
                 </div>
 
                 {/* venue */}
+                {pub.type === "WIP" && <>Work in Progress</>}
+
                 {pub.conference && (
                     <>
-                        {pub.conference.title} {pub.year}{" "}
-                        {pub.upcoming ? "(to appear)" : ""}
+                        {pub.conference.short}{" "}
+                        {pub.upcoming ? "  (to appear)" : ""}
                     </>
                 )}
 
                 {pub.journal && (
                     <>
-                        {pub.journal.title}, pp. {pub.journal.page}, {pub.year}{" "}
-                        {pub.upcoming ? "(to appear)" : ""}
+                        {pub.journal.short ? (
+                            pub.journal.short
+                        ) : (
+                            <>
+                                {pub.journal.title}, pp. {pub.journal.page},{" "}
+                                {pub.year}{" "}
+                            </>
+                        )}
+                        {pub.upcoming ? "  (to appear)" : ""}
                     </>
-                )}
-
-                {/* award */}
-                {pub.award && (
-                    <div className="text-muted">
-                        <small>🏆 Won {pub.award} 🏆</small>
-                    </div>
                 )}
 
                 {/* links */}

@@ -30,6 +30,8 @@ export const projects = [
         title: "Interaction Configurations and Prompt Guidance in Conversational AI for Question Answering in Human-AI Teams",
         year: 202407,
         desc: "This project was conducted under collaboration with IBM Thomas J. Watson Research Center",
+        paper: "https://arxiv.org/pdf/2505.01648",
+        link: "https://arxiv.org/abs/2505.01648",
         image: "projects/ibm.png",
         keywords: [
             "generative AI",
@@ -46,7 +48,8 @@ export const projects = [
         desc: "Scheduling Meetings with Large Language Models and Adaptive Representations of Group Availability",
         paper: "https://arxiv.org/pdf/2505.01000",
         link: "https://arxiv.org/abs/2505.01000",
-        image: "projects/togedule.gif",
+        image: "projects/togedule.png",
+        code: "https://github.com/jyoonsong/togedule",
         keywords: ["collaboration", "generative AI", "human-AI interaction"],
         current: true,
         paragraph: `Scheduling is a perennial—and often challenging—problem for many groups. Existing tools are mostly static, showing an identical set of choices to everyone, regardless of the current status of attendees’ inputs and preferences. In this paper, we propose Togedule, an adaptive scheduling tool that uses large language models to dynamically adjust the pool of choices and their presentation format. With the initial prototype, we conducted a formative study (N=10) and identified the potential benefits and risks of such an adaptive scheduling tool. Then, after enhancing the system, we conducted two controlled experiments, one each for attendees and organizers (total N=66). For each experiment, we compared scheduling with verbal messages, shared calendars, or Togedule. Results show that Togedule significantly reduces the cognitive load of attendees indicating their availability and improves the speed and quality of the decisions made by organizers.`,
@@ -56,7 +59,8 @@ export const projects = [
         topic: ["research"],
         title: "A Test for Evaluating Performance in Human-Computer Systems",
         year: 202206,
-        desc: "The Turing test for comparing computer performance to that of humans is well known, but, surprisingly, there is no widely used test for comparing how much better human-computer systems perform relative to humans alone, computers alone, or other baselines. In this paper, we show how to perform such a test using the ratio of means as a measure of effect size.",
+        desc: "",
+        paper: "https://arxiv.org/pdf/2206.12390",
         link: "https://arxiv.org/abs/2206.12390",
         image: "projects/test.png",
         keywords: [
@@ -64,6 +68,7 @@ export const projects = [
             "generative AI",
             "online experiment",
         ],
+        paragraph: `The Turing test for comparing computer performance to that of humans is well known, but, surprisingly, there is no widely used test for comparing how much better human-computer systems perform relative to humans alone, computers alone, or other baselines. Here, we show how to perform such a test using the ratio of means as a measure of effect size. Then we demonstrate the use of this test in three ways. First, in an analysis of 79 recently published experimental results, we find that, surprisingly, over half of the studies find a decrease in performance, the mean and median ratios of performance improvement are both approximately 1 (corresponding to no improvement at all), and the maximum ratio is 1.36 (a 36% improvement). Second, we experimentally investigate whether a higher performance improvement ratio is obtained when 100 human programmers generate software using GPT-3, a massive, state-of-the-art AI system. In this case, we find a speed improvement ratio of 1.27 (a 27% improvement). Finally, we find that 50 human non-programmers using GPT-3 can perform the task about as well as--and less expensively than--the human programmers. In this case, neither the non-programmers nor the computer would have been able to perform the task alone, so this is an example of a very strong form of human-computer synergy.`,
     },
     {
         id: "who2chat",
@@ -75,6 +80,8 @@ export const projects = [
         link: "https://doi.org/10.1145/3637435",
         image: "projects/who2chat.png",
         keywords: ["remote work", "collaboration"],
+        paragraph:
+            "Virtual academic networking is socio-technically challenging, however, fruitful for researchers' success. We introduce a system called Who2chat to tackle the challenge and facilitate connections of researchers in virtual social hours. Who2chat allows academic researchers to create a research profile and express their research interests, find researchers with similar interests, overcome social barriers, and coordinate and start video chats, all within a single interface. We engaged in an iterative design process by deploying Who2chat at academic conferences. In our preliminary deployment (N=80), we found that researchers often have difficulty finding other researchers who share similar interests, and they are shy about reaching out to other researchers. Inspired by this, we implemented social-signaling features to Who2chat and ran our first deployment (N=220). Our results highlight that the interface allowed users to find relevant researchers and helped them feel confident in joining conversations. However, this led to large group conversations where discussion topics were more superficial. In response, we developed and deployed our second interface (N=81). Key improvements were managing the size of conversations, dynamically determining and allowing individuals to join a conversation based on their relevance to the ongoing discussion, and maintaining the ratio of senior and junior members, to further enhance the quality of discussions. As a result, participants were able to meet more people and engage in more meaningful conversations. Our work demonstrates an interface design for social networking in academic settings and how to lower social barriers in virtual networking.",
     },
     {
         id: "noteworthy",
@@ -112,6 +119,8 @@ export const projects = [
         video: "https://youtu.be/Xruflul84ik",
         image: "projects/minglr.jpg",
         keywords: ["remote work", "collaboration"],
+        paragraph:
+            "Even though today’s videoconferencing systems are often very useful, these systems do not provide support for one of the most important aspects of in-person meetings: the ad hoc, private conversations that happen before, after, and during the breaks of scheduled events–the proverbial hallway conversations. Here we describe our design of a simple system, called Minglr, which supports this kind of interaction by facilitating the matching of conversational partners. We describe two studies of this system’s use at two virtual conferences with over 450 total participants. Our results provide evidence for the usefulness of this capability, showing that, for example, 81% of people who used the system successfully thought that future virtual conferences should include a tool with similar functionality. We believe that similar functionality is likely to be widely implemented in many videoconferencing systems and to increase the feasibility and desirability of many kinds of remote work and socializing.",
     },
     {
         id: "zatoori",
@@ -172,6 +181,8 @@ export const projects = [
         image: "projects/solutionchat.jpeg",
         slides: "https://docs.google.com/presentation/d/1hf84DHNZ2i3gJ0G8hIX1Kij83QtC-UNFN2v01HyCp-k/edit?usp=sharing",
         desc: "Real-time Moderator Support for Chat-based Structured Discussion",
+        paragraph:
+            "Online chat is an emerging channel for discussing community problems. It is common practice for communities to assign dedicated moderators to maintain a structured discussion and enhance the problem-solving experience. However, due to the synchronous nature of online chat, moderators face a high managerial overhead in tasks like discussion stage management, opinion summarization, and consensus-building support. To assist moderators with facilitating a structured discussion for community problem-solving, we introduce SolutionChat, a system that (1) visualizes discussion stages and featured opinions and (2) recommends contextually appropriate moderator messages. Results from a controlled lab study (n=55, 12 groups) suggest that participants' perceived discussion trackability was significantly higher with SolutionChat than without. Also, moderators provided better summarization with less effort and better managerial support using system-generated messages with SolutionChat than without. With SolutionChat, we envision untrained moderators to effectively facilitate chat-based discussions of important community matters.",
     },
     {
         id: "talkingBoogie",
@@ -190,6 +201,8 @@ export const projects = [
         link: "https://dl.acm.org/doi/10.1145/3313831.3376154",
         image: "projects/talkingboogie.jpeg",
         desc: "Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers",
+        paragraph:
+            "Augmentative and alternative communication (AAC) technologies are widely used to help non-verbal children enable communication. For AAC-aided communication to be successful, caregivers should support children with consistent intervention strategies in various settings. As such, caregivers need to continuously observe and discuss children's AAC usage to create a shared understanding of these strategies. However, caregivers often find it challenging to effectively collaborate with one another due to a lack of family involvement and the unstructured process of collaboration. To address these issues, we present TalkingBoogie, which consists of two mobile apps: TalkingBoogie-AAC for caregiver-child communication, and TalkingBoogie-coach supporting caregiver collaboration. Working together, these applications provide contextualized layouts for symbol arrangement, scaffold the process of sharing and discussing observations, and induce caregivers' balanced participation. A two-week deployment study with four groups (N=11) found that TalkingBoogie helped increase mutual understanding of strategies and encourage balanced participation between caregivers with reduced cognitive loads.",
     },
     {
         id: "soundglance",
@@ -205,7 +218,7 @@ export const projects = [
         image: "projects/soundglance.jpeg",
         desc: "Briefing the glanceable cues of Web pages for screen reader users",
         paragraph:
-            "<strong>Motivation.</strong> I learned HTML for the first time when I was in high school, and since then I've been participating in a lot of web projects mostly working as a front-end developer. As I got better in web development, <b>web accessibility</b> was one thing I started to care about. Although there was an official accessibility guideline for web developers to comply with, most websites did not follow this guideline in reality. I thought there should be some other way to tackle the problem of web accessibility than just to rely on each developer, which is the initial motivation for SoundGlance project.<br><br> So I and Kiroong started this project with the help of X-corps research institute and Siloam Center for the Blind People. Then, we continued this project while I was working at <a target='_blank' href='https://hcil.snu.ac.kr'>SNU HCI Lab</a>.<br><br> <strong>Abstract.</strong> Screen readers have become a core assistive technology for blind web users to browse web pages. Although screen readers can convey the textual information or structural properties of web pages, they cannot deliver their overall impression. Such a limitation hinders blind web users from obtaining an overview of the website, which non-blind people can do in a short time. As such, we present SoundGlance, a novel application that briefly delivers an auditory summary of web pages. SoundGlance supports the screen reader users by converting the important glanceable cues of the pages into sound. The feasibility of the prototype was examined in a pilot study with fourteen blind people. Several practical insights were derived from the experiment.",
+            "Screen readers have become a core assistive technology for blind web users to browse web pages. Although screen readers can convey the textual information or structural properties of web pages, they cannot deliver their overall impression. Such a limitation hinders blind web users from obtaining an overview of the website, which non-blind people can do in a short time. As such, we present SoundGlance, a novel application that briefly delivers an auditory summary of web pages. SoundGlance supports the screen reader users by converting the important glanceable cues of the pages into sound. The feasibility of prototype was examined in a pilot study with fourteen blind people. Several practical insights were derived from the experiment.",
     },
     {
         id: "oss",
@@ -226,7 +239,7 @@ export const projects = [
             link: "https://www.hangyo.com/news/article.html?no=85459",
         },
         paragraph:
-            "I started this project when I was <b>freshman</b> at college. I took a course titled 'Operations Management' taught by Professor Changhee Kim, where I did this project as a class assignment. Then, I took another class called 'Management Science' also taught by Prof. Kim. There, I worked more on the project and almost completed it. So this project was in fact already finished when I was a sophomore. <br><br>Next year, when I became a junior, I won first prize at a competition held by Korean Production and Operations Management Society (KOPOMS) where I gave a talk about this project. Soon Prof. Kim recommended to me submitting the completed work to a journal called Sustainability. That's how this work got published. However, since I had no time at the moment, I just <b>hired an expert to translate my manuscript</b>. Now that I look more into it, translation is kind of bad. Please keep in mind that the I only wrote the Korean version.<br><br>The paper is about 'what is needed for open source software projects to be efficient?'. Existing literature and common wisdom including Linus' Law celebrate the 'many eyeballs' as the key advantage of open source projects. Nevertheless, when it comes to efficiency, <b>'many eyeballs' could be a double-bladed sword.</b> By mining and analyzing the data collected from GitHub open source projects, this paper provides several implications for the efficiency of open source projects.",
+            "The purpose of this study is to investigate the relative efficiency of open source software projects, and to analyze what is needed for their sustainable success. The success of open source software is known to be attributable to a massive number of contributors engaging in the development process. However, an efficient open source software project is not guaranteed simply by active participation by many; a coordination mechanism is needed to seamlessly manage the multi-party collaboration. On this basis, this study aimed to examine the internal regulatory processes based on Git and GitHub, which serve as such a mechanism, and redefine the efficiency of open source software projects to fully reflect them. For this purpose, a two-stage data envelopment analysis was used to measure the project efficiency reflecting the internal processes. Moreover, this study considered the Kruskal–Wallis test and Tobit regression analysis to examine the effects of the participation by many on an open source software project based on the newly defined efficiency. Results show that a simple increase in contributors can be poisonous in terms of the efficiency of open source software projects.",
     },
     {
         id: "shashagungun",
@@ -375,11 +388,3 @@ export const projects = [
         desc: "How to support writing a meeting log while doing a video chat?",
     },
 ];
-
-/*
-who2chat
-story
-agreement
-noteworthy 
-scheduling
- */

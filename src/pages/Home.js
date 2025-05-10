@@ -111,15 +111,15 @@ const Home = () => {
                     </div>
 
                     <Publication
-                        pub={wips.find((wip) => wip.id === "test")}
-                        projects={projects}
-                    />
-                    <Publication
-                        pub={wips.find((wip) => wip.id === "badge")}
+                        pub={wips.find((wip) => wip.id === "story")}
                         projects={projects}
                     />
                     <Publication
                         pub={papers.find((paper) => paper.id === "togedule")}
+                        projects={projects}
+                    />
+                    <Publication
+                        pub={papers.find((paper) => paper.id === "test")}
                         projects={projects}
                     />
                     <div className="view-all">

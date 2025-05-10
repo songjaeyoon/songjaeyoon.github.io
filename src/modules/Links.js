@@ -49,7 +49,7 @@ const Links = ({ project, isPubList }) => {
                 </a>
             )}
             {project.id && isPubList === true && (
-                <Link to={`/projects?key=${project.id}`} rel="noreferrer">
+                <Link to={`/project/${project.id}`} rel="noreferrer">
                     <i className="fas fa-info-circle" aria-hidden="true"></i>{" "}
                     About
                 </Link>

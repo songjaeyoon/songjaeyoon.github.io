@@ -1,10 +1,13 @@
 import Navigation from "./modules/Navigation";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
 import Publications from "./pages/Publications";
 import Research from "./pages/Research";
 import Developer from "./pages/Developer";
 import Designer from "./pages/Designer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+
 import { ParallaxProvider } from "react-scroll-parallax";
 import { createBrowserHistory } from "history";
 import ScrollToTop from "./modules/ScrollToTop";
@@ -13,6 +16,7 @@ import { isMobile } from "react-device-detect";
 
 import { projects } from "./data/projects";
 import { devProjects } from "./data/devProjects";
+import NotFound from "./pages/NotFound";
 
 const history = createBrowserHistory();
 
@@ -80,6 +84,12 @@ function App() {
                     />
 
                     <Route
+                        path="/project/:id"
+                        exact
+                        element={<About projImages={projImages} />}
+                    />
+
+                    <Route
                         path="/projects"
                         exact
                         element={<Research projImages={projImages} />}
@@ -104,6 +114,8 @@ function App() {
                             />
                         }
                     />
+
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
         </ParallaxProvider>

@@ -174,7 +174,7 @@ const Developer = ({ devImages }) => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <small>🏆 {selectedProject?.prize.name} 🏆</small>
+                            <small>🏆 {selectedProject?.prize.name}</small>
                         </a>
                     </div>
                 )}
