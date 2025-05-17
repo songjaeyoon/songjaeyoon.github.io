@@ -162,19 +162,19 @@ export const pubs = [
         type: "Journal",
         upcoming: true,
     },
-    {
-        id: "forecasting",
-        title: "Investigating the Forecasting Capabilities of Large Language Models",
-        year: 2025,
-        authors: [],
-        // url: "https://arxiv.org/abs/2206.12390",
-        link: "/project/forecasting",
-        conference: {
-            title: "Work In Progress",
-        },
-        attrs: ["international", "journal", "wip"],
-        type: "WIP",
-    },
+    // {
+    //     id: "forecasting",
+    //     title: "Investigating the Forecasting Capabilities of Large Language Models",
+    //     year: 2025,
+    //     authors: [],
+    //     // url: "https://arxiv.org/abs/2206.12390",
+    //     link: "/project/forecasting",
+    //     conference: {
+    //         title: "Work In Progress",
+    //     },
+    //     attrs: ["international", "journal", "wip"],
+    //     type: "WIP",
+    // },
     {
         id: "story",
         title: "How Human-AI Synergy Changes as AI Technology Advances: A Case of Writing Short Stories",

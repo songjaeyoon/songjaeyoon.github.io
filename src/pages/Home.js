@@ -46,13 +46,12 @@ const Home = () => {
                         <b>social computing</b> &nbsp;at the intersection of
                         computer science, data science, and social science. I
                         employ data-driven computational thinking and methods to
-                        explore social science questions. Specifically, I am
-                        interested in human-AI interaction and the
-                        transformative impact of generative AI on work and
-                        organizations.
+                        explore social science questions. Currently, I am
+                        exploring the capabilities of large language models in
+                        real-world forecasting.
                         <br />
                         <br />
-                        📍 This summer, I'll be joining &nbsp;
+                        📍 This summer, I've joined &nbsp;
                         <b>Microsoft Research</b>&nbsp; as a research intern,
                         working with Dr.&nbsp;
                         <a

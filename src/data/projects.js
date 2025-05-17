@@ -1,14 +1,14 @@
 export const projects = [
-    {
-        id: "forecasting",
-        topic: ["research"],
-        title: "Investigating the Forecasting Capabilities of Large Language Models",
-        year: 202505,
-        desc: "How does the introduction of generative AI, specifically ChatGPT, impact the engagement patterns of different contributor groups on Stack Overflow?",
-        image: "projects/forecasting.png",
-        keywords: ["large language models"],
-        paragraph: `We aim to examine the capabilities of large language models (LLMs) in real-world forecasting by comparing their performance to human crowds and expert superforecasters on prediction market questions such as “How high will inflation rise in 2026?”, “Which company will lead in AI this year?”, or “What will be the top song on Spotify on August 11?”. To ensure genuinely forward-looking reasoning, our project eliminates retrospective contamination from fine-tuning datasets and enhances retrieval-augmented generation (RAG) by incorporating diverse, real-time sources.`,
-    },
+    // {
+    //     id: "forecasting",
+    //     topic: ["research"],
+    //     title: "Investigating the Forecasting Capabilities of Large Language Models",
+    //     year: 202505,
+    //     desc: "How does the introduction of generative AI, specifically ChatGPT, impact the engagement patterns of different contributor groups on Stack Overflow?",
+    //     image: "projects/forecasting.png",
+    //     keywords: ["large language models"],
+    //     paragraph: `We aim to examine the capabilities of large language models (LLMs) in real-world forecasting by comparing their performance to human crowds and expert superforecasters on prediction market questions such as “How high will inflation rise in 2026?”, “Which company will lead in AI this year?”, or “What will be the top song on Spotify on August 11?”. To ensure genuinely forward-looking reasoning, our project eliminates retrospective contamination from fine-tuning datasets and enhances retrieval-augmented generation (RAG) by incorporating diverse, real-time sources.`,
+    // },
     {
         id: "badge",
         topic: ["research"],
