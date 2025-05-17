@@ -3,11 +3,12 @@ export const devProjects = [
         id: "noteworthy",
         year: 2022,
         title: "Noteworthy",
-        image: "projects/noteworthy.png",
+        image: "projects/notescribe.jpg",
         link: "https://noteworthynotes.herokuapp.com/",
         collab: "Solo work",
-        stack: ["React.js", "Express.js", "MongoDB",],
-        explanation: "Noteworthy not only transcribes your meeting, but also (1) lets you highlight and label important parts during/after meetings, (2) organizes highlights into an outline for you, (3) helps you to easily figure out the context of the highlights by showing the connection with the transcript, and (4) analyze the meeting data to keep you on track.",
+        stack: ["React.js", "Express.js", "MongoDB"],
+        explanation:
+            "Noteworthy not only transcribes your meeting, but also (1) lets you highlight and label important parts during/after meetings, (2) organizes highlights into an outline for you, (3) helps you to easily figure out the context of the highlights by showing the connection with the transcript, and (4) analyze the meeting data to keep you on track.",
         prize: "MIT Web Lab 2022 3rd Place & Innovation Prize",
         featured: true,
     },
@@ -18,8 +19,9 @@ export const devProjects = [
         image: "projects/cube.gif",
         link: "https://jaeyoon.io/cube",
         collab: "Solo work",
-        stack: ["Vanilla JS",],
-        explanation: "I developed this website as a final project in the Interactive Web Development course at the University of Southern California (USC). I ranked 1st place and got the highest grade (A) for the course.\n\nPlacing the navigation on a rotating cube definitely does not provide a good user experience, but my goal was just to develop something non-typical.",
+        stack: ["Vanilla JS"],
+        explanation:
+            "I developed this website as a final project in the Interactive Web Development course at the University of Southern California (USC). I ranked 1st place and got the highest grade (A) for the course.\n\nPlacing the navigation on a rotating cube definitely does not provide a good user experience, but my goal was just to develop something non-typical.",
         featured: true,
     },
     {
@@ -31,7 +33,8 @@ export const devProjects = [
         code: "https://github.com/CCI-MIT/minglr",
         collab: "Solo work",
         stack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Jitsi"],
-        explanation: "Minglr supports ad hoc conversations at virtual conferences. It was deployed at two virtual conferences with over 450 total participants.",
+        explanation:
+            "Minglr supports ad hoc conversations at virtual conferences. It was deployed at two virtual conferences with over 450 total participants.",
         featured: true,
     },
     {
@@ -42,7 +45,8 @@ export const devProjects = [
         link: "https://sudo-cambridge.herokuapp.com",
         collab: "Teamwork (led a team of four)",
         stack: ["Vue.js", "Express.js", "MongoDB"],
-        explanation: "CoDe is a platform where people can suggest ideas about urban design. It has a unique feature that allows the merging of two similar ideas.",
+        explanation:
+            "CoDe is a platform where people can suggest ideas about urban design. It has a unique feature that allows the merging of two similar ideas.",
     },
     {
         id: "history",
@@ -52,8 +56,9 @@ export const devProjects = [
         link: "https://jaeyoon.io/infovis",
         code: "https://github.com/jyoonsong/hci-project",
         collab: "Teamwork (a team of two)",
-        stack: ["D3.js",],
-        explanation: "We visualized the Korean Independence Movement organizations in 1910 - 1945",
+        stack: ["D3.js"],
+        explanation:
+            "We visualized the Korean Independence Movement organizations in 1910 - 1945",
     },
     {
         id: "ravi",
@@ -62,8 +67,9 @@ export const devProjects = [
         image: "projects/ravi.jpeg",
         code: "https://github.com/jyoonsong/RAVi",
         collab: "Solo work",
-        stack: ["Chrome Extension",],
-        explanation: "Inspired by Tilda (Zhang & Cranshaw, 2018), I developed a browser extension that helps users to tag and take notes while having a video chat conversation.",
+        stack: ["Chrome Extension"],
+        explanation:
+            "Inspired by Tilda (Zhang & Cranshaw, 2018), I developed a browser extension that helps users to tag and take notes while having a video chat conversation.",
     },
     {
         id: "samsung",
@@ -82,7 +88,8 @@ export const devProjects = [
         image: "projects/who2chat.png",
         collab: "Teamwork (a team of 2)",
         stack: ["React.js", "Firebase", "Jitsi"],
-        explanation: "Who2chat is the second version of Minglr. It was deployed at UIST 2021 and CSCW 2021",
+        explanation:
+            "Who2chat is the second version of Minglr. It was deployed at UIST 2021 and CSCW 2021",
     },
     {
         id: "magicspell",
@@ -91,7 +98,8 @@ export const devProjects = [
         image: "projects/img-1-small.jpeg",
         collab: "Solo work",
         stack: ["React.js"],
-        explanation: "What is a magic spell in Harry Potter series that goes we",
+        explanation:
+            "What is a magic spell in Harry Potter series that goes we",
     },
     {
         id: "solutionChat",
@@ -101,7 +109,8 @@ export const devProjects = [
         image: "projects/solutionchat.jpeg",
         collab: "Teamwork (Team of Two)",
         stack: ["Angular.dart", "HTML/CSS"],
-        explanation: "My role in the team was to develop the front-end side interface",
+        explanation:
+            "My role in the team was to develop the front-end side interface",
     },
     {
         id: "soundglance",
@@ -112,7 +121,8 @@ export const devProjects = [
         image: "projects/soundglance_tagging.jpg",
         collab: "Solo work",
         stack: ["Ruby on Rails"],
-        explanation: "SoundGlance summarizes the glanceable cues of Web pages for screen reader users. This is a web interface we used to generate the dataset for CNN training.",
+        explanation:
+            "SoundGlance summarizes the glanceable cues of Web pages for screen reader users. This is a web interface we used to generate the dataset for CNN training.",
     },
     {
         id: "suggestbot",
@@ -121,7 +131,8 @@ export const devProjects = [
         image: "projects/suggestbot.jpeg",
         collab: "Teamwork (Team of two)",
         stack: ["React.js", "Ruby on Rails"],
-        explanation: "An interface to collect evidence of a given post from Mechanical Turk workers",
+        explanation:
+            "An interface to collect evidence of a given post from Mechanical Turk workers",
     },
     {
         id: "writing",
@@ -130,7 +141,8 @@ export const devProjects = [
         image: "projects/story.gif",
         collab: "Solo work",
         stack: ["React.js", "Empirica.js", "Meteor"],
-        explanation: "An interface to collect stories from experimental subjects on Upwork",
+        explanation:
+            "An interface to collect stories from experimental subjects on Upwork",
     },
     {
         id: "stampcookies",
@@ -150,7 +162,8 @@ export const devProjects = [
         link: "https://chrome.google.com/webstore/detail/mirror-youtube-for-dance/odmglmjpojlhploiiaemcdohkeoapakf",
         collab: "Solo work",
         stack: ["Vanilla JS", "Chrome Extension"],
-        explanation: "A chrome extension for dance practice with over 300 users",
+        explanation:
+            "A chrome extension for dance practice with over 300 users",
     },
     {
         id: "dobbies",
@@ -190,7 +203,8 @@ export const devProjects = [
         link: "http://covidhere.herokuapp.com/2/1",
         collab: "Solo work (Freelancer contract via Kmong)",
         stack: ["Ruby on Rails"],
-        explanation: "A website that shows Covid information at Yongin-si, South Korea",
+        explanation:
+            "A website that shows Covid information at Yongin-si, South Korea",
     },
     {
         id: "chartmetric",
@@ -200,7 +214,8 @@ export const devProjects = [
         link: "http://chartmetric.io",
         collab: "Internship",
         stack: ["Angular.js", "Highcharts.js"],
-        explanation: "As a short-term intern, I worked on enhancing the data visualization part using Highcharts.js and Angular.js",
+        explanation:
+            "As a short-term intern, I worked on enhancing the data visualization part using Highcharts.js and Angular.js",
     },
     {
         id: "truth101",
@@ -212,6 +227,4 @@ export const devProjects = [
         stack: ["D3.js"],
         explanation: "",
     },
-
-
-]
+];

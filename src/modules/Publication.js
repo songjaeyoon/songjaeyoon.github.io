@@ -50,7 +50,7 @@ const Publication = ({ pub, projects }) => {
                 </div>
 
                 {/* venue */}
-                {pub.type === "WIP" && <>Work in Progress</>}
+                {pub.type === "WIP" && <>{pub.conference.title}</>}
 
                 {pub.conference && (
                     <>

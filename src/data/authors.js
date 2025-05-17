@@ -31,6 +31,12 @@ export const authors = [
         image: "/authors/juho.jpg",
     },
     {
+        name: "Dokyun Lee",
+        affiliation: "Boston University",
+        website: "https://www.bu.edu/questrom/profiles/dokyun-dk-lee/",
+        image: "/authors/dk.jpg",
+    },
+    {
         name: "David Karger",
         affiliation: "MIT",
         website: "https://people.csail.mit.edu/karger/",
@@ -152,6 +158,18 @@ export const authors = [
         affiliation: "Seoul National University",
         website: "http://hcil.snu.ac.kr/people/jinwook-seo",
         image: "/authors/jinwook.png",
+    },
+    {
+        name: "Arman Vossoughi",
+        affiliation: "Boston University",
+        website: "https://www.linkedin.com/in/armanvoss/",
+        image: "/authors/arman.jpeg",
+    },
+    {
+        name: "Hongzun Zhang",
+        affiliation: "Boston University",
+        website: "https://www.linkedin.com/in/hongzun-zhang/",
+        image: "/authors/hongzun.jpeg",
     },
     {
         name: "Haoran Wen",
