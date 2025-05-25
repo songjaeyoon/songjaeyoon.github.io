@@ -147,10 +147,7 @@ const Home = () => {
                         <Link className="link-underline" to="/designer">
                             design
                         </Link>{" "}
-                        in my work and free time. Please contact me for more
-                        information about my current projects. I'm open to
-                        coffee chats on various topics like large language
-                        models, startups, accessibility, and the future of work.
+                        in my work and free time.
                     </div>
                 </Col>
 

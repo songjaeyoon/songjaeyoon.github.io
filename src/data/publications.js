@@ -197,13 +197,14 @@ export const pubs = [
         id: "badge",
         title: "Who Stays, Who Leaves? Behavioral Adaptation to Generative AI in the Online Knowledge Community",
         year: 2025,
-        authors: [
-            "Jaeyoon Song",
-            "Arman Vossoughi",
-            "Hongzun Zhang",
-            "Dokyun Lee",
-        ],
-        coauthors: ["Arman Vossoughi", "Hongzun Zhang"],
+        // authors: [
+        //     "Jaeyoon Song",
+        //     "Arman Vossoughi",
+        //     "Hongzun Zhang",
+        //     "Dokyun Lee",
+        // ],
+        authors: [],
+        // coauthors: ["Arman Vossoughi", "Hongzun Zhang"],
         // url: "https://arxiv.org/abs/2206.12390",
         link: "/project/badge",
         conference: {
@@ -216,7 +217,8 @@ export const pubs = [
         id: "noteworthy",
         title: "Augmenting Human Note-Taking with Real-Time Suggestions from Large Language Models",
         year: 2025,
-        authors: ["Jaeyoon Song", "Soya Park", "Thomas W. Malone"],
+        // authors: ["Jaeyoon Song", "Soya Park", "Thomas W. Malone"],
+        authors: [],
         // url: "https://arxiv.org/abs/2206.12390",
         link: "/project/noteworthy",
         conference: {

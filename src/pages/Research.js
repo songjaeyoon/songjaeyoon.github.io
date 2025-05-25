@@ -94,7 +94,7 @@ const Research = ({ projImages }) => {
                         </span>
                     ))}
                 </Col>
-                <Col
+                {/* <Col
                     xs={12}
                     md={{ offset: 1, span: 10 }}
                     lg={{ offset: 2, span: 8 }}
@@ -113,7 +113,7 @@ const Research = ({ projImages }) => {
                             {category}
                         </span>
                     ))}
-                </Col>
+                </Col> */}
             </Row>
             <Row className="pt-4 pb-5 px-2">
                 <Col
