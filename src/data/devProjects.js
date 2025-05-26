@@ -227,4 +227,15 @@ export const devProjects = [
         stack: ["D3.js"],
         explanation: "",
     },
+    {
+        id: "refugees",
+        title: "Are Refugees Dangerous?",
+        year: 2018,
+        image: "projects/img-2-small.jpeg",
+        link: "https://jaeyoon.io/dt4c",
+        collab: "Solo work",
+        stack: ["D3.js"],
+        explanation:
+            "The topic of my project was refugees, more specifically the Yemeni Muslim refugees coming to Jeju island in South Korea. To narrow down the scope of the topic, I tried to put emphasis on the question if the refugees are dangerous and likely to be involved in a crime in particular. I didn’t explicitly answer the question, but instead tried to focus more on delivering the data itself so that the reader wouldn’t feel that they are being forced to be on one side. One example is the case of Sweden in which I showed both increasing and decreasing crime rate due to accepting refugees. This implies that the number of refugees have nothing to do with the crime rate, showing neither positive nor negative correlation. <br><br> I spent a lot of time searching for factual data—I even read the German official police report using Google translation in order to keep the objectivity using the rawest data. Because of this, the resulting infographic was less visually engaging, and sometimes even misleading due to wrong usage of visual devices.<br><br>The infographic first points out what the people think about the refugees, which has also been a motivation for this project. Then, it points out how crime rate of refugees or foreigners are not so different from other people, giving example of Germany, Norway, and South Korea. Lastly, it suggests that maybe the reason for the difference between people's perspective and what data really says is partially because of what media highlight.",
+    },
 ];

@@ -247,8 +247,8 @@ export const projects = [
                 "Undergraduate Research Presentation Competition, Korean Production & Operations Management Society",
             link: "https://www.hangyo.com/news/article.html?no=85459",
         },
-        paragraph:
-            "The purpose of this study is to investigate the relative efficiency of open source software projects, and to analyze what is needed for their sustainable success. The success of open source software is known to be attributable to a massive number of contributors engaging in the development process. However, an efficient open source software project is not guaranteed simply by active participation by many; a coordination mechanism is needed to seamlessly manage the multi-party collaboration. On this basis, this study aimed to examine the internal regulatory processes based on Git and GitHub, which serve as such a mechanism, and redefine the efficiency of open source software projects to fully reflect them. For this purpose, a two-stage data envelopment analysis was used to measure the project efficiency reflecting the internal processes. Moreover, this study considered the Kruskal–Wallis test and Tobit regression analysis to examine the effects of the participation by many on an open source software project based on the newly defined efficiency. Results show that a simple increase in contributors can be poisonous in terms of the efficiency of open source software projects.",
+        paragraph: "",
+        // paragraph: "The purpose of this study is to investigate the relative efficiency of open source software projects, and to analyze what is needed for their sustainable success. The success of open source software is known to be attributable to a massive number of contributors engaging in the development process. However, an efficient open source software project is not guaranteed simply by active participation by many; a coordination mechanism is needed to seamlessly manage the multi-party collaboration. On this basis, this study aimed to examine the internal regulatory processes based on Git and GitHub, which serve as such a mechanism, and redefine the efficiency of open source software projects to fully reflect them. For this purpose, a two-stage data envelopment analysis was used to measure the project efficiency reflecting the internal processes. Moreover, this study considered the Kruskal–Wallis test and Tobit regression analysis to examine the effects of the participation by many on an open source software project based on the newly defined efficiency. Results show that a simple increase in contributors can be poisonous in terms of the efficiency of open source software projects.",
     },
     // {
     //     id: "shashagungun",
@@ -313,20 +313,20 @@ export const projects = [
     //     paragraph:
     //         "Chartmetric is a self-service tool that features a beautifully designed dashboard that combines hundreds of thousands of real-time data points across multiple music platforms (e.g., Spotify, iTunes). <br><br> In 2017 fall semester, I went to University of Southern California (USC) as an exchange student. Visiting Sungmoon Cho, who is the CEO of Chartmetric, I eventually became a short-term intern working on the front-end part of the system and visualizing the data.",
     // },
-    {
-        id: "refugees",
-        title: "Are Refugees Dangerous?",
-        year: 201811,
-        featured: true,
-        topic: ["personal"],
-        keywords: ["service design"],
-        link: "https://jaeyoon.io/dt4c",
-        image: "projects/img-2-small.jpeg",
-        desc: "What people think, what data say, and what media highlight",
-        paragraph: "",
-        // paragraph:
-        //     "The topic of my project was refugees, more specifically the Yemeni Muslim refugees coming to Jeju island in South Korea. To narrow down the scope of the topic, I tried to put emphasis on the question if the refugees are dangerous and likely to be involved in a crime in particular. I didn’t explicitly answer the question, but instead tried to focus more on delivering the data itself so that the reader wouldn’t feel that they are being forced to be on one side. One example is the case of Sweden in which I showed both increasing and decreasing crime rate due to accepting refugees. This implies that the number of refugees have nothing to do with the crime rate, showing neither positive nor negative correlation. <br><br> I spent a lot of time searching for factual data—I even read the German official police report using Google translation in order to keep the objectivity using the rawest data. Because of this, the resulting infographic was less visually engaging, and sometimes even misleading due to wrong usage of visual devices.<br><br>The infographic first points out what the people think about the refugees, which has also been a motivation for this project. Then, it points out how crime rate of refugees or foreigners are not so different from other people, giving example of Germany, Norway, and South Korea. Lastly, it suggests that maybe the reason for the difference between people's perspective and what data really says is partially because of what media highlight.",
-    },
+    // {
+    //     id: "refugees",
+    //     title: "Are Refugees Dangerous?",
+    //     year: 201811,
+    //     featured: true,
+    //     topic: ["personal"],
+    //     keywords: ["service design"],
+    //     link: "https://jaeyoon.io/dt4c",
+    //     image: "projects/img-2-small.jpeg",
+    //     desc: "What people think, what data say, and what media highlight",
+    //     paragraph: "",
+    //     // paragraph:
+    //     //     "The topic of my project was refugees, more specifically the Yemeni Muslim refugees coming to Jeju island in South Korea. To narrow down the scope of the topic, I tried to put emphasis on the question if the refugees are dangerous and likely to be involved in a crime in particular. I didn’t explicitly answer the question, but instead tried to focus more on delivering the data itself so that the reader wouldn’t feel that they are being forced to be on one side. One example is the case of Sweden in which I showed both increasing and decreasing crime rate due to accepting refugees. This implies that the number of refugees have nothing to do with the crime rate, showing neither positive nor negative correlation. <br><br> I spent a lot of time searching for factual data—I even read the German official police report using Google translation in order to keep the objectivity using the rawest data. Because of this, the resulting infographic was less visually engaging, and sometimes even misleading due to wrong usage of visual devices.<br><br>The infographic first points out what the people think about the refugees, which has also been a motivation for this project. Then, it points out how crime rate of refugees or foreigners are not so different from other people, giving example of Germany, Norway, and South Korea. Lastly, it suggests that maybe the reason for the difference between people's perspective and what data really says is partially because of what media highlight.",
+    // },
     // {
     //     id: "muggles",
     //     title: "Magic Spells All Muggles are Jealous of",

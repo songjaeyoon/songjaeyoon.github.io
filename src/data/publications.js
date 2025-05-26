@@ -179,12 +179,14 @@ export const pubs = [
         id: "story",
         title: "How Human-AI Synergy Changes as AI Technology Advances: A Case of Writing Short Stories",
         year: 2025,
-        authors: [
-            "Jaeyoon Song",
-            "Jennifer Heyman",
-            "Abdullah Almaatouq",
-            "Thomas W. Malone",
-        ],
+        // authors: [
+        //     "Jaeyoon Song",
+        //     "Jennifer Heyman",
+        //     "Michelle Vaccaro",
+        //     "Abdullah Almaatouq",
+        //     "Thomas W. Malone",
+        // ],
+        authors: [],
         // url: "https://arxiv.org/abs/2206.12390",
         link: "/project/story",
         conference: {
