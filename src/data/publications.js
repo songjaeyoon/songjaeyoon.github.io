@@ -57,7 +57,7 @@ export const pubs = [
             "Seokwoo Song",
             "Jisoo Park",
             "Joonhwan Lee",
-            "Soojin Jeon",
+            "Soojin Jun",
         ],
         conference: {
             full: "Proceedings of the 2020 CHI conference on human factors in computing systems",

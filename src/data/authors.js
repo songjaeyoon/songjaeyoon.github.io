@@ -130,7 +130,7 @@ export const authors = [
         image: "/authors/joonhwan.jpg",
     },
     {
-        name: "Soojin Jeon",
+        name: "Soojin Jun",
         affiliation: "Yonsei University",
         website:
             "https://uic.yonsei.ac.kr/main/academic.asp?mid=m03_01_01&act=view&uid=947",

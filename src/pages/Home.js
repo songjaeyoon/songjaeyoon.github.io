@@ -27,7 +27,7 @@ const Home = () => {
                         <br />
                         <span className="text-normal">
                             Human-AI Interaction, Large Language Models,
-                            Computational Social Science
+                            Multi-Agent Systems
                         </span>
                     </p>
                     <p className="text-small">
