@@ -111,8 +111,8 @@ export const authors = [
     {
         name: "Donghoon Shin",
         affiliation: "University of Washington",
-        website: "https://donghoon.io/",
-        image: "/authors/donghoon.png",
+        // website: "https://donghoon.io/",
+        // image: "/authors/donghoon.png",
     },
     {
         name: "Seokwoo Song",
@@ -149,7 +149,7 @@ export const authors = [
     },
     {
         name: "Jaemin Jo",
-        affiliation: "Sungkyunkwan",
+        affiliation: "Sungkyunkwan University",
         website: "https://www.jaeminjo.com/",
         image: "/authors/jaemin.jpeg",
     },
