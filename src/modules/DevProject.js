@@ -7,14 +7,7 @@ const DevProject = ({ proj, projects, devImages, handleClick }) => {
     const project = found.length > 0 ? found[0] : proj;
 
     return (
-        <Col
-            xs={12}
-            md={6}
-            lg={4}
-            className="project"
-            id={proj.id}
-            onClick={handleClick}
-        >
+        <Col xs={12} className="project" id={proj.id} onClick={handleClick}>
             <div className="project-wrapper">
                 <div className="project-img">
                     <img src={devImages[proj.id]} alt={proj.title} />

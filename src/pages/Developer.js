@@ -4,7 +4,9 @@ import { projects } from "../data/projects";
 import DevProject from "../modules/DevProject";
 import { Col, Container, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
+import "react-responsive-modal/styles.css";
 import Modal from "react-responsive-modal";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Developer = ({ devImages }) => {
     const location = useLocation();
@@ -114,39 +116,48 @@ const Developer = ({ devImages }) => {
                     md={{ offset: 1, span: 10 }}
                     lg={{ offset: 2, span: 8 }}
                 >
-                    <Row>
-                        {devProjects.map((proj) => {
-                            let show = false;
-                            for (let stack of selectedStack) {
-                                if (proj.stack.includes(stack)) {
-                                    show = true;
-                                    break;
+                    <ResponsiveMasonry
+                        columnsCountBreakPoints={{ 360: 1, 768: 2, 992: 3 }}
+                        gutterBreakPoints={{
+                            360: "12px",
+                            768: "16px",
+                            992: "24px",
+                        }}
+                    >
+                        <Masonry>
+                            {devProjects.map((proj) => {
+                                let show = false;
+                                for (let stack of selectedStack) {
+                                    if (proj.stack.includes(stack)) {
+                                        show = true;
+                                        break;
+                                    }
                                 }
-                            }
-                            if (
-                                selectedCollab !== "" &&
-                                proj.collab.includes(selectedCollab)
-                            ) {
-                                show = true;
-                            }
-                            if (
-                                show ||
-                                (selectedStack.length === 0 &&
-                                    selectedCollab === "")
-                            ) {
-                                return (
-                                    <DevProject
-                                        key={proj.id}
-                                        proj={proj}
-                                        projects={projects}
-                                        devImages={devImages}
-                                        handleClick={selectProject}
-                                    />
-                                );
-                            }
-                            return <div key={proj.id}></div>;
-                        })}
-                    </Row>
+                                if (
+                                    selectedCollab !== "" &&
+                                    proj.collab.includes(selectedCollab)
+                                ) {
+                                    show = true;
+                                }
+                                if (
+                                    show ||
+                                    (selectedStack.length === 0 &&
+                                        selectedCollab === "")
+                                ) {
+                                    return (
+                                        <DevProject
+                                            key={proj.id}
+                                            proj={proj}
+                                            projects={projects}
+                                            devImages={devImages}
+                                            handleClick={selectProject}
+                                        />
+                                    );
+                                }
+                                return <div key={proj.id}></div>;
+                            })}
+                        </Masonry>
+                    </ResponsiveMasonry>
                 </Col>
             </Row>
             <Modal

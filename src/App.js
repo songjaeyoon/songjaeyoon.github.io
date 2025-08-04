@@ -1,5 +1,5 @@
 import Navigation from "./modules/Navigation";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Publications from "./pages/Publications";
 import Research from "./pages/Research";
@@ -92,7 +92,12 @@ function App() {
                     <Route
                         path="/projects"
                         exact
-                        element={<Research projImages={projImages} />}
+                        element={
+                            <Research
+                                projImages={projImages}
+                                history={history}
+                            />
+                        }
                     />
 
                     <Route

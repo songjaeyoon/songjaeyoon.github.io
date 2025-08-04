@@ -1,17 +1,11 @@
 import React from "react";
 import Links from "./Links";
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Project = ({ proj, projImages, handleClick }) => {
     return (
-        <Col
-            xs={12}
-            md={6}
-            lg={4}
-            className="project"
-            id={proj.id}
-            onClick={handleClick}
-        >
+        <Link to={`/project/${proj.id}`} className="project" id={proj.id}>
             <div className="project-wrapper">
                 <div className="project-img">
                     <img src={projImages[proj.id]} alt={proj.title} />
@@ -37,7 +31,7 @@ const Project = ({ proj, projImages, handleClick }) => {
                     <Links project={proj} isPubList={false} />
                 </div>
             </div>
-        </Col>
+        </Link>
     );
 };
 
