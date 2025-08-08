@@ -24,6 +24,10 @@ const Home = () => {
                     <h1 className="mb-1 intro-name">Jaeyoon Song</h1>
                     <p>
                         <span className="text-bold">PhD Student @ MIT</span>
+                        <br />
+                        <span className="text-normal">
+                            Human-AI Interaction
+                        </span>
                     </p>
                     <p className="text-small">
                         Hello, I am a PhD candidate in Information Technology at
