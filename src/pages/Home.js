@@ -26,8 +26,8 @@ const Home = () => {
                         <span className="text-bold">PhD Student @ MIT</span>
                         <br />
                         <span className="text-normal">
-                            Human-AI Interaction, Large Language Models,
-                            Multi-Agent Systems
+                            Human-AI Interaction, Large Language Models, Social
+                            Computing
                         </span>
                     </p>
                     <p className="text-small">
