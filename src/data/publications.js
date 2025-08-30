@@ -196,8 +196,22 @@ export const pubs = [
         type: "WIP",
     },
     {
+        id: "forecasting",
+        title: "FutureBench: Forward-Only Evaluation of Retrieval-Augmented LLM Forecasting",
+        year: 2025,
+        // authors: ["Jaeyoon Song", "Ben Lira", "Dan Goldstein"],
+        authors: [],
+        // url: "https://arxiv.org/abs/2206.12390",
+        link: "/project/forecasting",
+        conference: {
+            title: "Work In Progress",
+        },
+        attrs: ["international", "conference", "wip"],
+        type: "WIP",
+    },
+    {
         id: "badge",
-        title: "Who Stays, Who Leaves? Behavioral Adaptation to Generative AI in the Online Knowledge Community",
+        title: "Who Stays, Who Leaves? Behavioral Trends in the Online Knowledge Community Since the Emergence of Generative AI",
         year: 2025,
         // authors: [
         //     "Jaeyoon Song",
@@ -210,14 +224,14 @@ export const pubs = [
         // url: "https://arxiv.org/abs/2206.12390",
         link: "/project/badge",
         conference: {
-            title: "Under Review",
+            title: "Under Revision",
         },
-        attrs: ["international", "journal", "wip"],
+        attrs: ["international", "journal", "manuscript"],
         type: "WIP",
     },
     {
         id: "noteworthy",
-        title: "Augmenting Human Note-Taking with Real-Time Suggestions from Large Language Models",
+        title: "Designing for Effortful AI: The Efficiency-Learning Dilemma in AI-Assisted Note-Taking",
         year: 2025,
         // authors: ["Jaeyoon Song", "Soya Park", "Thomas W. Malone"],
         authors: [],
@@ -226,7 +240,25 @@ export const pubs = [
         conference: {
             title: "Under Review",
         },
-        attrs: ["international", "journal", "wip"],
+        attrs: ["international", "conference", "manuscript"],
+        type: "WIP",
+    },
+    {
+        id: "uplift",
+        title: "The Case for Harmful Capability Uplift: Why AI Safety Evaluation Must Focus on Human-AI Systems",
+        year: 2025,
+        authors: [
+            "Michelle Vaccaro",
+            "Jaeyoon Song",
+            "Abdullah Almaatouq",
+            "Michiel A. Bakker",
+        ],
+        // url: "https://arxiv.org/abs/2206.12390",
+        link: "/project/uplift",
+        conference: {
+            title: "Under Review",
+        },
+        attrs: ["international", "conference", "manuscript"],
         type: "WIP",
     },
 ];

@@ -8,6 +8,9 @@ const publications = pubs.sort((a, b) => b.year - a.year);
 const papers = publications.filter((pub) => pub.attrs.includes("paper"));
 const posters = publications.filter((pub) => pub.attrs.includes("poster"));
 const wips = publications.filter((pub) => pub.attrs.includes("wip"));
+const manuscripts = publications.filter((pub) =>
+    pub.attrs.includes("manuscript")
+);
 
 const Publications = () => {
     return (
@@ -25,6 +28,22 @@ const Publications = () => {
                             {wips.map((wip, i) => (
                                 <Publication
                                     pub={wip}
+                                    projects={projects}
+                                    key={i}
+                                />
+                            ))}
+                        </Col>
+
+                        <Col xs={12} md={3} className="section-title mb-1">
+                            <strong className="text-mono">
+                                Manuscripts Under Review
+                            </strong>
+                        </Col>
+
+                        <Col xs={12} md={9} className="indent mb-2">
+                            {manuscripts.map((manuscript, i) => (
+                                <Publication
+                                    pub={manuscript}
                                     projects={projects}
                                     key={i}
                                 />

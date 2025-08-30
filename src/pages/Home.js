@@ -109,11 +109,11 @@ const Home = () => {
                     </div>
 
                     <Publication
-                        pub={wips.find((wip) => wip.id === "story")}
+                        pub={wips.find((wip) => wip.id === "forecasting")}
                         projects={projects}
                     />
                     <Publication
-                        pub={papers.find((paper) => paper.id === "test")}
+                        pub={wips.find((wip) => wip.id === "story")}
                         projects={projects}
                     />
                     <Publication

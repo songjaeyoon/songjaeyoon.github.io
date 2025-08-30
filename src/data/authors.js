@@ -25,6 +25,12 @@ export const authors = [
         image: "/authors/abdullah.jpg",
     },
     {
+        name: "Michiel A. Bakker",
+        affiliation: "MIT",
+        website: "https://miba.dev/",
+        image: "/authors/michiel.jpg",
+    },
+    {
         name: "Juho Kim",
         affiliation: "KAIST",
         website: "https://juhokim.com/",
