@@ -137,7 +137,7 @@ const About = ({ projImages }) => {
                     </div>
 
                     <strong>Abstract</strong>
-                    <p className="mb-5">{proj?.paragraph}</p>
+                    <p className="mb-5 abstract">{proj?.paragraph}</p>
 
                     {pub?.type !== "WIP" && (
                         <>
