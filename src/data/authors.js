@@ -26,7 +26,7 @@ export const authors = [
     },
     {
         name: "Michiel A. Bakker",
-        affiliation: "MIT",
+        affiliation: "MIT & Google DeepMind",
         website: "https://miba.dev/",
         image: "/authors/michiel.jpg",
     },
