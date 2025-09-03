@@ -24,10 +24,10 @@ const Home = () => {
                     <h1 className="mb-1 intro-name">Jaeyoon Song</h1>
                     <p>
                         <span className="text-bold">PhD Student @ MIT</span>
-                        <br />
+                        {/* <br />
                         <span className="text-normal">
                             Human-AI Interaction
-                        </span>
+                        </span> */}
                     </p>
                     <p className="text-small">
                         Hello, I am a PhD candidate in Information Technology at
@@ -40,27 +40,52 @@ const Home = () => {
                         >
                             Thomas W. Malone
                         </a>
-                        . My general research area is &nbsp;
-                        <b>computational social science</b> &nbsp;and &nbsp;
-                        <b>social computing</b> &nbsp;at the intersection of
-                        computer science, data science, and social science. I
-                        employ data-driven computational thinking and methods to
-                        explore social science questions. Currently, I am
-                        exploring the capabilities of large language models in
-                        real-world forecasting.
-                        <br />
-                        <br />
-                        📍 This summer, I've joined &nbsp;
-                        <b>Microsoft Research</b>&nbsp; as a research intern,
-                        working with Dr.&nbsp;
+                        . &nbsp;My research lies at the intersection of &nbsp;
+                        <b>human-computer interaction (HCI)</b>&nbsp; and &nbsp;
+                        <b>artificial intelligence (AI)</b>, where I build and
+                        study systems that use large language models to augment
+                        human decision-making and collaboration. I develop
+                        experiments, datasets, and interactive tools that
+                        connect AI techniques to real-world applications. My
+                        current work focuses on advancing the forecasting
+                        capabilities of large language models. Previously, I
+                        completed internships at &nbsp;
                         <a
                             className="link-underline"
-                            href="https://www.dangoldstein.com/"
+                            href="https://www.microsoft.com/en-us/research/"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Dan Goldstein
+                            Microsoft Research
                         </a>
+                        , &nbsp;
+                        <a
+                            className="link-underline"
+                            href="https://www.bosch.com/research/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Bosch Research
+                        </a>
+                        , and{" "}
+                        <a
+                            className="link-underline"
+                            href="https://research.adobe.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Adobe Research
+                        </a>
+                        , and worked as a software engineer at{" "}
+                        <a
+                            className="link-underline"
+                            href="https://medium.com/oheadline"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            BigPearl
+                        </a>
+                        .
                         <br />
                         <br />
                         <span className="d-none d-md-inline-block">
