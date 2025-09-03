@@ -49,7 +49,7 @@ const Home = () => {
                         connect AI techniques to real-world applications. My
                         current work focuses on advancing the forecasting
                         capabilities of large language models. Previously, I
-                        completed internships at &nbsp;
+                        held internships at &nbsp;
                         <a
                             className="link-underline"
                             href="https://www.microsoft.com/en-us/research/"
