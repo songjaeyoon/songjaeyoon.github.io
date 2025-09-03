@@ -2,7 +2,7 @@ export const projects = [
     {
         id: "forecasting",
         topic: ["research"],
-        title: "FutureBench: Forward-Only Evaluation of Retrieval-Augmented LLM Forecasting",
+        title: "Forward-Only Evaluation of Retrieval-Augmented LLM Forecasting",
         year: 202508,
         desc: "",
         image: "projects/forecasting.gif",
