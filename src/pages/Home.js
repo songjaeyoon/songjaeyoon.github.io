@@ -41,15 +41,20 @@ const Home = () => {
                             Thomas W. Malone
                         </a>
                         . &nbsp;My research lies at the intersection of &nbsp;
-                        <b>human-computer interaction (HCI)</b>&nbsp; and &nbsp;
-                        <b>artificial intelligence (AI)</b>, where I build and
-                        study systems that use large language models to augment
-                        human decision-making and collaboration. I develop
-                        experiments, datasets, and interactive tools that
-                        connect AI techniques to real-world applications. My
-                        current work focuses on advancing the forecasting
-                        capabilities of large language models. Previously, I
-                        held internships at &nbsp;
+                        <span className="text-bold">
+                            human-computer interaction (HCI)
+                        </span>
+                        &nbsp; and &nbsp;
+                        <span className="text-bold">
+                            artificial intelligence (AI)
+                        </span>
+                        , where I build and study systems that use large
+                        language models to augment human decision-making and
+                        collaboration. I develop experiments, datasets, and
+                        interactive tools that connect AI techniques to
+                        real-world applications. My current work focuses on
+                        advancing the forecasting capabilities of large language
+                        models. Previously, I held internships at &nbsp;
                         <a
                             className="link-underline"
                             href="https://www.microsoft.com/en-us/research/"
