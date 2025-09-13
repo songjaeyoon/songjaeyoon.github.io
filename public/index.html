@@ -59,4 +59,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get('redirect');
+      if (redirect) {
+        window.history.replaceState({}, '', redirect);
+      }
+    })();
+  </script>
 </html>
