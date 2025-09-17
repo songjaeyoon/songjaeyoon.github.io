@@ -198,7 +198,7 @@ export const pubs = [
     },
     {
         id: "forecasting",
-        title: "Forward-Only Evaluation of Retrieval-Augmented LLM Forecasting",
+        title: "Forward-Only Evaluation of Retrieval-Augmented Forecasting with Language Modles",
         year: 2025,
         // authors: ["Jaeyoon Song", "Ben Lira", "Dan Goldstein"],
         authors: [],
