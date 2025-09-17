@@ -212,7 +212,7 @@ export const pubs = [
     },
     {
         id: "badge",
-        title: "Who Stays, Who Leaves? Behavioral Trends in the Online Knowledge Community Since the Emergence of Generative AI",
+        title: "The Generative AI Divide: A Descriptive Analysis of Heterogeneous Adaptation Among Knowledge Contributors",
         year: 2025,
         authors: [
             "Jaeyoon Song",
@@ -220,7 +220,7 @@ export const pubs = [
             "Hongzun Zhang",
             "Dokyun Lee",
         ],
-        // coauthors: ["Arman Vossoughi", "Hongzun Zhang"],
+        coauthors: ["Arman Vossoughi", "Hongzun Zhang"],
         // url: "https://arxiv.org/abs/2206.12390",
         link: "/project/badge",
         conference: {

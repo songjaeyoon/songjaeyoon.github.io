@@ -40,56 +40,20 @@ const Home = () => {
                         >
                             Thomas W. Malone
                         </a>
-                        . &nbsp;My research lies at the intersection of &nbsp;
-                        <span className="text-bold">
-                            human-computer interaction (HCI)
-                        </span>
-                        &nbsp; and &nbsp;
-                        <span className="text-bold">
-                            artificial intelligence (AI)
-                        </span>
-                        , where I build and study systems that use large
+                        . &nbsp;My research lies at the intersection of HCI and
+                        AI, where I build and study systems that use large
                         language models to augment human decision-making and
                         collaboration. I develop experiments, datasets, and
                         interactive tools that connect AI techniques to
                         real-world applications. My current work focuses on
                         advancing the forecasting capabilities of large language
                         models. Previously, I held internships at &nbsp;
-                        <a
-                            className="link-underline"
-                            href="https://www.microsoft.com/en-us/research/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Microsoft Research
-                        </a>
-                        , &nbsp;
-                        <a
-                            className="link-underline"
-                            href="https://www.bosch.com/research/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Bosch Research
-                        </a>
-                        , and{" "}
-                        <a
-                            className="link-underline"
-                            href="https://research.adobe.com/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Adobe Research
-                        </a>
-                        , and worked as a software engineer at{" "}
-                        <a
-                            className="link-underline"
-                            href="https://medium.com/oheadline"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            BigPearl
-                        </a>
+                        <span className="text-bold">Microsoft Research</span>,
+                        &nbsp;
+                        <span className="text-bold">Bosch Research</span>, and{" "}
+                        <span className="text-bold">Adobe Research</span>, and
+                        worked as a software engineer at{" "}
+                        <span className="text-bold">BigPearl</span>
                         .
                         <br />
                         <br />
