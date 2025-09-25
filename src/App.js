@@ -55,9 +55,6 @@ function App() {
 
         if (isMobile) {
             window.addEventListener("scroll", () => {
-                console.log(vh);
-                console.log(window.outerHeight);
-                console.log(window.innerHeight);
                 if (vh !== window.outerHeight) {
                     vh = window.outerHeight;
                     document

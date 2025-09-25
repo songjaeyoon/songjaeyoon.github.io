@@ -257,7 +257,7 @@ export const pubs = [
             "Abdullah Almaatouq",
             "Michiel A. Bakker",
         ],
-        // url: "https://arxiv.org/abs/2206.12390",
+        url: "https://miba.dev/assets/publications/2025_hcp/harmful_capability_uplift.pdf",
         link: "/project/uplift",
         conference: {
             title: "Under Revision",

@@ -6,6 +6,7 @@ import { pubs } from "../data/publications";
 import Links from "../modules/Links";
 import Bibtex from "../modules/Bibtex";
 import { authors } from "../data/authors";
+import { isMobile } from "react-device-detect";
 
 const About = ({ projImages }) => {
     const navigate = useNavigate();
@@ -87,6 +88,13 @@ const About = ({ projImages }) => {
                                     lg={2}
                                     key={index}
                                     className="author-info"
+                                    style={
+                                        pub?.authors?.length === 4 &&
+                                        isMobile &&
+                                        index === 0
+                                            ? { marginLeft: "0.333333%" }
+                                            : {}
+                                    }
                                 >
                                     {foundAuthor?.website ? (
                                         <a
