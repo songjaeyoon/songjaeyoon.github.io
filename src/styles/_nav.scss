@@ -37,7 +37,10 @@
     font-size: 14px;
 }
 .dropdown-item.active, .dropdown-item:active {
-    background-color: $brand-color-light;
+    // background-color: $brand-color-light;
+    font-weight: 700;
+    background-color: inherit;
+    color: inherit;
 }
 
 .navbar-toggler {
@@ -56,23 +59,47 @@
     background-color: transparent;
 }
 
+
+
 @media (max-width: 991px) {
-    .navbar-collapse {
-        background-color: aliceblue;
-        padding: 20px 0 10px;
+    /* collapsed state */
+    .navbar-collapse.collapse {
+        display: block;                 /* keep it in flow so it can animate */
+        max-height: 0;                  /* <-- start closed */
+        opacity: 0;
+        transform: translateY(-8px);
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+        max-height 250ms ease,        /* <-- animate height */
+        opacity 200ms ease,
+        transform 200ms ease,
+        visibility 200ms ease;
+        will-change: max-height, opacity, transform;
         position: fixed;
         top: 0;
         width: 100%;
-        .dropdown-menu {
-            background-color: aliceblue;
-            border: none;
-            font-size: 13px;
-            font-weight: 300;
-            color: #222;
-            padding: 0;
-            margin: 0;
-            padding-left: 1rem;
-        }
+        background-color: aliceblue;
+        padding: 20px 0 10px;
+    }
+    
+    /* expanded state */
+    .navbar-collapse.collapse.show {
+        max-height: 222.5px;            /* <-- end open */
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        pointer-events: auto;
+    }
+    
+    .navbar-collapse .dropdown-menu {
+        background-color: aliceblue;
+        border: none;
+        font-size: 13px;
+        font-weight: 300;
+        color: #222;
+        padding: 0 0 0 1rem;
+        margin: 0;
     }
 }
 
@@ -161,4 +188,21 @@
   transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
+}
+
+@media (max-width: 991px) {
+    .animate-dropdown .dropdown-menu {
+        height: 0;
+        transition: opacity 200ms ease, transform 200ms ease, visibility 200ms, height 200ms ease;
+        will-change: transform, opacity, height;
+    }
+
+    /* When Bootstrap adds .show, fade/slide in */
+    .animate-dropdown .dropdown-menu.show {
+        height: 100%;
+    }
+
+    .dropdown-item:last-child {
+        padding-bottom: .75rem;
+    }
 }

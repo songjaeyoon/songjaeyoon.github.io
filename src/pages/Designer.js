@@ -194,10 +194,10 @@ const Designer = ({ designImage, video0, video1, video2, video3 }) => {
                             className="youtube"
                             src="https://www.youtube.com/embed/3nVzW6YZcUg?si=WekSOuGARrCcflXG"
                             title="YouTube video player"
-                            frameborder="0"
+                            frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
                         ></iframe>
                     </div>
                 </Col>
