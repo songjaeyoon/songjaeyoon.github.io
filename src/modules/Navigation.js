@@ -68,7 +68,12 @@ const Navigation = () => {
                             Resume
                         </Nav.Link>
 
-                        <NavDropdown title="Fun" id="basic-nav-dropdown">
+                        <NavDropdown
+                            title="Fun"
+                            id="fun-dropdown"
+                            className="animate-dropdown"
+                            renderMenuOnMount
+                        >
                             <NavDropdown.Item
                                 as={NavLink}
                                 onClick={() => setToggleActive(false)}

@@ -142,3 +142,23 @@
         max-width: 100%;
     }
 }
+
+/* Make the menu always participate in layout so we can animate it */
+.animate-dropdown .dropdown-menu {
+  display: block;              /* override Bootstrap's display:none */
+  opacity: 0;
+  transform: translateY(-8px); /* start slightly above */
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+  transform-origin: top center;
+  will-change: transform, opacity;
+}
+
+/* When Bootstrap adds .show, fade/slide in */
+.animate-dropdown .dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
