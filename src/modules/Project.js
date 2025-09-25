@@ -1,11 +1,16 @@
 import React from "react";
 import Links from "./Links";
 import { Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Project = ({ proj, projImages, handleClick }) => {
+    const navigate = useNavigate();
     return (
-        <Link to={`/project/${proj.id}`} className="project" id={proj.id}>
+        <div
+            onClick={() => navigate(`/project/${proj.id}`)}
+            className="project"
+            id={proj.id}
+        >
             <div className="project-wrapper">
                 <div className="project-img">
                     <img src={projImages[proj.id]} alt={proj.title} />
@@ -31,7 +36,7 @@ const Project = ({ proj, projImages, handleClick }) => {
                     <Links project={proj} isPubList={false} />
                 </div>
             </div>
-        </Link>
+        </div>
     );
 };
 

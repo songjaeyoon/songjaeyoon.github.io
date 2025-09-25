@@ -64,102 +64,104 @@ const Developer = ({ devImages }) => {
     };
 
     return (
-        <Container fluid>
-            <Row className="pt-5 mt-5">
-                <Col
-                    xs={12}
-                    md={{ offset: 1, span: 10 }}
-                    lg={{ offset: 2, span: 8 }}
-                    className="mb-2 keyword-filter"
-                >
-                    <strong className="text-muted">Stack</strong> <br />
-                    {allStack.map((stack) => (
+        <>
+            <Container fluid>
+                <Row className="pt-5 mt-5">
+                    <Col
+                        xs={12}
+                        md={{ offset: 1, span: 10 }}
+                        lg={{ offset: 2, span: 8 }}
+                        className="mb-2 keyword-filter"
+                    >
+                        <strong className="text-muted">Stack</strong> <br />
+                        {allStack.map((stack) => (
+                            <span
+                                key={stack}
+                                className={`${
+                                    selectedStack.includes(stack) && "text-bold"
+                                } me-3 pointer filter`}
+                                onClick={selectStack}
+                            >
+                                {stack}
+                            </span>
+                        ))}
+                    </Col>
+                    <Col
+                        xs={12}
+                        md={{ offset: 1, span: 10 }}
+                        lg={{ offset: 2, span: 8 }}
+                        className="keyword-filter"
+                    >
+                        <strong className="text-muted">Work by</strong> <br />
                         <span
-                            key={stack}
                             className={`${
-                                selectedStack.includes(stack) && "text-bold"
+                                selectedCollab === "Solo" && "text-bold"
                             } me-3 pointer filter`}
-                            onClick={selectStack}
+                            onClick={selectCollab}
                         >
-                            {stack}
+                            Individual
                         </span>
-                    ))}
-                </Col>
-                <Col
-                    xs={12}
-                    md={{ offset: 1, span: 10 }}
-                    lg={{ offset: 2, span: 8 }}
-                    className="keyword-filter"
-                >
-                    <strong className="text-muted">Work by</strong> <br />
-                    <span
-                        className={`${
-                            selectedCollab === "Solo" && "text-bold"
-                        } me-3 pointer filter`}
-                        onClick={selectCollab}
+                        <span
+                            className={`${
+                                selectedCollab === "Team" && "text-bold"
+                            } mr-1 pointer filter`}
+                            onClick={selectCollab}
+                        >
+                            Team
+                        </span>
+                    </Col>
+                </Row>
+                <Row className="pt-4 pb-5 px-2">
+                    <Col
+                        xs={12}
+                        md={{ offset: 1, span: 10 }}
+                        lg={{ offset: 2, span: 8 }}
                     >
-                        Individual
-                    </span>
-                    <span
-                        className={`${
-                            selectedCollab === "Team" && "text-bold"
-                        } mr-1 pointer filter`}
-                        onClick={selectCollab}
-                    >
-                        Team
-                    </span>
-                </Col>
-            </Row>
-            <Row className="pt-4 pb-5 px-2">
-                <Col
-                    xs={12}
-                    md={{ offset: 1, span: 10 }}
-                    lg={{ offset: 2, span: 8 }}
-                >
-                    <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 360: 1, 768: 2, 992: 3 }}
-                        gutterBreakPoints={{
-                            360: "12px",
-                            768: "16px",
-                            992: "24px",
-                        }}
-                    >
-                        <Masonry>
-                            {devProjects.map((proj) => {
-                                let show = false;
-                                for (let stack of selectedStack) {
-                                    if (proj.stack.includes(stack)) {
-                                        show = true;
-                                        break;
+                        <ResponsiveMasonry
+                            columnsCountBreakPoints={{ 360: 1, 768: 2, 992: 3 }}
+                            gutterBreakPoints={{
+                                360: "12px",
+                                768: "16px",
+                                992: "24px",
+                            }}
+                        >
+                            <Masonry>
+                                {devProjects.map((proj) => {
+                                    let show = false;
+                                    for (let stack of selectedStack) {
+                                        if (proj.stack.includes(stack)) {
+                                            show = true;
+                                            break;
+                                        }
                                     }
-                                }
-                                if (
-                                    selectedCollab !== "" &&
-                                    proj.collab.includes(selectedCollab)
-                                ) {
-                                    show = true;
-                                }
-                                if (
-                                    show ||
-                                    (selectedStack.length === 0 &&
-                                        selectedCollab === "")
-                                ) {
-                                    return (
-                                        <DevProject
-                                            key={proj.id}
-                                            proj={proj}
-                                            projects={projects}
-                                            devImages={devImages}
-                                            handleClick={selectProject}
-                                        />
-                                    );
-                                }
-                                return <div key={proj.id}></div>;
-                            })}
-                        </Masonry>
-                    </ResponsiveMasonry>
-                </Col>
-            </Row>
+                                    if (
+                                        selectedCollab !== "" &&
+                                        proj.collab.includes(selectedCollab)
+                                    ) {
+                                        show = true;
+                                    }
+                                    if (
+                                        show ||
+                                        (selectedStack.length === 0 &&
+                                            selectedCollab === "")
+                                    ) {
+                                        return (
+                                            <DevProject
+                                                key={proj.id}
+                                                proj={proj}
+                                                projects={projects}
+                                                devImages={devImages}
+                                                handleClick={selectProject}
+                                            />
+                                        );
+                                    }
+                                    return "";
+                                })}
+                            </Masonry>
+                        </ResponsiveMasonry>
+                    </Col>
+                </Row>
+            </Container>
             <Modal
                 open={isOpen}
                 onClose={() => {
@@ -203,7 +205,7 @@ const Developer = ({ devImages }) => {
                     }}
                 ></p>
             </Modal>
-        </Container>
+        </>
     );
 };
 

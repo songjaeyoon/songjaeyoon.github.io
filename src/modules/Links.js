@@ -4,29 +4,54 @@ const Links = ({ project, isPubList }) => {
     return (
         <div className="extra-links">
             {project.link && (
-                <a href={project.link} target="_blank" rel="noreferrer">
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i className="fas fa-link" aria-hidden="true"></i> Link
                 </a>
             )}
             {project.paper && (
-                <a href={project.paper} target="_blank" rel="noreferrer">
+                <a
+                    href={project.paper}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i className="far fa-sticky-note" aria-hidden="true"></i>{" "}
                     PDF
                 </a>
             )}
             {project.demo && (
-                <a href={project.demo} target="_blank" rel="noreferrer">
+                <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i className="fas fa-laptop-code" aria-hidden="true"></i>{" "}
                     Demo
                 </a>
             )}
             {project.video && (
-                <a href={project.video} target="_blank" rel="noreferrer">
+                <a
+                    href={project.video}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i className="fas fa-play" aria-hidden="true"></i> Video
                 </a>
             )}
             {project.slides && (
-                <a href={project.slides} target="_blank" rel="noreferrer">
+                <a
+                    href={project.slides}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i
                         className="far fa-window-maximize"
                         aria-hidden="true"
@@ -35,7 +60,12 @@ const Links = ({ project, isPubList }) => {
                 </a>
             )}
             {project.poster && (
-                <a href={project.poster} target="_blank" rel="noreferrer">
+                <a
+                    href={project.poster}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i
                         className="far fa-window-maximize"
                         aria-hidden="true"
@@ -44,13 +74,25 @@ const Links = ({ project, isPubList }) => {
                 </a>
             )}
             {project.code && (
-                <a href={project.code} target="_blank" rel="noreferrer">
+                <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <i className="fab fa-github" aria-hidden="true"></i> Code
                 </a>
             )}
             {project.id && isPubList === true && (
-                <Link to={`/project/${project.id}`} rel="noreferrer">
-                    <i className="fas fa-info-circle" aria-hidden="true"></i>{" "}
+                <Link
+                    to={`/project/${project.id}`}
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <i
+                        className="fas fa-external-link-alt"
+                        aria-hidden="true"
+                    ></i>{" "}
                     About
                 </Link>
             )}

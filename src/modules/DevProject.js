@@ -1,13 +1,14 @@
 import React from "react";
 import Links from "./Links";
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const DevProject = ({ proj, projects, devImages, handleClick }) => {
     const found = projects.filter((project) => project.id === proj.id);
     const project = found.length > 0 ? found[0] : proj;
 
     return (
-        <Col xs={12} className="project" id={proj.id} onClick={handleClick}>
+        <div className="project" id={proj.id} onClick={handleClick}>
             <div className="project-wrapper">
                 <div className="project-img">
                     <img src={devImages[proj.id]} alt={proj.title} />
@@ -32,7 +33,7 @@ const DevProject = ({ proj, projects, devImages, handleClick }) => {
                     <Links project={project} isPubList={false} />
                 </div>
             </div>
-        </Col>
+        </div>
     );
 };
 
