@@ -169,7 +169,7 @@ html {
     z-index: 999;
     pointer-events: none;
     transition: border-color .5s ease-in-out;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         border-width: 1rem;
         // min-height: 100dvh;
         &:after {

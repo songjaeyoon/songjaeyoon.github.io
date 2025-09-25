@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 const Navigation = () => {
     const [toggleActive, setToggleActive] = useState(false);
 
     return (
         <Navbar expand="lg">
-            <Container>
+            <Container className="nav-container">
                 <button
                     aria-controls="basic-navbar-nav"
                     type="button"
