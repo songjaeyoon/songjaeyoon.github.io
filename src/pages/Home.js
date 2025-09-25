@@ -9,6 +9,9 @@ import { Col, Container, Row } from "react-bootstrap";
 const publications = pubs.sort((a, b) => b.year - a.year);
 const papers = publications.filter((pub) => pub.attrs.includes("paper"));
 const wips = publications.filter((pub) => pub.attrs.includes("wip"));
+const manuscripts = publications.filter((pub) =>
+    pub.attrs.includes("manuscript")
+);
 
 const Home = () => {
     return (
@@ -103,7 +106,9 @@ const Home = () => {
                     </div>
 
                     <Publication
-                        pub={wips.find((wip) => wip.id === "forecasting")}
+                        pub={manuscripts.find(
+                            (manuscript) => manuscript.id === "forecasting"
+                        )}
                         projects={projects}
                     />
                     <Publication

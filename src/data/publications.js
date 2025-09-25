@@ -198,16 +198,21 @@ export const pubs = [
     },
     {
         id: "forecasting",
-        title: "Forward-Only Evaluation of Retrieval-Augmented Forecasting with Language Models",
+        title: "Forecasting with LLMs: A Dataset for Rapid Backtesting Without Temporal Contamination",
         year: 2025,
-        // authors: ["Jaeyoon Song", "Ben Lira", "Dan Goldstein"],
-        authors: [],
+        authors: [
+            "Jaeyoon Song",
+            "Benjamin Lira Luttges",
+            "Mohammed Alsobay",
+            "Dan Goldstein",
+        ],
+        coauthors: ["Jaeyoon Song", "Benjamin Lira Luttges"],
         // url: "https://arxiv.org/abs/2206.12390",
         link: "/project/forecasting",
         conference: {
-            title: "Work In Progress",
+            title: "Under Review",
         },
-        attrs: ["international", "conference", "wip"],
+        attrs: ["international", "conference", "manuscript"],
         type: "WIP",
     },
     {

@@ -31,6 +31,24 @@ export const authors = [
         image: "/authors/michiel.jpg",
     },
     {
+        name: "Dan Goldstein",
+        affiliation: "Microsoft Research",
+        website: "https://www.dangoldstein.com/",
+        image: "/authors/dan.jpg",
+    },
+    {
+        name: "Benjamin Lira Luttges",
+        affiliation: "University of Pennsylvania",
+        website: "https://lirabenjamin.github.io/",
+        image: "/authors/ben.jpeg",
+    },
+    {
+        name: "Mohammed Alsobay",
+        affiliation: "Microsoft Research",
+        website: "https://malsobay.com/",
+        image: "/authors/mohammed.jpg",
+    },
+    {
         name: "Juho Kim",
         affiliation: "KAIST",
         website: "https://juhokim.com/",
