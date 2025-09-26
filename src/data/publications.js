@@ -95,8 +95,8 @@ export const pubs = [
         preprint: "arXiv preprint arXiv:2206.12390",
         coauthors: ["Andres Campero", "Michelle Vaccaro"],
         url: "https://arxiv.org/pdf/2206.12390",
-        attrs: ["international", "journal", "paper"],
-        type: "Journal",
+        attrs: ["international", "preprint"],
+        type: "Preprint",
     },
     {
         id: "who2chat",
@@ -259,10 +259,8 @@ export const pubs = [
         ],
         url: "https://miba.dev/assets/publications/2025_hcp/harmful_capability_uplift.pdf",
         link: "/project/uplift",
-        conference: {
-            title: "Under Revision",
-        },
-        attrs: ["international", "conference", "manuscript"],
-        type: "WIP",
+        preprint: "arXiv preprint",
+        attrs: ["international", "preprint"],
+        type: "Preprint",
     },
 ];

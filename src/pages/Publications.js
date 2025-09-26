@@ -7,6 +7,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const publications = pubs.sort((a, b) => b.year - a.year);
 const papers = publications.filter((pub) => pub.attrs.includes("paper"));
 const posters = publications.filter((pub) => pub.attrs.includes("poster"));
+const preprints = publications.filter((pub) => pub.attrs.includes("preprint"));
 const wips = publications.filter((pub) => pub.attrs.includes("wip"));
 const manuscripts = publications.filter((pub) =>
     pub.attrs.includes("manuscript")
@@ -60,6 +61,20 @@ const Publications = () => {
                             {papers.map((paper, i) => (
                                 <Publication
                                     pub={paper}
+                                    projects={projects}
+                                    key={i}
+                                />
+                            ))}
+                        </Col>
+
+                        <Col xs={12} md={3} className="section-title mb-1">
+                            <strong className="text-mono">Preprints</strong>
+                        </Col>
+
+                        <Col xs={12} md={9} className="indent mb-2">
+                            {preprints.map((preprint, i) => (
+                                <Publication
+                                    pub={preprint}
                                     projects={projects}
                                     key={i}
                                 />
