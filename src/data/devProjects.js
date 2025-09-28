@@ -9,7 +9,7 @@ export const devProjects = [
         stack: ["React.js", "Express.js", "MongoDB"],
         explanation:
             "Noteworthy not only transcribes your meeting, but also (1) lets you highlight and label important parts during/after meetings, (2) organizes highlights into an outline for you, (3) helps you to easily figure out the context of the highlights by showing the connection with the transcript, and (4) analyze the meeting data to keep you on track.",
-        prize: "MIT Web Lab 2022 3rd Place & Innovation Prize",
+        prize: "MIT Web Lab 2022 3rd Place Prize",
         featured: true,
     },
     {
@@ -25,6 +25,19 @@ export const devProjects = [
         featured: true,
     },
     {
+        id: "dance",
+        year: 2021,
+        title: "A Chrome Extension for Dance Practice",
+        image: "projects/dance.jpg",
+        link: "https://chrome.google.com/webstore/detail/mirror-youtube-for-dance/odmglmjpojlhploiiaemcdohkeoapakf",
+        collab: "Solo work",
+        stack: ["Chrome Extension"],
+        explanation:
+            "A chrome extension for dance practice with over 2,000+ users. This extension got featured on the Chrome Store.",
+        prize: "Featured on Chrome Store (2,000+ users)",
+        featured: true,
+    },
+    {
         id: "minglr",
         year: 2020,
         title: "Minglr",
@@ -37,17 +50,17 @@ export const devProjects = [
             "Minglr supports ad hoc conversations at virtual conferences. It was deployed at two virtual conferences with over 450 total participants.",
         featured: true,
     },
-    {
-        id: "code",
-        year: 2021,
-        title: "CoDe",
-        image: "projects/code.png",
-        link: "https://sudo-cambridge.herokuapp.com",
-        collab: "Teamwork (led a team of four)",
-        stack: ["Vue.js", "Express.js", "MongoDB"],
-        explanation:
-            "CoDe is a platform where people can suggest ideas about urban design. It has a unique feature that allows the merging of two similar ideas.",
-    },
+    // {
+    //     id: "code",
+    //     year: 2021,
+    //     title: "CoDe",
+    //     image: "projects/code.png",
+    //     link: "https://sudo-cambridge.herokuapp.com",
+    //     collab: "Teamwork (led a team of four)",
+    //     stack: ["Vue.js", "Express.js", "MongoDB"],
+    //     explanation:
+    //         "CoDe is a platform where people can suggest ideas about urban design. It has a unique feature that allows the merging of two similar ideas.",
+    // },
     {
         id: "history",
         year: 2018,
@@ -67,7 +80,7 @@ export const devProjects = [
         image: "projects/ravi.jpeg",
         code: "https://github.com/jyoonsong/RAVi",
         collab: "Solo work",
-        stack: ["Chrome Extension"],
+        stack: ["Chrome Extension", "Python"],
         explanation:
             "Inspired by Tilda (Zhang & Cranshaw, 2018), I developed a browser extension that helps users to tag and take notes while having a video chat conversation.",
     },
@@ -77,9 +90,10 @@ export const devProjects = [
         title: "Restaurant Recommendation App",
         image: "projects/samsung.jpeg",
         collab: "Teamwork (a team of 5)",
-        stack: ["React.js", "Express.js"],
-        explanation: "My role in the team was to develop the front-end side.",
-        prize: "Top Ten Finalist Prize at 2018 Samsung AI Hackathon",
+        stack: ["React.js", "Express.js", "Python"],
+        explanation:
+            "Developed a personalized restaurant recommender system with collaborative filtering using restaurants rating and text review data",
+        prize: "Top Ten Finalist at Samsung AI Hackathon",
     },
     {
         id: "who2chat",
@@ -155,17 +169,6 @@ export const devProjects = [
         explanation: "A mobile game to stamp cookies",
     },
     {
-        id: "dance",
-        year: 2021,
-        title: "A Chrome Extension for Dance Practice",
-        image: "projects/dance.jpg",
-        link: "https://chrome.google.com/webstore/detail/mirror-youtube-for-dance/odmglmjpojlhploiiaemcdohkeoapakf",
-        collab: "Solo work",
-        stack: ["Vanilla JS", "Chrome Extension"],
-        explanation:
-            "A chrome extension for dance practice with over 300 users",
-    },
-    {
         id: "dobbies",
         year: 2021,
         title: "HCI & The Seven Dobbies",
@@ -209,7 +212,7 @@ export const devProjects = [
     {
         id: "chartmetric",
         year: 2017,
-        title: "Intern at Chartmetric (a startup)",
+        title: "Internship at Chartmetric",
         image: "projects/chartmetric.jpeg",
         link: "http://chartmetric.io",
         collab: "Internship",
@@ -227,15 +230,15 @@ export const devProjects = [
         stack: ["D3.js"],
         explanation: "",
     },
-    {
-        id: "refugees",
-        title: "Are Refugees Dangerous?",
-        year: 2018,
-        image: "projects/img-2-small.jpeg",
-        link: "https://jaeyoon.io/dt4c",
-        collab: "Solo work",
-        stack: ["D3.js"],
-        explanation:
-            "The topic of my project was refugees, more specifically the Yemeni Muslim refugees coming to Jeju island in South Korea. To narrow down the scope of the topic, I tried to put emphasis on the question if the refugees are dangerous and likely to be involved in a crime in particular. I didn’t explicitly answer the question, but instead tried to focus more on delivering the data itself so that the reader wouldn’t feel that they are being forced to be on one side. One example is the case of Sweden in which I showed both increasing and decreasing crime rate due to accepting refugees. This implies that the number of refugees have nothing to do with the crime rate, showing neither positive nor negative correlation. <br><br> I spent a lot of time searching for factual data—I even read the German official police report using Google translation in order to keep the objectivity using the rawest data. Because of this, the resulting infographic was less visually engaging, and sometimes even misleading due to wrong usage of visual devices.<br><br>The infographic first points out what the people think about the refugees, which has also been a motivation for this project. Then, it points out how crime rate of refugees or foreigners are not so different from other people, giving example of Germany, Norway, and South Korea. Lastly, it suggests that maybe the reason for the difference between people's perspective and what data really says is partially because of what media highlight.",
-    },
+    // {
+    //     id: "refugees",
+    //     title: "Are Refugees Dangerous?",
+    //     year: 2018,
+    //     image: "projects/img-2-small.jpeg",
+    //     link: "https://jaeyoon.io/dt4c",
+    //     collab: "Solo work",
+    //     stack: ["D3.js"],
+    //     explanation:
+    //         "The topic of my project was refugees, more specifically the Yemeni Muslim refugees coming to Jeju island in South Korea. To narrow down the scope of the topic, I tried to put emphasis on the question if the refugees are dangerous and likely to be involved in a crime in particular. I didn’t explicitly answer the question, but instead tried to focus more on delivering the data itself so that the reader wouldn’t feel that they are being forced to be on one side. One example is the case of Sweden in which I showed both increasing and decreasing crime rate due to accepting refugees. This implies that the number of refugees have nothing to do with the crime rate, showing neither positive nor negative correlation. <br><br> I spent a lot of time searching for factual data—I even read the German official police report using Google translation in order to keep the objectivity using the rawest data. Because of this, the resulting infographic was less visually engaging, and sometimes even misleading due to wrong usage of visual devices.<br><br>The infographic first points out what the people think about the refugees, which has also been a motivation for this project. Then, it points out how crime rate of refugees or foreigners are not so different from other people, giving example of Germany, Norway, and South Korea. Lastly, it suggests that maybe the reason for the difference between people's perspective and what data really says is partially because of what media highlight.",
+    // },
 ];
