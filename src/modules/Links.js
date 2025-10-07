@@ -24,7 +24,7 @@ const Links = ({ project, isPubList }) => {
                     PDF
                 </a>
             )}
-            {project.preprint && (
+            {/* {project.preprint && (
                 <a
                     href={require(`../pdf/${project.preprint}`)}
                     target="_blank"
@@ -34,7 +34,7 @@ const Links = ({ project, isPubList }) => {
                     <i className="far fa-sticky-note" aria-hidden="true"></i>{" "}
                     Preprint
                 </a>
-            )}
+            )} */}
             {project.demo && (
                 <a
                     href={project.demo}
