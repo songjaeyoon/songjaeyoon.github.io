@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import "react-responsive-modal/styles.css";
 import Modal from "react-responsive-modal";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Links from "../modules/Links";
 
 const Developer = ({ devImages }) => {
     const location = useLocation();
@@ -180,18 +181,13 @@ const Developer = ({ devImages }) => {
                 <div>{selectedProject?.desc}</div>
 
                 {selectedProject?.prize && (
-                    <div>
-                        <a
-                            className="text-gray"
-                            href={selectedProject?.prize.link}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <small>🏆 {selectedProject?.prize.name}</small>
-                        </a>
+                    <div className="text-gray">
+                        <small>🏆 {selectedProject?.prize}</small>
                     </div>
                 )}
-
+                <div className="mb-2">
+                    <Links project={selectedProject} isPubList={false} />
+                </div>
                 <div className="mb-2">
                     <img
                         src={devImages[selectedProject?.id]}
@@ -201,7 +197,7 @@ const Developer = ({ devImages }) => {
 
                 <p
                     dangerouslySetInnerHTML={{
-                        __html: selectedProject?.paragraph,
+                        __html: selectedProject?.explanation,
                     }}
                 ></p>
             </Modal>

@@ -8,7 +8,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["React.js", "Express.js", "MongoDB"],
         explanation:
-            "Noteworthy not only transcribes your meeting, but also (1) lets you highlight and label important parts during/after meetings, (2) organizes highlights into an outline for you, (3) helps you to easily figure out the context of the highlights by showing the connection with the transcript, and (4) analyze the meeting data to keep you on track.",
+            "Developed a smart meeting transcription platform that automatically records, highlights, and organizes discussions. Noteworthy allows users to label and categorize key insights, view contextual connections within transcripts, and analyze meeting data for actionable insights. Awarded 3rd Place at MIT Web Lab 2022.",
         prize: "MIT Web Lab 2022 3rd Place Prize",
         featured: true,
     },
@@ -21,7 +21,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["Vanilla JS"],
         explanation:
-            "I developed this website as a final project in the Interactive Web Development course at the University of Southern California (USC). I ranked 1st place and got the highest grade (A) for the course.\n\nPlacing the navigation on a rotating cube definitely does not provide a good user experience, but my goal was just to develop something non-typical.",
+            "Created an experimental 3D navigation interface using pure JavaScript as a final project for USC’s Interactive Web Development course. Designed a rotating cube UI to explore unconventional web interaction patterns. Ranked 1st in the class and received the highest grade (A).",
         featured: true,
     },
     {
@@ -33,7 +33,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["Chrome Extension"],
         explanation:
-            "A chrome extension for dance practice with over 2,000+ users. This extension got featured on the Chrome Store.",
+            "Developed a Chrome extension that mirrors YouTube videos for dance practice, enabling users to follow choreography more easily. Reached over 2,000 active users and was featured on the Chrome Web Store.",
         prize: "Featured on Chrome Store (2,000+ users)",
         featured: true,
     },
@@ -47,20 +47,9 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Jitsi"],
         explanation:
-            "Minglr supports ad hoc conversations at virtual conferences. It was deployed at two virtual conferences with over 450 total participants.",
+            "Built a web platform that facilitates ad hoc video conversations at virtual conferences. Successfully deployed at two major academic events with over 450 participants. Contributed to enhancing spontaneous networking in remote conference settings.",
         featured: true,
     },
-    // {
-    //     id: "code",
-    //     year: 2021,
-    //     title: "CoDe",
-    //     image: "projects/code.png",
-    //     link: "https://sudo-cambridge.herokuapp.com",
-    //     collab: "Teamwork (led a team of four)",
-    //     stack: ["Vue.js", "Express.js", "MongoDB"],
-    //     explanation:
-    //         "CoDe is a platform where people can suggest ideas about urban design. It has a unique feature that allows the merging of two similar ideas.",
-    // },
     {
         id: "history",
         year: 2018,
@@ -71,7 +60,7 @@ export const devProjects = [
         collab: "Teamwork (a team of two)",
         stack: ["D3.js"],
         explanation:
-            "We visualized the Korean Independence Movement organizations in 1910 - 1945",
+            "Developed a data visualization showcasing the structure and connections of Korean independence organizations from 1910 to 1945 using D3.js. Designed interactive visuals to enhance historical data exploration.",
     },
     {
         id: "ravi",
@@ -82,7 +71,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["Chrome Extension", "Python"],
         explanation:
-            "Inspired by Tilda (Zhang & Cranshaw, 2018), I developed a browser extension that helps users to tag and take notes while having a video chat conversation.",
+            "Built a browser extension inspired by Tilda (Zhang & Cranshaw, 2018) that enables users to tag and annotate key moments during live video chats, supporting collaborative note-taking and conversation summarization.",
     },
     {
         id: "samsung",
@@ -92,7 +81,7 @@ export const devProjects = [
         collab: "Teamwork (a team of 5)",
         stack: ["React.js", "Express.js", "Python"],
         explanation:
-            "Developed a personalized restaurant recommender system with collaborative filtering using restaurants rating and text review data",
+            "Designed and developed a personalized restaurant recommendation system using collaborative filtering and sentiment analysis on user reviews. Selected as a Top Ten Finalist at the Samsung AI Hackathon.",
         prize: "Top Ten Finalist at Samsung AI Hackathon",
     },
     {
@@ -100,10 +89,11 @@ export const devProjects = [
         year: 2021,
         title: "Who2chat",
         image: "projects/who2chat.png",
+        link: "https://who2chat.com/",
         collab: "Teamwork (a team of 2)",
         stack: ["React.js", "Firebase", "Jitsi"],
         explanation:
-            "Who2chat is the second version of Minglr. It was deployed at UIST 2021 and CSCW 2021",
+            "Developed the second iteration of Minglr for academic conferences. Deployed successfully at UIST 2021 and CSCW 2021, supporting spontaneous one-on-one video conversations among attendees.",
     },
     {
         id: "magicspell",
@@ -113,7 +103,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["React.js"],
         explanation:
-            "What is a magic spell in Harry Potter series that goes we",
+            "An interactive web experience exploring self-affirmation and inspiration through the concept of ‘magic spells.’ Designed and developed with a focus on playful visual storytelling using React.js.",
     },
     {
         id: "solutionChat",
@@ -124,7 +114,7 @@ export const devProjects = [
         collab: "Teamwork (Team of Two)",
         stack: ["Angular.dart", "HTML/CSS"],
         explanation:
-            "My role in the team was to develop the front-end side interface",
+            "Contributed to the development of an interactive chat interface designed to support collaborative problem-solving. Focused on building and optimizing the front-end user experience.",
     },
     {
         id: "soundglance",
@@ -136,7 +126,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["Ruby on Rails"],
         explanation:
-            "SoundGlance summarizes the glanceable cues of Web pages for screen reader users. This is a web interface we used to generate the dataset for CNN training.",
+            "Developed a web interface to generate datasets for a CNN-based accessibility tool that summarizes visual web content for screen reader users. Used in the SoundGlance research project published at CHI 2019.",
     },
     {
         id: "suggestbot",
@@ -146,7 +136,7 @@ export const devProjects = [
         collab: "Teamwork (Team of two)",
         stack: ["React.js", "Ruby on Rails"],
         explanation:
-            "An interface to collect evidence of a given post from Mechanical Turk workers",
+            "Built an interface to crowdsource supporting evidence for online posts using Mechanical Turk. Designed the workflow and front-end logic for scalable data collection.",
     },
     {
         id: "writing",
@@ -156,7 +146,7 @@ export const devProjects = [
         collab: "Solo work",
         stack: ["React.js", "Empirica.js", "Meteor"],
         explanation:
-            "An interface to collect stories from experimental subjects on Upwork",
+            "Developed an online experimental platform to collect short story data from participants via Upwork. Integrated real-time collaboration and data management using Empirica.js and Meteor.",
     },
     {
         id: "stampcookies",
@@ -166,7 +156,8 @@ export const devProjects = [
         link: "https://drive.google.com/file/d/1RGKYJNpZxTdZN9zPai-BIS8rZoyQAjGL/view",
         collab: "Solo work",
         stack: ["React Native"],
-        explanation: "A mobile game to stamp cookies",
+        explanation:
+            "Created a mobile game where players stamp cookies with patterns and earn points based on accuracy and speed. Built using React Native for cross-platform deployment.",
     },
     {
         id: "dobbies",
@@ -176,38 +167,41 @@ export const devProjects = [
         link: "https://studyhci.netlify.app/",
         collab: "Solo work",
         stack: ["Gatsby", "Netlify"],
-        explanation: "A website for an HCI study club",
+        explanation:
+            "Developed a modern, static website for an HCI study club using Gatsby and Netlify. Focused on lightweight design and fast deployment for community resource sharing.",
     },
     {
         id: "ffaper",
         year: 2021,
         title: "FFA:PER",
         image: "projects/ffaper.png",
-        link: "https://ffaper.com/",
+        // link: "https://ffaper.com/",
         collab: "Solo work (Freelancer contract via Kmong)",
         stack: ["Ruby on Rails"],
-        explanation: "A website for a clothing brand",
+        explanation:
+            "Developed an e-commerce website for a fashion brand, focusing on responsive UI and efficient product management. Delivered as a freelance project via Kmong.",
     },
     {
         id: "psnm",
         year: 2021,
         title: "SKT PS&M Event Website",
         image: "projects/psnm.png",
-        link: "https://www.tworldevent.com",
+        // link: "https://www.tworldevent.com",
         collab: "Solo work (Freelancer contract via Kmong)",
         stack: ["Ruby on Rails"],
-        explanation: "A website for an event held by SKT PS&M",
+        explanation:
+            "Designed and implemented an event microsite for SKT PS&M, optimizing for scalability and user engagement during a nationwide promotional campaign.",
     },
     {
         id: "covidhere",
         year: 2021,
         title: "Covidhere",
         image: "projects/covidhere.png",
-        link: "http://covidhere.herokuapp.com/2/1",
+        // link: "http://covidhere.herokuapp.com/2/1",
         collab: "Solo work (Freelancer contract via Kmong)",
         stack: ["Ruby on Rails"],
         explanation:
-            "A website that shows Covid information at Yongin-si, South Korea",
+            "Built a public information website displaying real-time COVID-19 case data for Yongin-si, South Korea. Focused on clarity, accessibility, and automated data updates.",
     },
     {
         id: "chartmetric",
@@ -218,17 +212,18 @@ export const devProjects = [
         collab: "Internship",
         stack: ["Angular.js", "Highcharts.js"],
         explanation:
-            "As a short-term intern, I worked on enhancing the data visualization part using Highcharts.js and Angular.js",
+            "Contributed to improving data visualization features for the music analytics platform Chartmetric. Implemented interactive chart components using Highcharts.js and Angular.js during a short-term internship.",
     },
     {
         id: "truth101",
         year: 2017,
         title: "Truth 101",
         image: "projects/truth101.png",
-        link: "http://truth-101.github.io",
+        // link: "http://truth-101.github.io",
         collab: "Teamwork (Led a team of four)",
         stack: ["D3.js"],
-        explanation: "",
+        explanation:
+            "Led a team of four to develop an interactive data visualization project exploring the spread of misinformation. Designed dynamic visual components using D3.js to communicate complex datasets effectively.",
     },
     // {
     //     id: "refugees",
