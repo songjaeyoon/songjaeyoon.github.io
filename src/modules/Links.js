@@ -24,6 +24,17 @@ const Links = ({ project, isPubList }) => {
                     PDF
                 </a>
             )}
+            {project.preprint && (
+                <a
+                    href={require(project.preprint)}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <i className="far fa-sticky-note" aria-hidden="true"></i>{" "}
+                    Preprint
+                </a>
+            )}
             {project.demo && (
                 <a
                     href={project.demo}
