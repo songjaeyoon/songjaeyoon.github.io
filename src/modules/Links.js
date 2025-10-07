@@ -26,7 +26,7 @@ const Links = ({ project, isPubList }) => {
             )}
             {project.preprint && (
                 <a
-                    href={require(project.preprint)}
+                    href={require(`../pdf/${project.preprint}`)}
                     target="_blank"
                     rel="noreferrer"
                     onClick={(e) => e.stopPropagation()}
