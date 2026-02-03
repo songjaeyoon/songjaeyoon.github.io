@@ -234,19 +234,19 @@ export const pubs = [
         attrs: ["international", "journal", "manuscript"],
         type: "WIP",
     },
-    {
-        id: "noteworthy",
-        title: "Designing for Effortful AI: The Efficiency-Learning Dilemma in AI-Assisted Note-Taking",
-        year: 2025,
-        authors: ["Jaeyoon Song", "Soya Park", "Thomas W. Malone"],
-        // url: "https://arxiv.org/abs/2206.12390",
-        link: "/project/noteworthy",
-        conference: {
-            title: "Under Review",
-        },
-        attrs: ["international", "conference", "manuscript"],
-        type: "WIP",
-    },
+    // {
+    //     id: "noteworthy",
+    //     title: "Designing for Effortful AI: The Efficiency-Learning Dilemma in AI-Assisted Note-Taking",
+    //     year: 2025,
+    //     authors: ["Jaeyoon Song", "Soya Park", "Thomas W. Malone"],
+    //     // url: "https://arxiv.org/abs/2206.12390",
+    //     link: "/project/noteworthy",
+    //     conference: {
+    //         title: "Under Review",
+    //     },
+    //     attrs: ["international", "conference", "manuscript"],
+    //     type: "WIP",
+    // },
     {
         id: "uplift",
         title: "The Case for Harmful Capability Uplift: Why AI Safety Evaluation Must Focus on Human-AI Systems",
