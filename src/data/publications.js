@@ -257,10 +257,12 @@ export const pubs = [
             "Abdullah Almaatouq",
             "Michiel A. Bakker",
         ],
-        url: "https://miba.dev/assets/publications/2025_hcp/harmful_capability_uplift.pdf",
+        url: "https://miba.dev/assets/publications/2025_hcu/harmful_capability_uplift.pdf",
         link: "/project/uplift",
-        preprint: "arXiv preprint",
-        attrs: ["international", "preprint"],
-        type: "Preprint",
+        conference: {
+            title: "Work In Progress",
+        },
+        attrs: ["international", "journal", "wip"],
+        type: "WIP",
     },
 ];
