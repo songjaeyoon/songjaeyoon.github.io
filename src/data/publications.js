@@ -247,22 +247,22 @@ export const pubs = [
     //     attrs: ["international", "conference", "manuscript"],
     //     type: "WIP",
     // },
-    {
-        id: "uplift",
-        title: "The Case for Harmful Capability Uplift: Why AI Safety Evaluation Must Focus on Human-AI Systems",
-        year: 2025,
-        authors: [
-            "Michelle Vaccaro",
-            "Jaeyoon Song",
-            "Abdullah Almaatouq",
-            "Michiel A. Bakker",
-        ],
-        url: "https://miba.dev/assets/publications/2025_hcu/harmful_capability_uplift.pdf",
-        link: "/project/uplift",
-        conference: {
-            title: "Work In Progress",
-        },
-        attrs: ["international", "journal", "wip"],
-        type: "WIP",
-    },
+    // {
+    //     id: "uplift",
+    //     title: "The Case for Harmful Capability Uplift: Why AI Safety Evaluation Must Focus on Human-AI Systems",
+    //     year: 2025,
+    //     authors: [
+    //         "Michelle Vaccaro",
+    //         "Jaeyoon Song",
+    //         "Abdullah Almaatouq",
+    //         "Michiel A. Bakker",
+    //     ],
+    //     url: "https://miba.dev/assets/publications/2025_hcu/harmful_capability_uplift.pdf",
+    //     link: "/project/uplift",
+    //     conference: {
+    //         title: "Work In Progress",
+    //     },
+    //     attrs: ["international", "journal", "wip"],
+    //     type: "WIP",
+    // },
 ];
