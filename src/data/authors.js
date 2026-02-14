@@ -196,7 +196,14 @@ export const authors = [
         image: "/authors/hongzun.jpeg",
     },
     {
+        name: "Alice Cai",
+        affiliation: "MIT",
+        website: "https://mitsloan.mit.edu/programs/phd/alice-cai",
+        image: "/authors/alice.jpeg",
+    },
+    {
         name: "Haoran Wen",
         affiliation: "MIT",
+        image: "/authors/haoran.jpeg",
     },
 ];
